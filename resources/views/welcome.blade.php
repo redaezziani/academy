@@ -17,7 +17,7 @@
     </head>
     <body class=" w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
-        class="w-full bg-white flex border-b-[1.4px] justify-between fixed top-0 items-center px-10 py-4"
+        class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center px-10 py-4"
 
         >
             <div class="logo">
@@ -32,7 +32,7 @@
                 </i>
                 <div class="products-count">
                     <span
-                    class="absolute -top-2  -right-2 bg-yellow-400 text-slate-950 rounded-full px-1 text-xs"
+                    class="absolute -top-2  -right-2 bg-emerald-400 text-slate-950 rounded-full px-1 text-xs"
                     >
                         2
                     </span>
@@ -77,10 +77,12 @@
                         </a>
                 </div>
             </div>
-            <div class="menu-bar z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
-                <div class="menu text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
+            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
+                <div 
+                onClick="add()"
+                
+                class="menu hover:text-emerald-400  ease-in-out duration-300 transition-all  text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
                     <i
-                    onClick="add()"
                     class="fas fa-bars  "
                     >
                     </i>
