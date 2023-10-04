@@ -41,6 +41,9 @@
         </nav>
         <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
+            <div class="side-bar flex flex-col min-w-[90px] justify-start items-center bg-white ">
+
+            </div>
             <div class="menu-bar z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
                 <div class="menu text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
                     <i
