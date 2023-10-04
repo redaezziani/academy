@@ -56,17 +56,19 @@
                     <button
                     class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-full"
                     >
-                    تسجيل الدخول
+                    <a href="/login">   تسجيل الدخول
+                    </a>
                     </button>
                     <button
                     class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-full"
                     >
-                    مستخدم جديد
+                    <a href="/register">
+                        مستخدم جديد
+                    </a>
                     </button>
                 </div>
             </div>
         </main>
-        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
 
     </body>
 </html>
