@@ -70,11 +70,12 @@
                     </a>
                     
                 </div>
-                <div class="links flex w-full  flex-col justify-center items-center">
-                        <a href=" w-full  flex items-center justify-start  px-4 py-2 text-slate-400">              
+                <div class="links overflow-auto flex w-full  flex-col justify-center items-center">
+                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">              
                         البرمجة
                         </a>
-                    </div>
+                        
+                </div>
             </div>
             <div class="menu-bar z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
                 <div class="menu text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
