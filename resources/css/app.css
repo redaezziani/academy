@@ -20,5 +20,19 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-
 }
+/*lets make base btn 
+
+*/
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    outline: none;
+}
+

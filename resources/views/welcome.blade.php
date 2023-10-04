@@ -17,7 +17,7 @@
     </head>
     <body class=" w-full  flex-col relative bg-white flex justify-start items-center">
         <nav
-        class="w-full bg-white flex border-b-[1.4px] justify-between fixed top-0 items-center px-10 py-4"
+        class="w-full z-50 bg-white flex border-b-[1.4px] justify-between fixed top-0 items-center px-10 py-4"
         
         >
             <div class="logo">
@@ -40,7 +40,28 @@
             </div>
         </nav>
         <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
-
+            <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
+            <div class="menu-bar z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
+                <div class="menu text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
+                    <i
+                    class="fas fa-bars  "
+                    >
+                    </i>
+                    المواضيع 
+                </div>
+                <div class="btn-container flex items-center gap-2">
+                    <button
+                    class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-full"
+                    >
+                    تسجيل الدخول
+                    </button>
+                    <button
+                    class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-full"
+                    >
+                    مستخدم جديد 
+                    </button>
+                </div>
+            </div>
         </main>
     </body>
 </html>
