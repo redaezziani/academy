@@ -17,7 +17,7 @@
     </head>
     <body class=" w-full  flex-col relative bg-white flex justify-start items-center">
         <nav
-        class="w-full bg-white flex border-b-[1.4px] justify-between fixed top-0 items-center px-8 py-4"
+        class="w-full bg-white flex border-b-[1.4px] justify-between fixed top-0 items-center px-10 py-4"
         
         >
             <div class="logo">
@@ -39,7 +39,7 @@
                 </div>
             </div>
         </nav>
-        <main class="rtl hero w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
 
         </main>
     </body>
