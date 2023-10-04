@@ -33,7 +33,7 @@
                 </i>
                 <div class="products-count">
                     <span
-                    class="absolute -top-2  -right-2 bg-emerald-400 text-slate-950 rounded-full px-1 text-xs"
+                    class="absolute -top-2  -right-2 bg-emerald-400 text-slate-950 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out px-1 text-xs"
                     >
                         2
                     </span>
@@ -58,14 +58,14 @@
                 <div class="btn-container mt-5 flex gap-2 w-full items-center justify-center">
                 <a href="">
                     <button
-                    class="bg-emerald-500 text-white  px-4 py-2 rounded-full"
+                    class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     دورات مباشرة
                     </button>
                     </a>
                     <a href="">
                     <button
-                    class="bg-slate-500 text-white  px-4 py-2 rounded-full"
+                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     دورات مسجلة
                     </button>
@@ -78,7 +78,7 @@
                         </a>
                 </div>
             </div>
-            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
+            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex md:justify-between justify-start gap-4  items-start md:items-center md:flex-row flex-col  px-4 py-7">
                 <div
                 onClick="add()"
 
@@ -91,13 +91,13 @@
                 </div>
                 <div class="btn-container flex items-center gap-2">
                     <button
-                    class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-full"
+                    class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     <a href="/login">   تسجيل الدخول
                     </a>
                     </button>
                     <button
-                    class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-full"
+                    class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     <a href="/register">
                         مستخدم جديد
@@ -106,7 +106,7 @@
                 </div>
             </div>
             <section
-            class="w-full z-10 flex flex-col justify-center items-start gap-5 mt-20 rtl px-5"
+            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
             >
             <h1
             class="text-4xl text-white font-semibold"
@@ -121,9 +121,8 @@
             </section>
         </main>
         <section
-        class="   w-full  rtl z-10 place-items-center justify-center items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-4 bg-emerald-500 text-white min-h-[6rem] px-5 "
-        >
-        <div class="groupe mr-72  px-4 col-span-1 w-full flex items-center justify-start gap-1">
+        class="   w-full  rtl z-10 place-items-center justify-center items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-4 bg-emerald-500 text-white min-h-[6rem] px-5 ">
+        <div class="groupe lg:mr-72  px-4 col-span-1 w-full flex items-center justify-start gap-1">
             <img
             class="w-10"
             src="{{asset('./images/speech-bubble.svg')}}" alt="" srcset="">
@@ -140,7 +139,7 @@
                 </p>
             </div>
         </div>
-        <div class="groupe mr-72 px-4 col-span-1 w-full flex items-center justify-start gap-1">
+        <div class="groupe lg:mr-72 px-4 col-span-1 w-full flex items-center justify-start gap-1">
             <img
             class="w-10"
             src="{{asset('./images/lightbulb.svg')}}" alt="" srcset="">
@@ -157,7 +156,7 @@
                 </p>
             </div>
         </div>
-        <div class="groupe mr-72 px-4 col-span-1 w-full flex items-center justify-start gap-1">
+        <div class="groupe lg:mr-72 px-4 col-span-1 w-full flex items-center justify-start gap-1">
             <img
             class="w-10"
             src="{{asset('./images/medal.svg')}}" alt="" srcset="">
@@ -175,20 +174,51 @@
             </div>
         </div>
         </section>
-        <main
-        class=" w-full flex  justify-start items-center"
+    <main
+        class=" w-full  rtl border-t-2 border-emerald-500  flex bg-white  justify-start items-center"
         >
-        <section
-        class="w-1/2 relative h-full z-10  flex justify-between items-center gap-5 mt-20 rtl px-5"
-        >
-        <img src="{{asset('./images/cou.jpg')}}" class=" top-0 left-0 w-full h-full object-cover" alt="" srcset="">
-        </section>
-        <section
-        class="w-1/2 relative h-full z-10  flex justify-between items-center gap-5 mt-20 rtl px-5"
-        >
-        <img src="{{asset('./images/home-live-bg2.jpg')}}" class=" top-0 left-0 w-full h-full object-cover" alt="" srcset="">
-        </section>
-        </main>
+        <div class="w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
+            <img src="{{asset('./images/hero.jpg')}}" class="w-full opacity-60 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
+            <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
+                <h2
+                class="md:text-4xl text-2xl  font-semibold text-white"
+                >مكتبة الدورات المسجلة</h2>
+                <p
+                class="md:text-xl text-sm text-white/90"
+                >تعلم في الأوقات المناسبة لك</p>
+                <a href="">
+                    <button
+                    class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                    >
+                    استعرض الدورات المتاحة
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
+            <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full opacity-50 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
+            <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
+                <h2
+                class="md:text-4xl text-2xl  font-semibold text-white"
+                >نظام التعلم عن بعد</h2>
+                <p
+                class="md:text-xl text-sm text-blue-700/80"
+                >بخاصية البث المباشر</p>
+                <p
+                class='md:text-xl text-sm text-center text-white/80'
+                >
+                يمكنك الإلتحاق بالدورات التي تعقد في الأكاديمية دون الحاجة للتواجد داخل القاعة التدريبية
+                </p>
+                <a href="">
+                    <button
+                    class=" bg-blue-400 text-white  px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ease-out"
+                    >
+                    اعرف المزيد
+                    </button>
+                </a>
+            </div>
+        </div>
+    </main>
         <script>
             let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');
