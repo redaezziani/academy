@@ -21,13 +21,15 @@
 
         >
             <div class="logo">
-                <img src="../../public/images/pioneerstec.png" alt="logo"
-                class="w-20"
+                <img 
+                src="{{asset('./images/pioneerstec.png')}}"
+                alt="logo"
+                class="w-10"
                 >
             </div>
             <div class="cart cursor-pointer flex justify-center items-center relative">
                 <i
-                class="fas fa-shopping-cart text-xl text-slate-900"
+                class="fas fa-shopping-cart text-xl text-slate-400"
                 >
                 </i>
                 <div class="products-count">
@@ -104,7 +106,76 @@
                     </button>
                 </div>
             </div>
+            <section
+            class="w-full z-10 flex flex-col justify-center items-start gap-5 mt-20 rtl px-5"
+            >
+            <h1
+            class="text-4xl text-white font-semibold"
+            >
+            تعلم اليوم، لتَقُد غداً
+            </h1>
+            <p
+            class="text-xl text-white/80"
+            >
+            تعلم.. طور.. وحقق نجاحك مع أكاديمية الرواد! 
+            </p>
+            </section>
         </main>
+        <section
+        class="   w-full  rtl z-10 place-items-center justify-center items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-4 bg-emerald-500 text-white min-h-[6rem] px-5 "
+        >
+        <div class="groupe mr-72  px-4 col-span-1 w-full flex items-center justify-start gap-1">
+            <img
+            class="w-10"
+            src="{{asset('./images/speech-bubble.svg')}}" alt="" srcset="">
+            <div class="text-content flex gap-2 flex-col items-start justify-start">
+                <h2
+                class="text-xl font-semibold"
+                >
+                معتمدون دولياً 
+                </h2>
+                <p
+                class=" text-white/80"
+                >
+                مركز تدريب واختبار معتمد 
+                </p>
+            </div>
+        </div>
+        <div class="groupe mr-72 px-4 col-span-1 w-full flex items-center justify-start gap-1">
+            <img
+            class="w-10"
+            src="{{asset('./images/lightbulb.svg')}}" alt="" srcset="">
+            <div class="text-content flex gap-2 flex-col items-start justify-start">
+                <h2
+                class="text-xl font-semibold"
+                >
+                مدربون محترفون
+                </h2>
+                <p
+                class=" text-white/80"
+                >
+                ذوي كفاءة عالية ومعتمدون دوليأ 
+                </p>
+            </div>
+        </div>
+        <div class="groupe mr-72 px-4 col-span-1 w-full flex items-center justify-start gap-1">
+            <img
+            class="w-10"
+            src="{{asset('./images/medal.svg')}}" alt="" srcset="">
+            <div class="text-content flex gap-2 flex-col items-start justify-start">
+                <h2
+                class="text-xl font-semibold"
+                >
+                تنوع في التدريب 
+                </h2>
+                <p
+                class=" text-white/80"
+                >
+                عن بعد (مباشر) – قاعة دراسية  
+                </p>
+            </div>
+        </div>
+        </section>
         <script>
             let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');
