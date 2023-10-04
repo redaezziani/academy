@@ -11,14 +11,14 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-                
+
         <!-- Styles -->
         @vite('resources/css/app.css')
     </head>
     <body class=" w-full  flex-col relative bg-white flex justify-start items-center">
         <nav
         class="w-full bg-white flex border-b-[1.4px] justify-between fixed top-0 items-center px-10 py-4"
-        
+
         >
             <div class="logo">
                 <img src="../../public/images/pioneerstec.png" alt="logo"
@@ -42,5 +42,7 @@
         <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
 
         </main>
+        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+
     </body>
 </html>
