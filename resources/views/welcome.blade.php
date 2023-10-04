@@ -15,7 +15,7 @@
         <!-- Styles -->
         @vite('resources/css/app.css')
     </head>
-    <body class=" w-full  flex-col relative bg-white flex justify-start items-center">
+    <body class=" w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
         class="w-full bg-white flex border-b-[1.4px] justify-between fixed top-0 items-center px-10 py-4"
 
@@ -41,7 +41,7 @@
         </nav>
         <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
-            <div class="sidebar absolute gap-5 right-0 z-50 top-0 h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
+            <div class=" sidebar absolute gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
                     <h3
                     class="text-slate-500 text-xl font-semibold"
@@ -49,7 +49,7 @@
                     إبدأ رحلة التعلم 
                     </h3>
                     <i
-                    id="cancel"
+                    onClick="remove()"
                     class="fas fa-times text-slate-500 text-xl cursor-pointer"
                     >
                     </i>
@@ -80,7 +80,7 @@
             <div class="menu-bar z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
                 <div class="menu text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
                     <i
-                    id="menu"
+                    onClick="add()"
                     class="fas fa-bars  "
                     >
                     </i>
@@ -103,6 +103,19 @@
                 </div>
             </div>
         </main>
+        <script>
+            let menu=document.getElementById('menu');
+let cancel=document.getElementById('cancel');
+let sidebar=document.querySelector('.sidebar');
 
+
+function add(){
+    sidebar.classList.toggle('active');
+}
+
+function remove(){
+    sidebar.classList.toggle('active');
+}
+        </script>
     </body>
 </html>
