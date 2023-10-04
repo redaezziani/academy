@@ -21,8 +21,8 @@
 
         >
             <div class="logo">
-                <img 
-                src="{{asset('./images/pioneerstec.png')}}"
+                <img
+                src="{{asset('./images/pifoneerstec.png')}}"
                 alt="logo"
                 class="w-10"
                 >
@@ -48,7 +48,7 @@
                     <h3
                     class="text-slate-500 text-xl font-semibold"
                     >
-                    إبدأ رحلة التعلم 
+                    إبدأ رحلة التعلم
                     </h3>
                     <i
                     onClick="remove()"
@@ -61,7 +61,7 @@
                     <button
                     class="bg-emerald-500 text-white  px-4 py-2 rounded-full"
                     >
-                    دورات مباشرة 
+                    دورات مباشرة
                     </button>
                     </a>
                     <a href="">
@@ -71,18 +71,18 @@
                     دورات مسجلة
                     </button>
                     </a>
-                    
+
                 </div>
                 <div class="links overflow-auto flex w-full  flex-col justify-center items-center">
-                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">              
+                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
                         البرمجة
                         </a>
                 </div>
             </div>
             <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex justify-between items-center px-4 py-7">
-                <div 
+                <div
                 onClick="add()"
-                
+
                 class="menu hover:text-emerald-400  ease-in-out duration-300 transition-all  text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
                     <i
                     class="fas fa-bars  "
@@ -117,7 +117,7 @@
             <p
             class="text-xl text-white/80"
             >
-            تعلم.. طور.. وحقق نجاحك مع أكاديمية الرواد! 
+            تعلم.. طور.. وحقق نجاحك مع أكاديمية الرواد!
             </p>
             </section>
         </main>
@@ -132,12 +132,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                معتمدون دولياً 
+                معتمدون دولياً
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                مركز تدريب واختبار معتمد 
+                مركز تدريب واختبار معتمد
                 </p>
             </div>
         </div>
@@ -154,7 +154,7 @@
                 <p
                 class=" text-white/80"
                 >
-                ذوي كفاءة عالية ومعتمدون دوليأ 
+                ذوي كفاءة عالية ومعتمدون دوليأ
                 </p>
             </div>
         </div>
@@ -166,12 +166,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                تنوع في التدريب 
+                تنوع في التدريب
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                عن بعد (مباشر) – قاعة دراسية  
+                عن بعد (مباشر) – قاعة دراسية
                 </p>
             </div>
         </div>
