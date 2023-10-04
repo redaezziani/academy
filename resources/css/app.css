@@ -26,7 +26,16 @@ body {
 */
 
 .sidebar.active{
-  right: 0px;
+    right: 0;
+    animation: slideIn .3s ease-in-out;;  
 }
-//add animation key 
+
+@keyframes slideIn {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 
