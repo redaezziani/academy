@@ -18,7 +18,6 @@
     <body class=" w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
         class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center px-10 py-4"
-
         >
             <div class="logo">
                 <img 
@@ -176,6 +175,20 @@
             </div>
         </div>
         </section>
+        <main
+        class=" w-full flex  justify-start items-center"
+        >
+        <section
+        class="w-1/2 relative h-full z-10  flex justify-between items-center gap-5 mt-20 rtl px-5"
+        >
+        <img src="{{asset('./images/cou.jpg')}}" class=" top-0 left-0 w-full h-full object-cover" alt="" srcset="">
+        </section>
+        <section
+        class="w-1/2 relative h-full z-10  flex justify-between items-center gap-5 mt-20 rtl px-5"
+        >
+        <img src="{{asset('./images/home-live-bg2.jpg')}}" class=" top-0 left-0 w-full h-full object-cover" alt="" srcset="">
+        </section>
+        </main>
         <script>
             let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');

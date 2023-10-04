@@ -29,6 +29,7 @@ body {
     right: 0px;
 }
 
+
 @keyframes slideIn {
   from {
     transform: translateX(300px);
