@@ -233,6 +233,102 @@
             </div>
         </div>
     </main>
+    <div class="w-full rtl z-10 bg-slate-100 min-h-[30rem] flex justify-center flex-col gap-3 items-center">
+        <h1
+        class="text-4xl text-slate-800 font-semibold"
+        >
+        آراء <span
+        class="text-emerald-500"
+        >العملاء</span>
+        </h1>
+        <div class="grid grid-cols-1 px-6 mt-3 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
+                <p
+                class="text-slate-400"
+                >
+                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
+                </p>
+                <p
+                class="text-slate-700"
+                >
+                محمد الشعلان
+                </p>
+                <p
+                class=" text-pink-600"
+                >
+                مدير دائرة الامداد
+                </p>
+            </div>
+            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
+                <p
+                class="text-slate-400"
+                >
+                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
+                </p>
+                <p
+                class="text-slate-700"
+                >
+                محمد الشعلان
+                </p>
+                <p
+                class=" text-pink-600"
+                >
+                مدير دائرة الامداد
+                </p>
+            </div>
+            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
+                <p
+                class="text-slate-400"
+                >
+                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
+                </p>
+                <p
+                class="text-slate-700"
+                >
+                محمد الشعلان
+                </p>
+                <p
+                class=" text-pink-600"
+                >
+                مدير دائرة الامداد
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer
+    class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
+    >
+    <div class="w-full rtl flex border-b py-2 border-slate-400 justify-between items-center ">
+        <img src="{{asset('./images/pifoneerstec.png')}}" alt="logo" class="w-10" srcset="">
+        <div class="groupe flex justify-center items-center gap-2">
+            <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
+            <img class="w-14" src="{{asset('./images/visa.svg')}}" alt="" srcset="">
+            </div>
+
+            <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
+            <img class="w-14" src="{{asset('./images/mastercard-2.svg')}}" alt="" srcset="">
+            </div>
+
+            <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
+            <img class="w-14" src="{{asset('./images/paypal.svg')}}" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="informations flex-wrap mt-2 rtl w-full  flex justify-start items-center ">
+        <div class="group-1 w-full md:w-2/3 gap-2 flex flex-col justify-start items-start">
+            <h2
+            class="text-xl text-white font-semibold"
+            >
+            تبحث عن تدريب
+            </h2>
+            <p
+            class="text-white/80 text-sm"
+            >
+            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المهندس مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
+            </p>
+        </div>
+    </div>
+    </footer>
         <script>
             let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');

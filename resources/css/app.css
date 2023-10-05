@@ -32,7 +32,7 @@ body {
 
 /* Apply the animation to .sidebar.active */
 .sidebar.active {
-  animation: slideIn 1s ease-in-out forwards;
+  animation: slideIn .5s  forwards;
 }
 
 
