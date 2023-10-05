@@ -28,6 +28,14 @@ body {
     background-repeat: no-repeat;
     min-height: 78vh;
 }
+
+.hero-3{
+  background-image: url('../views/images/hero3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 78vh;
+}
 /*lets make base btn 
 
 */
