@@ -42,7 +42,7 @@
                 </div>
             </div>
         </nav>
-        <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero-3  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -134,17 +134,50 @@
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
             >
             <h1
-            class="text-4xl text-white font-semibold"
-            >
-            تعلم اليوم، لتَقُد غداً
+            class="text-5xl text-white font-semibold"
+            > طور مهاراتك
+           
             </h1>
             <p
-            class="text-xl text-white/80"
+            class="text-6xl text-white/80"
             >
-            تعلم.. طور.. وحقق نجاحك مع أكاديمية الرواد!
+            وأنت 
+            <span
+            class='text-emerald-500 '
+            >
+            في مكانك!
+            </span>
+            </p>
+            <p
+            class="text-xl text-white"
+            >
+            تعلم عن بعد... وتميز بشهادات 
+                <b
+                class=""
+                >
+                معتمدة دولية
+                </b>
+            </p>
+            <p
+            class='text-xl text-white'
+            >
+            أكثر من
+            <span
+            class='text-emerald-500'
+            >
+            50
+            </span>
+            دورة في مختلف التخصصات الأكثر طلباً 
+            </p>
+            <p
+            class="text-xl text-white"
+            >
+            محلياً وعالمياً!
             </p>
             </section>
+
         </main>
+
         <section
         class="   w-full  rtl z-10 place-items-center justify-center items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-4 bg-emerald-500 text-white min-h-[6rem] px-5 ">
         <div class="groupe lg:mr-72  px-4 col-span-1 w-full flex items-center justify-start gap-1">
@@ -199,113 +232,88 @@
             </div>
         </div>
         </section>
-    <main
-        class=" w-full flex-wrap  rtl border-t-2 border-emerald-500  flex bg-white  justify-start items-center"
+        <main
+        class=" w-full rtl grid py-3 z-10 bg-slate-700 min-h-[15rem] md:px-20 px-6  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 "
         >
-        <div class="w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
-            <img src="{{asset('./images/hero.jpg')}}" class="w-full opacity-60 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
-            <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-one.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
+
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+            مكان  لإدارة جميع أمورك الأكاديمية والمالية
+            </h2>
+        </div>
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-two.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
+
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+             خيارات متعددة للدفع
+             تدعم الدفع الإلكتروني
+            </h2>
+        </div>
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-three.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
+
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+            سلسلة من الدروس المسجلة التي تم طرحها خلال الدورة
+            </h2>
+        </div>
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-four.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
+
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+            فريق عمل متخصص بتقديم المساعدة
+            (الدعم الفني)
+            </h2>
+        </div>
+        </main>
+        <div class="w-full rtl flex flex-col z-10 gap-2 justify-center items-center min-h-[30rem] px-6 md:px-40 py-4 bg-slate-50">
+            <div class=" mt-8  w-full text-center md:w-2/3">
+                <h1
+                class="text-4xl text-emerald-500 font-semibold"
+                >
+                تصفح الدورات التدريبية
+                </h1>
                 <h2
-                class="md:text-4xl text-2xl  font-semibold text-white"
-                >مكتبة الدورات المسجلة</h2>
-                <p
-                class="md:text-xl text-sm text-white/90"
-                >تعلم في الأوقات المناسبة لك</p>
-                <a href="/RecordCourses">
-                    <button
-                    class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                class="text-xl mt-3 text-slate-600 font-semibold"
+                >
+                اختر الدورة التدريبية التي ترغب في الالتحاق بها
+                </h2>
+            </div>
+            <div class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                @foreach ($recordcourses as $course)
+                <a href="">
+                <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
+                    <img src="{{ asset('./images/' . $course->image) }}" alt="logo" srcset="" class="w-16">
+                    <p
+                    class="text-slate-600 text-xl font-semibold"
                     >
-                    استعرض الدورات المتاحة
-                    </button>
+                    {{$course->name}}
+                    </p>
+                </div>
                 </a>
+                @endforeach
             </div>
         </div>
-        <div class=" w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
-            <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full opacity-50 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
-            <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
-                <h2
-                class="md:text-4xl text-2xl  font-semibold text-white"
-                >نظام التعلم عن بعد</h2>
-                <p
-                class="md:text-xl text-sm text-blue-700/80"
-                >بخاصية البث المباشر</p>
-                <p
-                class='md:text-xl text-sm text-center text-white/80'
-                >
-                يمكنك الإلتحاق بالدورات التي تعقد في الأكاديمية دون الحاجة للتواجد داخل القاعة التدريبية
-                </p>
-                <a href="/LiveCourses">
-                    <button
-                    class=" bg-blue-400 text-white  px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ease-out"
-                    >
-                    اعرف المزيد
-                    </button>
-                </a>
-            </div>
-        </div>
-    </main>
-    <div class="w-full rtl z-10 bg-slate-100 min-h-[30rem] flex justify-center flex-col gap-3 items-center">
-        <h1
-        class="text-4xl text-slate-800 font-semibold"
-        >
-        آراء <span
-        class="text-emerald-500"
-        >العملاء</span>
-        </h1>
-        <div class="grid grid-cols-1 px-6 mt-3 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
-                <p
-                class="text-slate-400"
-                >
-                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
-                </p>
-                <p
-                class="text-slate-700"
-                >
-                محمد الشعلان
-                </p>
-                <p
-                class=" text-pink-600"
-                >
-                مدير دائرة الامداد
-                </p>
-            </div>
-            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
-                <p
-                class="text-slate-400"
-                >
-                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
-                </p>
-                <p
-                class="text-slate-700"
-                >
-                محمد الشعلان
-                </p>
-                <p
-                class=" text-pink-600"
-                >
-                مدير دائرة الامداد
-                </p>
-            </div>
-            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
-                <p
-                class="text-slate-400"
-                >
-                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
-                </p>
-                <p
-                class="text-slate-700"
-                >
-                محمد الشعلان
-                </p>
-                <p
-                class=" text-pink-600"
-                >
-                مدير دائرة الامداد
-                </p>
-            </div>
-        </div>
-    </div>
     <footer
     class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
     >
