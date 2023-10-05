@@ -194,7 +194,7 @@
             </div>
         </div>
         </section>
-        <div class="w-full rtl flex flex-col z-10 gap-2 justify-center items-center min-h-[30rem] px-40 py-4 bg-slate-50">
+        <div class="w-full rtl flex flex-col z-10 gap-2 justify-center items-center min-h-[30rem] px-6 md:px-40 py-4 bg-slate-50">
             <div class=" mt-8  w-full text-center md:w-2/3">
             <h1
             class="text-2xl text-slate-400 font-semibold"

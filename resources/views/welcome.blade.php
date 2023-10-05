@@ -203,7 +203,7 @@
         class=" w-full flex-wrap  rtl border-t-2 border-emerald-500  flex bg-white  justify-start items-center"
         >
         <div class="w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
-            <img src="{{asset('./images/hero.jpg')}}" class="w-full opacity-60 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
+            <img src="{{asset('./images/hero.jpg')}}" class="w-full  h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
             <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
                 <h2
                 class="md:text-4xl text-2xl  font-semibold text-white"
@@ -221,7 +221,7 @@
             </div>
         </div>
         <div class=" w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
-            <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full opacity-50 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
+            <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full  h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
             <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
                 <h2
                 class="md:text-4xl text-2xl  font-semibold text-white"
