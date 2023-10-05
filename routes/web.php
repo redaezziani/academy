@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/HomePage');
 });
+
+Route::get('/HomePage', [App\Http\Controllers\Controller::class, 'welcome'])->name('HomePage');
 
 Auth::routes();
 
