@@ -60,14 +60,14 @@
                 <div class="btn-container mt-5 flex gap-2 w-full items-center justify-center">
 
                     <a >
-                    <button onclick="hiderecord()"
-                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                    <button onclick="hiderecord()" id="livebutton"
+                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out btn-active"
                     >
                     دورات مباشرة
                     </button>
                     </a>
                     <a >
-                    <button onclick="hidelive()"
+                    <button onclick="hidelive()" id="recordbutton"
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     دورات مسجلة
@@ -200,7 +200,7 @@
                 <p
                 class="md:text-xl text-sm text-white/90"
                 >تعلم في الأوقات المناسبة لك</p>
-                <a href="">
+                <a href="/RecordCourses">
                     <button
                     class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
@@ -346,11 +346,16 @@ function hidelive() {
             var myElement = document.getElementById('divrecord');
             myElement.style.display = 'block';
             document.getElementById('divlive').style.display='none';
+            document.getElementById('recordbutton').classList.add("btn-active");
+            document.getElementById('livebutton').classList.remove("btn-active");
         }
 function hiderecord() {
             var myElement = document.getElementById('divrecord');
             myElement.style.display = 'none';
             document.getElementById('divlive').style.display='block';
+            document.getElementById('livebutton').classList.add("btn-active");
+            document.getElementById('recordbutton').classList.remove("btn-active");
+
         }
     </script>
     </body>
