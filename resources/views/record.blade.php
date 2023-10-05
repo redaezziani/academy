@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -205,8 +206,7 @@
                 @foreach ($recordcourses as $course)
                 <a href="">
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
-                    <img src=
-                     alt="logo" srcset="">
+                    <img src="{{ asset('./images/' . $course->image) }}" alt="logo" srcset="" class="w-16">
                     <p
                     class="text-slate-600 text-xl font-semibold"
                     >
@@ -282,3 +282,4 @@ function hiderecord() {
     </script>
     </body>
 </html>
+
