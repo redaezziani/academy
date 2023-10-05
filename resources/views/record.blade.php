@@ -194,13 +194,16 @@
         </div>
         </section>
         <div class="w-full rtl flex flex-col z-10 gap-2 justify-center items-center min-h-[30rem] px-40 py-4 bg-slate-50">
+            <div class=" mt-8  w-full text-center md:w-2/3">
             <h1
-            class="text-2xl text-slate-600 font-semibold"
+            class="text-2xl text-slate-400 font-semibold"
             >
             مجموعة من الدورات المسجلة مسبقاً, تمكنك من تطوير مهاراتك في الوقت المناسب لك
             </h1>
-            <div class="grid mt-4 gap-8 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            </div>
+            <div class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                 @foreach ($recordcourses as $course)
+                <a href="">
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
                     <img src="" alt="logo" srcset="">
                     <p
@@ -209,6 +212,7 @@
                     {{$course->name}}
                     </p>
                 </div>
+                </a>
                 @endforeach
             </div>
         </div>
