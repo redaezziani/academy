@@ -42,12 +42,12 @@
                 </div>
             </div>
         </nav>
-        <main class="rtl hero-4 bg-emerald-800  w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero-4 bg-emerald-800  relative w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
-            <img class=" w-56 h-full transform rotate-180  z-0 absolute right-0 bottom-0"
+            <img class=" w-56 h-full transform rotate-180  z-0 absolute right-0 -bottom-36"
             src="{{asset('./images/Ornament 69.svg')}}"
             />
-            <img class=" w-56 h-full  z-0 absolute left-0 -top-32"
+            <img class=" w-56 h-full  z-0 absolute left-0 top-8"
             src="{{asset('./images/Ornament 69.svg')}}"
             />
 
@@ -168,7 +168,7 @@
             </div>
         </div>
         <main
-        class="w-full  z-10 flex flex-col bg-white justify-center items-center  gap-5 rtl px-5"
+        class="w-full py-4  z-10 flex flex-col bg-white justify-center items-center  gap-5 rtl px-5"
         >
         <h1
         class="text-5xl mt-16 text-slate-400 font-semibold"
@@ -177,7 +177,7 @@
         </h1>
         <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3
         ">
-        <div class="card flex  w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
+        <div class="card flex py-3  w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
             <img 
             class="w-1/2  h-30 rounded-md max-h-30 object-cover"
             src="{{asset('./images/1035.jpg')}}"
@@ -191,9 +191,23 @@
 
                 </i>
                 </p>
-                <p>
-                    
+                <p
+                class="text-xl text-slate-500 font-medium"
+                >
+                آندرويد باستخدام لغة كوتلن - مستوى1
                 </p>
+                <p
+                class="text-xl text-slate-400 font-medium "
+                >
+                7:27 ساعة
+                </p>
+                <a href="">
+                <button
+                class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                >
+                    تفاصيل الدورة
+                </button>
+                </a>
             </div>
         </div>
         </div>
