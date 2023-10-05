@@ -175,6 +175,28 @@
         >
         دورات مسجلة
         </h1>
+        <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+        ">
+        <div class="card flex  w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
+            <img 
+            class="w-1/2  h-30 rounded-md max-h-30 object-cover"
+            src="{{asset('./images/1035.jpg')}}"
+            alt="" srcset="">
+            <div class="text-content flex justify-center items-center gap-2 flex-col ">
+                <p>                
+                عربي
+                <i
+                class="fas fa-circle text-emerald-500 text-xs"
+                >
+
+                </i>
+                </p>
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+        </div>
         </main>
     <footer
     class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
