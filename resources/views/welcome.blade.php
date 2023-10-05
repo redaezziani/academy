@@ -58,15 +58,16 @@
                     </i>
                 </div>
                 <div class="btn-container mt-5 flex gap-2 w-full items-center justify-center">
-                <a href="">
-                    <button
+
+                    <a >
+                    <button onclick="hiderecord()"
                     class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     دورات مباشرة
                     </button>
                     </a>
-                    <a href="">
-                    <button
+                    <a >
+                    <button onclick="hidelive()"
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     دورات مسجلة
