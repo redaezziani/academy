@@ -200,14 +200,16 @@
             مجموعة من الدورات المسجلة مسبقاً, تمكنك من تطوير مهاراتك في الوقت المناسب لك
             </h1>
             <div class="grid mt-4 gap-8 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                @foreach ($recordcourses as $course)
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
                     <img src="" alt="logo" srcset="">
                     <p
                     class="text-slate-600 text-xl font-semibold"
-                    > 
-                    البرمجة بلغة بايثون
+                    >
+                    {{$course->name}}
                     </p>
                 </div>
+                @endforeach
             </div>
         </div>
     <footer
