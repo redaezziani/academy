@@ -12,7 +12,7 @@ class Controller extends BaseController
 {
     public function welcome()
     {
-
+ 
             $recordcourses = recordcourses::all();
             $livecourses = Livecourses::all();
             return view('welcome')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
