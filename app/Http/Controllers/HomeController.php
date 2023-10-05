@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\recordcourses;
+use App\Models\Livecourses;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $recordcourses = recordcourses::all();
+        $livecourses = Livecourses::all();
+        return view('welcome')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
     }
 }
