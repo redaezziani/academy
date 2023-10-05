@@ -142,8 +142,8 @@
             >
             <h1
             class="text-5xl text-white font-semibold"
-            > 
-            البرمجة 
+            >
+            البرمجة
             </h1>
             <p
             class=" text-emerald-500 text-5xl"
@@ -158,7 +158,7 @@
                 <h2
                 class="text-3xl text-slate-400 font-semibold"
                 >
-                دورات 
+                دورات
                 </h2>
                 <p
                 class="text-xl text-emerald-500/80 font-semibold"
@@ -177,14 +177,15 @@
         </h1>
         <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3
         ">
+        @foreach ($allrecord as $items)
         <div class="card flex py-3  w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
-            <img 
+            <img
             class="w-1/2  h-30 rounded-md max-h-30 object-cover"
             src="{{asset('./images/1035.jpg')}}"
             alt="" srcset="">
             <div class="text-content flex justify-center items-center gap-2 flex-col ">
-                <p>                
-                عربي
+                <p>
+                {{$items->langue}}
                 <i
                 class="fas fa-circle text-emerald-500 text-xs"
                 >
@@ -194,12 +195,12 @@
                 <p
                 class="text-xl text-slate-500 font-medium"
                 >
-                آندرويد باستخدام لغة كوتلن - مستوى1
+                {{$items->name}}
                 </p>
                 <p
                 class="text-xl text-slate-400 font-medium "
                 >
-                7:27 ساعة
+                {{$items->time}} ساعة
                 </p>
                 <a href="">
                 <button
@@ -210,6 +211,7 @@
                 </a>
             </div>
         </div>
+        @endforeach
         </div>
         </main>
     <footer

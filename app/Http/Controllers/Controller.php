@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\recordcourses;
 use App\Models\Livecourses;
+use App\Models\Allrecord;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -33,12 +34,13 @@ class Controller extends BaseController
             return view('live')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
 
     }
-    public function LiveCourseWatche()
+    public function LiveCourseWatche($id)
     {
 
         $recordcourses = recordcourses::all();
         $livecourses = Livecourses::all();
-            return view('livecourses')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
+        $allrecord = Allrecord::where('id-course', $id)->get();
+            return view('livecourses')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord);
 
     }
 
