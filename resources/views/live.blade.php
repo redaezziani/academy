@@ -42,7 +42,7 @@
                 </div>
             </div>
         </nav>
-        <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero-3  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -148,8 +148,36 @@
             في مكانك!
             </span>
             </p>
+            <p
+            class="text-xl text-white"
+            >
+            تعلم عن بعد... وتميز بشهادات 
+                <b
+                class=""
+                >
+                معتمدة دولية
+                </b>
+            </p>
+            <p
+            class='text-xl text-white'
+            >
+            أكثر من
+            <span
+            class='text-emerald-500'
+            >
+            50
+            </span>
+            دورة في مختلف التخصصات الأكثر طلباً 
+            </p>
+            <p
+            class="text-xl text-white"
+            >
+            محلياً وعالمياً!
+            </p>
             </section>
+
         </main>
+
         <section
         class="   w-full  rtl z-10 place-items-center justify-center items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-4 bg-emerald-500 text-white min-h-[6rem] px-5 ">
         <div class="groupe lg:mr-72  px-4 col-span-1 w-full flex items-center justify-start gap-1">
@@ -204,8 +232,88 @@
             </div>
         </div>
         </section>
+        <main
+        class=" w-full rtl grid py-3 z-10 bg-slate-700 min-h-[15rem] md:px-20 px-6  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 "
+        >
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-one.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
 
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+            مكان  لإدارة جميع أمورك الأكاديمية والمالية
+            </h2>
+        </div>
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-two.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
 
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+             خيارات متعددة للدفع
+             تدعم الدفع الإلكتروني
+            </h2>
+        </div>
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-three.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
+
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+            سلسلة من الدروس المسجلة التي تم طرحها خلال الدورة
+            </h2>
+        </div>
+        <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
+            <img 
+            src="{{asset('./images/live-feature-four.svg')}}"
+            class=" w-20 rounded-md object-cover"
+            alt="" srcset="">
+
+            <h2
+            class="text-xl text-white font-semibold mt-2"
+            >
+            فريق عمل متخصص بتقديم المساعدة
+            (الدعم الفني)
+            </h2>
+        </div>
+        </main>
+        <div class="w-full rtl flex flex-col z-10 gap-2 justify-center items-center min-h-[30rem] px-6 md:px-40 py-4 bg-slate-50">
+            <div class=" mt-8  w-full text-center md:w-2/3">
+                <h1
+                class="text-4xl text-emerald-500 font-semibold"
+                >
+                تصفح الدورات التدريبية
+                </h1>
+                <h2
+                class="text-xl mt-3 text-slate-600 font-semibold"
+                >
+                اختر الدورة التدريبية التي ترغب في الالتحاق بها
+                </h2>
+            </div>
+            <div class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                @foreach ($recordcourses as $course)
+                <a href="">
+                <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
+                    <img src="{{ asset('./images/' . $course->image) }}" alt="logo" srcset="" class="w-16">
+                    <p
+                    class="text-slate-600 text-xl font-semibold"
+                    >
+                    {{$course->name}}
+                    </p>
+                </div>
+                </a>
+                @endforeach
+            </div>
+        </div>
     <footer
     class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
     >
