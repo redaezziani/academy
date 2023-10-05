@@ -143,12 +143,12 @@
             <h1
             class="text-5xl text-white font-semibold"
             >
-            البرمجة
+            {{$namecourses}}
             </h1>
             <p
             class=" text-emerald-500 text-5xl"
             >
-            تدريب مُسجّل
+            تدريب مباشر
             </p>
             </section>
 
@@ -163,7 +163,7 @@
                 <p
                 class="text-xl text-emerald-500/80 font-semibold"
                 >
-                مسجلة
+                مباشرة
                 </p>
             </div>
         </div>
@@ -173,18 +173,18 @@
         <h1
         class="text-5xl mt-16 text-slate-400 font-semibold"
         >
-        دورات مسجلة
+        دورات مباشرة
         </h1>
-        <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+        <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3
         ">
         @foreach ($allrecord as $items)
         <div class="card flex py-3  w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
             <img
             class="w-1/2  h-30 rounded-md max-h-30 object-cover"
-            src="{{asset('./images/1035.jpg')}}"
+            src="{{asset('./images/'.$items->image)}}"
             alt="" srcset="">
             <div class="text-content flex justify-center items-center gap-2 flex-col ">
-                <p>
+                <p class="mt-4">
                 {{$items->langue}}
                 <i
                 class="fas fa-circle text-emerald-500 text-xs"
@@ -204,7 +204,7 @@
                 </p>
                 <a href="">
                 <button
-                class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                 >
                     تفاصيل الدورة
                 </button>

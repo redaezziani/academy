@@ -39,8 +39,9 @@ class Controller extends BaseController
 
         $recordcourses = recordcourses::all();
         $livecourses = Livecourses::all();
+        $namecourses = Livecourses::where('id', $id)->value('name');
         $allrecord = Allrecord::where('id-course', $id)->get();
-            return view('livecourses')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord);
+            return view('livecourses')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord)->with('namecourses',$namecourses);
 
     }
 
