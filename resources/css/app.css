@@ -30,6 +30,10 @@ body {
   }
 }
 
+.btn-active{
+  background-color: #10B981;
+}
+
 /* Apply the animation to .sidebar.active */
 .sidebar.active {
   animation: slideIn .5s  forwards;
