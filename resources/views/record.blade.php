@@ -205,7 +205,7 @@
                 @foreach ($recordcourses as $course)
                 <a href="">
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
-                    <img src=""
+                    <img src=
                      alt="logo" srcset="">
                     <p
                     class="text-slate-600 text-xl font-semibold"
