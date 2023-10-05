@@ -29,4 +29,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/RecordCourses', [App\Http\Controllers\Controller::class, 'RecordCourses'])->name('RecordCourses');
+Route::get('/LiveCourses', [App\Http\Controllers\Controller::class, 'LiveCourses'])->name('LiveCourses');
 

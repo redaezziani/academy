@@ -234,7 +234,7 @@
                 >
                 يمكنك الإلتحاق بالدورات التي تعقد في الأكاديمية دون الحاجة للتواجد داخل القاعة التدريبية
                 </p>
-                <a href="">
+                <a href="/LiveCourses">
                     <button
                     class=" bg-blue-400 text-white  px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ease-out"
                     >
