@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : Jeu. 05 Oct. 2023 à 13:47
+-- Généré le : Jeu. 05 Oct. 2023 à 15:22
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 8.1.5
 
@@ -56,16 +56,16 @@ CREATE TABLE `livecourses` (
 --
 
 INSERT INTO `livecourses` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'البرمجة', '', NULL, NULL),
-(2, 'الشبكات وامن المعلومات', '', NULL, NULL),
-(3, 'الادارة والمحاسبة', '', NULL, NULL),
-(4, 'التصميم الجرافيكي والمعماري', '', NULL, NULL),
-(5, 'اللغات', '', NULL, NULL),
-(6, 'تكنولوجيا التعليم الرقمي', '', NULL, NULL),
-(7, 'الهندسة', '', NULL, NULL),
-(8, 'مهارات الحاسوب', '', NULL, NULL),
-(9, 'الادارة الطبية و التجميل ', '', NULL, NULL),
-(10, 'ادارة المطارات و علوم السياحة و السفر', '', NULL, NULL);
+(1, 'البرمجة', '1.svg', NULL, NULL),
+(2, 'الشبكات وامن المعلومات', '5.svg', NULL, NULL),
+(3, 'الادارة والمحاسبة', '6.svg', NULL, NULL),
+(4, 'التصميم الجرافيكي والمعماري', '4.svg', NULL, NULL),
+(5, 'اللغات', '2.svg', NULL, NULL),
+(6, 'تكنولوجيا التعليم الرقمي', '11.svg', NULL, NULL),
+(7, 'الهندسة', '3.svg', NULL, NULL),
+(8, 'مهارات الحاسوب', '7.svg', NULL, NULL),
+(9, 'الادارة الطبية و التجميل ', '13.svg', NULL, NULL),
+(10, 'ادارة المطارات و علوم السياحة و السفر', '12.svg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -154,22 +154,22 @@ CREATE TABLE `recordcourses` (
 --
 
 INSERT INTO `recordcourses` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'البرمجة', '', NULL, NULL),
-(2, 'الشبكات و امن المعلومات\r\n', '', NULL, NULL),
-(3, 'الادارة و المحاسبة \r\n', '', NULL, NULL),
-(4, 'التصميم الجرافيكي و المعماري', '', NULL, NULL),
-(5, 'اللغات\r\n', '', NULL, NULL),
-(6, 'تكنولوجيا التعليم الرقمي', '', NULL, NULL),
-(7, 'الهندسة', '', NULL, NULL),
-(8, 'مهارات الحاسوب \r\n', '', NULL, NULL),
-(9, ' الادارة الطبية والتجميل ', '', NULL, NULL),
-(10, 'ادارة المطارات و علوم السياحة و السفر', '', NULL, NULL),
-(11, 'النفط و الغاز', '', NULL, NULL),
-(12, 'القانون ', '', NULL, NULL),
-(13, 'السلامة و الصحة المهنية', '', NULL, NULL),
-(14, 'الصحافة و الاعلام الرقمي', '', NULL, NULL),
+(1, 'البرمجة', '1.svg', NULL, NULL),
+(2, 'الشبكات و امن المعلومات\r\n', '5.svg', NULL, NULL),
+(3, 'الادارة و المحاسبة \r\n', '6.svg', NULL, NULL),
+(4, 'التصميم الجرافيكي و المعماري', '4.svg', NULL, NULL),
+(5, 'اللغات\r\n', '2.svg', NULL, NULL),
+(6, 'تكنولوجيا التعليم الرقمي', '11.svg', NULL, NULL),
+(7, 'الهندسة', '3.svg', NULL, NULL),
+(8, 'مهارات الحاسوب \r\n', '7.svg', NULL, NULL),
+(9, ' الادارة الطبية والتجميل ', '13.svg', NULL, NULL),
+(10, 'ادارة المطارات و علوم السياحة و السفر', '12.svg', NULL, NULL),
+(11, 'النفط و الغاز', '14.svg', NULL, NULL),
+(12, 'القانون ', '8.svg', NULL, NULL),
+(13, 'السلامة و الصحة المهنية', '15.svg', NULL, NULL),
+(14, 'الصحافة و الاعلام الرقمي', '10.svg', NULL, NULL),
 (15, 'تصميم الأزياء', '', NULL, NULL),
-(16, 'تصميم المجوهرات\r\n', '', NULL, NULL);
+(16, 'تصميم المجوهرات\r\n', '9.svg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -187,6 +187,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'monsef', 'xr.monsef@gmail.com', NULL, '$2y$10$VaDS7I6TYM.Q2sd1WsGi6Oxy5wYRJoIuxPuBQ3PXdbmGwj1Y7nTcW', NULL, '2023-10-05 10:52:42', '2023-10-05 10:52:42');
 
 --
 -- Index pour les tables déchargées
@@ -282,7 +289,7 @@ ALTER TABLE `recordcourses`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
