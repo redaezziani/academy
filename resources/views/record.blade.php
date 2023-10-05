@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-         
+            اكادمية المهندس
         </title>
 
         <!--fontawesome cdn link-->
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </nav>
-        <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero-2  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -60,14 +60,14 @@
                 <div class="btn-container mt-5 flex gap-2 w-full items-center justify-center">
 
                     <a >
-                    <button onclick="hiderecord()"
-                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                    <button onclick="hiderecord()" id="livebutton"
+                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out btn-active"
                     >
                     دورات مباشرة
                     </button>
                     </a>
                     <a >
-                    <button onclick="hidelive()"
+                    <button onclick="hidelive()" id="recordbutton"
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     دورات مسجلة
@@ -123,14 +123,19 @@
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
             >
             <h1
-            class="text-4xl text-white font-semibold"
+            class="text-5xl text-white font-semibold"
             >
-            تعلم اليوم، لتَقُد غداً
+            الدورات المسجلة
             </h1>
             <p
-            class="text-xl text-white/80"
+            class="text-3xl text-white/80"
             >
-            تعلم.. طور.. وحقق نجاحك مع أكاديمية الرواد!
+            <span
+            class="text-emerald-500"
+            >
+            طور مهاراتك
+            </span>
+            بدون قيود
             </p>
             </section>
         </main>
@@ -188,52 +193,56 @@
             </div>
         </div>
         </section>
-    <main
-        class=" w-full flex-wrap  rtl border-t-2 border-emerald-500  flex bg-white  justify-start items-center"
-        >
-        <div class="w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
-            <img src="{{asset('./images/hero.jpg')}}" class="w-full opacity-60 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
-            <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
-                <h2
-                class="md:text-4xl text-2xl  font-semibold text-white"
-                >مكتبة الدورات المسجلة</h2>
-                <p
-                class="md:text-xl text-sm text-white/90"
-                >تعلم في الأوقات المناسبة لك</p>
-                <a href="">
-                    <button
-                    class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
-                    >
-                    استعرض الدورات المتاحة
-                    </button>
-                </a>
+        <div class="w-full rtl flex flex-col z-10 gap-2 justify-center items-center min-h-[30rem] px-40 py-4 bg-slate-50">
+            <h1
+            class="text-2xl text-slate-600 font-semibold"
+            >
+            مجموعة من الدورات المسجلة مسبقاً, تمكنك من تطوير مهاراتك في الوقت المناسب لك
+            </h1>
+            <div class="grid mt-4 gap-8 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
+                    <img src="" alt="logo" srcset="">
+                    <p
+                    class="text-slate-600 text-xl font-semibold"
+                    > 
+                    البرمجة بلغة بايثون
+                    </p>
+                </div>
             </div>
         </div>
-        <div class=" w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
-            <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full opacity-50 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
-            <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
-                <h2
-                class="md:text-4xl text-2xl  font-semibold text-white"
-                >نظام التعلم عن بعد</h2>
-                <p
-                class="md:text-xl text-sm text-blue-700/80"
-                >بخاصية البث المباشر</p>
-                <p
-                class='md:text-xl text-sm text-center text-white/80'
-                >
-                يمكنك الإلتحاق بالدورات التي تعقد في الأكاديمية دون الحاجة للتواجد داخل القاعة التدريبية
-                </p>
-                <a href="">
-                    <button
-                    class=" bg-blue-400 text-white  px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ease-out"
-                    >
-                    اعرف المزيد
-                    </button>
-                </a>
+    <footer
+    class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
+    >
+    <div class="w-full rtl flex border-b py-2 border-slate-400 justify-between items-center ">
+        <img src="{{asset('./images/pifoneerstec.png')}}" alt="logo" class="w-10" srcset="">
+        <div class="groupe flex justify-center items-center gap-2">
+            <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
+            <img class="w-14" src="{{asset('./images/visa.svg')}}" alt="" srcset="">
+            </div>
+
+            <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
+            <img class="w-14" src="{{asset('./images/mastercard-2.svg')}}" alt="" srcset="">
+            </div>
+
+            <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
+            <img class="w-14" src="{{asset('./images/paypal.svg')}}" alt="" srcset="">
             </div>
         </div>
-        </main>
-   
+    </div>
+    <div class="informations flex-wrap mt-2 rtl w-full  flex justify-start items-center ">
+        <div class="group-1 w-full md:w-2/3 gap-2 flex flex-col justify-start items-start">
+            <h2
+            class="text-xl text-white font-semibold"
+            >
+            تبحث عن تدريب
+            </h2>
+            <p
+            class="text-white/80 text-sm"
+            >
+            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المهندس مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
+            </p>
+        </div>
+    </div>
     </footer>
         <script>
             let menu=document.getElementById('menu');
@@ -252,11 +261,16 @@ function hidelive() {
             var myElement = document.getElementById('divrecord');
             myElement.style.display = 'block';
             document.getElementById('divlive').style.display='none';
+            document.getElementById('recordbutton').classList.add("btn-active");
+            document.getElementById('livebutton').classList.remove("btn-active");
         }
 function hiderecord() {
             var myElement = document.getElementById('divrecord');
             myElement.style.display = 'none';
             document.getElementById('divlive').style.display='block';
+            document.getElementById('livebutton').classList.add("btn-active");
+            document.getElementById('recordbutton').classList.remove("btn-active");
+
         }
     </script>
     </body>
