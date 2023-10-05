@@ -52,32 +52,57 @@
                     إبدأ رحلة التعلم
                     </h3>
                     <i
-                    onClick="remove()"
+                    onclick="remove()"
                     class="fas fa-times text-slate-500 text-xl cursor-pointer"
                     >
                     </i>
                 </div>
                 <div class="btn-container mt-5 flex gap-2 w-full items-center justify-center">
+<<<<<<< HEAD
                 <a href="">
                     <button
                     class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+=======
+                <a>
+                    <button id="recordbutton" onclick="hiderecord()"
+                    class="bg-emerald-500 text-white  px-4 py-2 rounded-full"
+>>>>>>> 2139fc303aa5ae9e53355d515e650d5346f49553
                     >
                     دورات مباشرة
                     </button>
                     </a>
+<<<<<<< HEAD
                     <a href="">
                     <button
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+=======
+                    <a >
+                    <button id="recordbutton" onclick="hidelive()"
+                    class="bg-slate-500 text-white  px-4 py-2 rounded-full"
+>>>>>>> 2139fc303aa5ae9e53355d515e650d5346f49553
                     >
                     دورات مسجلة
                     </button>
                     </a>
 
                 </div>
-                <div class="links overflow-auto flex w-full  flex-col justify-center items-center">
+
+                <div id="divlive"  class="links overflow-auto flex w-full  flex-col justify-center items-center">
+                    @foreach ($livecourses as $course)
                         <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        البرمجة
+                        {{ $course->name }}
                         </a>
+                    @endforeach
+                </div>
+
+                <div id="divrecord" style="display: none" class="links overflow-auto flex w-full  flex-col justify-center items-center">
+                @foreach ($recordcourses as $course)
+
+                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
+                        {{ $course->name }}
+                        </a>
+
+                @endforeach
                 </div>
             </div>
             <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex md:justify-between justify-start gap-4  items-start md:items-center md:flex-row flex-col  px-4 py-7">
@@ -230,10 +255,26 @@ let sidebar=document.querySelector('.sidebar');
 function add(){
     sidebar.classList.toggle('active');
 }
-
 function remove(){
     sidebar.classList.toggle('active');
 }
-        </script>
+
+function hidelive() {
+            var myElement = document.getElementById('divrecord');
+            myElement.style.display = 'block';
+            document.getElementById('divlive').style.display='none';
+        }
+function hiderecord() {
+            var myElement = document.getElementById('divrecord');
+            myElement.style.display = 'none';
+            document.getElementById('divlive').style.display='block';
+        }
+
+
+
+
+
+
+    </script>
     </body>
 </html>
