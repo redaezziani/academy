@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>
+            اكادمية المهندس
+        </title>
 
         <!--fontawesome cdn link-->
         <link
@@ -42,7 +44,7 @@
         </nav>
         <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
-            <div class=" sidebar absolute gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
+            <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
                     <h3
                     class="text-slate-500 text-xl font-semibold"
@@ -91,13 +93,13 @@
                 </div>
                 <div class="btn-container flex items-center gap-2">
                     <button
-                    class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                    class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
                     >
                     <a href="/login">   تسجيل الدخول
                     </a>
                     </button>
                     <button
-                    class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                    class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out"
                     >
                     <a href="/register">
                         مستخدم جديد
@@ -175,7 +177,7 @@
         </div>
         </section>
     <main
-        class=" w-full  rtl border-t-2 border-emerald-500  flex bg-white  justify-start items-center"
+        class=" w-full flex-wrap  rtl border-t-2 border-emerald-500  flex bg-white  justify-start items-center"
         >
         <div class="w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
             <img src="{{asset('./images/hero.jpg')}}" class="w-full opacity-60 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
@@ -195,7 +197,7 @@
                 </a>
             </div>
         </div>
-        <div class="w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
+        <div class=" w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
             <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full opacity-50 h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
             <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
                 <h2

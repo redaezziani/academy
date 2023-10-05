@@ -23,18 +23,16 @@ body {
 /*lets make base btn 
 
 */
-
-.sidebar.active{
-    right: 0px;
-}
-
-
+/* Define the keyframe as slideIn */
 @keyframes slideIn {
-  from {
-    transform: translateX(300px);
-  }
   to {
-    transform: translateX(0px);
+    right: 0;
   }
 }
+
+/* Apply the animation to .sidebar.active */
+.sidebar.active {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
 
