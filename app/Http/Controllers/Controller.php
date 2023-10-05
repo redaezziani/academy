@@ -33,6 +33,14 @@ class Controller extends BaseController
             return view('live')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
 
     }
+    public function LiveCourseWatche()
+    {
+
+        $recordcourses = recordcourses::all();
+        $livecourses = Livecourses::all();
+            return view('livecourses')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
+
+    }
 
 
 }

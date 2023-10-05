@@ -204,7 +204,7 @@
             </div>
             <div class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                 @foreach ($recordcourses as $course)
-                <a href="">
+                <a href="/LiveCourses/Course">
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
                     <img src="{{ asset('./images/' . $course->image) }}" alt="logo" srcset="" class="w-16">
                     <p

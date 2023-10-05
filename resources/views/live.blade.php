@@ -136,12 +136,12 @@
             <h1
             class="text-5xl text-white font-semibold"
             > طور مهاراتك
-           
+
             </h1>
             <p
             class="text-6xl text-white/80"
             >
-            وأنت 
+            وأنت
             <span
             class='text-emerald-500 '
             >
@@ -151,7 +151,7 @@
             <p
             class="text-xl text-white"
             >
-            تعلم عن بعد... وتميز بشهادات 
+            تعلم عن بعد... وتميز بشهادات
                 <b
                 class=""
                 >
@@ -167,7 +167,7 @@
             >
             50
             </span>
-            دورة في مختلف التخصصات الأكثر طلباً 
+            دورة في مختلف التخصصات الأكثر طلباً
             </p>
             <p
             class="text-xl text-white"
@@ -236,7 +236,7 @@
         class=" w-full rtl grid py-3 z-10 bg-slate-700 min-h-[15rem] md:px-20 px-6  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 "
         >
         <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
-            <img 
+            <img
             src="{{asset('./images/live-feature-one.svg')}}"
             class=" w-20 rounded-md object-cover"
             alt="" srcset="">
@@ -248,7 +248,7 @@
             </h2>
         </div>
         <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
-            <img 
+            <img
             src="{{asset('./images/live-feature-two.svg')}}"
             class=" w-20 rounded-md object-cover"
             alt="" srcset="">
@@ -261,7 +261,7 @@
             </h2>
         </div>
         <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
-            <img 
+            <img
             src="{{asset('./images/live-feature-three.svg')}}"
             class=" w-20 rounded-md object-cover"
             alt="" srcset="">
@@ -273,7 +273,7 @@
             </h2>
         </div>
         <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
-            <img 
+            <img
             src="{{asset('./images/live-feature-four.svg')}}"
             class=" w-20 rounded-md object-cover"
             alt="" srcset="">
@@ -300,7 +300,7 @@
                 </h2>
             </div>
             <div class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                @foreach ($recordcourses as $course)
+                @foreach ($livecourses as $course)
                 <a href="">
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
                     <img src="{{ asset('./images/' . $course->image) }}" alt="logo" srcset="" class="w-16">
