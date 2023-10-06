@@ -17,6 +17,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "lottie-web": "^5.12.2"
+        "lottie-web": "^5.12.2",
+        "swiper": "^10.3.1"
     }
 }
