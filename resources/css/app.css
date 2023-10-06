@@ -44,10 +44,7 @@ body {
   background-repeat: no-repeat;
   min-height: 78vh;
 }
-/*lets make base btn
 
-*/
-/* Define the keyframe as slideIn */
 @keyframes slideIn {
   to {
     right: 0;
@@ -58,15 +55,12 @@ body {
   background-color: #10B981;
 }
 
-/* Apply the animation to .sidebar.active */
+
 .sidebar.active {
   animation: slideIn .5s  forwards;
 }
 
 
-/*
-Optional styles
-*/
 
 body {
   background-color: #222;
