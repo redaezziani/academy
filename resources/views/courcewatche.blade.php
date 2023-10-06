@@ -178,7 +178,9 @@
                         <span
                         class=" text-white"
                         >
-                           دولار
+
+                        دولار
+
                         </span>
                     </div>
                 </div>
@@ -204,9 +206,52 @@
         </div>
         </section>
         @endforeach
+        <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
+    <div class="grid w-full  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
+        <!-- Card max-w-[90%] 1 -->
+        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
+            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
+            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
+                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
+                <p>دورة تدريبية</p>
+                <p>دورة تدريبية</p>
+            </div>
+            <a class="w-full" href="">
+                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
+            </a>
+        </div>
+
+        <!-- Card max-w-[90%] 2 -->
+        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
+            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
+            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
+                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
+                <p>دورة تدريبية</p>
+                <p>دورة تدريبية</p>
+            </div>
+            <a class="w-full" href="">
+                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
+            </a>
+        </div>
+
+        <!-- Card max-w-[90%] 3 -->
+        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
+            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
+            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
+                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
+                <p>دورة تدريبية</p>
+                <p>دورة تدريبية</p>
+            </div>
+            <a class="w-full" href="">
+                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
+            </a>
+        </div>
+    </div>
+    </section>
         <section
         class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  rtl px-5"
         >
+
         <div class=" mt-3 flex flex-col w-full  gap-4 md:justify-start items-center md:flex-col justify-center md:items-center  ">
             <div class="group flex md:mr-20 flex-col gap-2 ">
                 <div
@@ -238,7 +283,7 @@
             </div>
 
             <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
-            <img class="w-14" src="{{asset('./images/mastercard-2.svg')}}" alt="" srcset="">
+            <img class="w-14" src="{{asset('./images/mastercard max-w-[90%]-2.svg')}}" alt="" srcset="">
             </div>
 
             <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
