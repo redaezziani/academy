@@ -104,7 +104,8 @@
                         مستخدم جديد
                     </a>
                     </button>
-                </div>@else
+                </div>
+                @else
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         <div class="btn-container flex items-center gap-2">
