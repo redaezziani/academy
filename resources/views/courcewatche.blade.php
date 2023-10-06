@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            اكادمية المهندس
+            اكادمية المبتكر
         </title>
         <!-- Add the Swiper CSS -->
 
@@ -224,7 +224,7 @@
 
            </div>
         </div>
-        
+
         </section>
 
     <footer

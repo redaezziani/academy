@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            اكادمية المهندس
+            اكادمية المبتكر
         </title>
 
         <!--fontawesome cdn link-->

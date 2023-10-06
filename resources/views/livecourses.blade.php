@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            اكادمية المهندس
+            اكادمية المبتكر
         </title>
 
         <!--fontawesome cdn link-->
@@ -44,7 +44,7 @@
         </nav>
         <main class="rtl hero-2   relative w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
-            
+
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
                     <h3
