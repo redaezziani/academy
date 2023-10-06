@@ -7,6 +7,8 @@
         <title>
             اكادمية المهندس
         </title>
+        <!-- Add the Swiper CSS -->
+
 
         <!--fontawesome cdn link-->
         <link
@@ -14,11 +16,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-        <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-
 
         <!-- Styles -->
         @vite('resources/css/app.css')
@@ -265,7 +262,8 @@
         </div>
     </div>
     </footer>
-
+<!-- Add the Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
 
 const animation = lottie.loadAnimation({
