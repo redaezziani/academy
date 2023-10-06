@@ -111,9 +111,9 @@
                         <div class="btn-container flex items-center gap-2">
                             @csrf
                             <p
-                                class=" rtl  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
-                                مرحبا بك {{ auth()->user()->name }}
-                        </p>
+                                class=" rtl   text-white  px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
+                                مرحبا بك {{ auth()->user()->name }} في أكاديمية المهندس
+                            </p>
                             <button type="submit"
                                 class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
                                 تسجيل الخروج
