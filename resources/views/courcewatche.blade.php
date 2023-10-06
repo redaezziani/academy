@@ -16,7 +16,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-        
+
         <!-- Styles -->
         @vite('resources/css/app.css')
     </head>
@@ -130,13 +130,14 @@
                 </div>
                 @endif
             </div>
+            @foreach ($allrecord as $items)
             <section
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
             >
             <h1
             class="text-4xl text-white font-semibold"
             >
-            علم البيانات باستخدام بايثون
+           {{$items->name}}
             </h1>
             <div class="informations rtl flex-col flex justify-start items-start gap-4 text-white/90">
                 <p>
@@ -144,9 +145,9 @@
                 <span
                 class="text-emerald-500 mr-8"
                 >
-                    3 
+                   {{$items->time}}
                 </span>
-                الساعة 
+                الساعة
                 </p>
                 <div
                 class="flex justify-center items-center gap-2 "
@@ -161,7 +162,7 @@
                     تدريب اونلاين
                     </span>
                 </div>
-               
+
                 </p>
                 </div>
                 <div class="flex  justify-center items-center gap-2 ">
@@ -174,12 +175,13 @@
                         <span
                         class=" text-emerald-500"
                         >
-                            500
+                        {{$items->price}}
+
                         </span>
                         <span
                         class=" text-white"
                         >
-                            ريال سعودي
+                           دولار
                         </span>
                     </div>
                 </div>
@@ -193,19 +195,19 @@
         <h1
         class="text-2xl text-slate-800 font-semibold"
         >
-        علم البيانات باستخدام بايثون
+        {{$items->name}}
+
         </h1>
         <p>
         دورة تدريبية
         </p>
         <p>
-        صُممت دورة علم البيانات باستخدام لغة بايثون باستخدام Python لتمكين المشاركين من تحليل البيانات والتنبؤ بالعديد من مشكلات الحياة الواقعية باستخدام العديد من مجموعات البيانات الواقعية باستخدام خوارزميات ML الأكثر شيوعًا مثل التصنيف والتجميع بمساعدة لغة برمجة .Python
-
-تركز الدورة على المهارات الأساسية المطلوبة لعالم البيانات، حيث يتم تمكين المشتركين من أساسيات البرمجة باستخدام  Python، بالإضافة إلى الموضوعات المتقدمة مثل التعلم العميق والتعتيم ونشر النماذج، باستخدام أحدث المعارف والتقنيات في هذا المجال.
+            {{$items->desc1}}
         </p>
         </div>
         </section>
-        <section 
+        @endforeach
+        <section
         class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  rtl px-5"
         >
         <div class=" mt-3 flex flex-col w-full  gap-4 md:justify-start items-center md:flex-col justify-center md:items-center  ">
@@ -222,11 +224,9 @@
             احجز الدورة
             </button>
             </div>
-            
+
         </div>
         </section>
-
-<!-- Create a container for the slide -->
 
     <footer
     class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"

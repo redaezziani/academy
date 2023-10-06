@@ -44,12 +44,13 @@ class Controller extends BaseController
             return view('livecourses')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord)->with('namecourses',$namecourses);
 
     }
-    public function CourseWatche()
+    public function CourseWatche($id)
     {
 
         $recordcourses = recordcourses::all();
         $livecourses = Livecourses::all();
-        return view('courcewatche')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
+        $allrecord = Allrecord::where('id', $id)->get();
+        return view('courcewatche')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord);
 
     }
 
