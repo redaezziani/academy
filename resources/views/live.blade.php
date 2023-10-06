@@ -91,6 +91,7 @@
                     </i>
                     المواضيع
                 </div>
+                @if (!auth()->check())
                 <div class="btn-container flex items-center gap-2">
                     <button
                     class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
@@ -105,18 +106,24 @@
                         مستخدم جديد
                     </a>
                     </button>
-                    {{-- <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div> --}}
                 </div>
+                @else
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        <div class="btn-container flex items-center gap-2">
+                            @csrf
+                            <p
+                                class=" rtl  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
+                                مرحبا بك {{ auth()->user()->name }}
+                        </p>
+                            <button type="submit"
+                                class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
+                                تسجيل الخروج
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                @endif
             </div>
             <section
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"

@@ -88,8 +88,8 @@
                     </i>
                     المواضيع
                 </div>
-                @if (!auth()->check())
 
+                @if (!auth()->check())
                 <div class="btn-container flex items-center gap-2">
                     <button
                     class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
@@ -263,7 +263,7 @@
                 <p
                 class=" text-pink-600"
                 >
-                مدير مكتب الشركة العامة للمعارض  
+                مدير مكتب الشركة العامة للمعارض
                 </p>
                 </div>
             </div>
