@@ -17,7 +17,7 @@
         <!-- Styles -->
         @vite('resources/css/app.css')
     </head>
-    <body class=" w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
+    <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
         class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center px-10 py-4"
         >
@@ -42,15 +42,9 @@
                 </div>
             </div>
         </nav>
-        <main class="rtl hero-4 bg-emerald-800  relative w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero-2   relative w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
-            <img class=" w-56 h-full transform rotate-180  z-0 absolute right-0 -bottom-36"
-            src="{{asset('./images/Ornament 69.svg')}}"
-            />
-            <img class=" w-56 h-full  z-0 absolute left-0 top-8"
-            src="{{asset('./images/Ornament 69.svg')}}"
-            />
-
+            
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
                     <h3
@@ -119,9 +113,11 @@
                         <div class="btn-container flex items-center gap-2">
                             @csrf
                             <p
-                                class=" rtl  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
-                                مرحبا بك {{ auth()->user()->name }}
-                        </p>
+                                class=" rtl   text-white  px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
+                                مرحبا بك <span
+                                class="text-emerald-500"
+                                >{{ auth()->user()->name }}</span> في أكاديمية المهندس
+                            </p>
                             <button type="submit"
                                 class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
                                 تسجيل الخروج

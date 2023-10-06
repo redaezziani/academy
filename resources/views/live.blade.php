@@ -17,7 +17,7 @@
         <!-- Styles -->
         @vite('resources/css/app.css')
     </head>
-    <body class=" w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
+    <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
         class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center px-10 py-4"
         >
@@ -113,9 +113,11 @@
                         <div class="btn-container flex items-center gap-2">
                             @csrf
                             <p
-                                class=" rtl  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
-                                مرحبا بك {{ auth()->user()->name }}
-                        </p>
+                                class=" rtl   text-white  px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
+                                مرحبا بك <span
+                                class="text-emerald-500"
+                                >{{ auth()->user()->name }}</span> في أكاديمية المهندس
+                            </p>
                             <button type="submit"
                                 class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
                                 تسجيل الخروج

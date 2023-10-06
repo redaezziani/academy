@@ -20,7 +20,7 @@
         <!-- Styles -->
         @vite('resources/css/app.css')
     </head>
-    <body class=" w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
+    <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
         class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center px-10 py-4"
         >
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </nav>
-        <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero-2  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -91,7 +91,6 @@
                     </i>
                     المواضيع
                 </div>
-
                 @if (!auth()->check())
                 <div class="btn-container flex items-center gap-2">
                     <button
@@ -110,9 +109,7 @@
                 </div>
                 @else
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <form id="logout-form"
-                    class=" w-full"
-                    action="{{ route('logout') }}" method="POST" class="d-none">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         <div class="btn-container flex items-center gap-2">
                             @csrf
                             <p
@@ -122,7 +119,7 @@
                                 >{{ auth()->user()->name }}</span> في أكاديمية المهندس
                             </p>
                             <button type="submit"
-                                class="  border-[1.4px] border-red-500 text-white   md:px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
+                                class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
                                 تسجيل الخروج
                             </button>
                         </div>
@@ -191,7 +188,7 @@
         <section
         class="w-full bg-white py-2 md:flex-row flex-col   z-10 flex  justify-center items-start md:items-start gap-5  rtl px-5"
         >
-        <div class=" w-full md:w-[70%] mt-3 flex flex-col gap-4 justify-start items-start  ">
+        <div class=" w-full z-10  text-slate-600 md:w-[70%] mt-3 flex flex-col gap-4 justify-start items-start  ">
         <h1
         class="text-2xl text-slate-800 font-semibold"
         >
@@ -211,10 +208,9 @@
         class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  rtl px-5"
         >
         <div class=" mt-3 flex flex-col w-full  gap-4 md:justify-start items-center md:flex-col justify-center md:items-center  ">
-
             <div class="group flex md:mr-20 flex-col gap-2 ">
                 <div
-                class="flex flex-col gap-2 w-48 justify-start items-start  "
+                class="flex flex-col gap-2 w-72 justify-start items-start  "
                 id='lottie'
                 >
                 </div>
@@ -224,8 +220,11 @@
             احجز الدورة
             </button>
             </div>
+            <div class="grid w-1/2   bg-white z-10 h-28 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
+           </div>
         </div>
+        
         </section>
 
     <footer
