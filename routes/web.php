@@ -33,6 +33,6 @@ Route::get('/RecordCourses', [App\Http\Controllers\Controller::class, 'RecordCou
 Route::get('/LiveCourses', [App\Http\Controllers\Controller::class, 'LiveCourses'])->name('LiveCourses');
 
 Route::get('/LiveCourses/Course/{id}', [App\Http\Controllers\Controller::class, 'LiveCourseWatche'])->name('LiveCourseWatche');
-Route::get('/CourseWatache', [App\Http\Controllers\Controller::class, 'CourseWatche'])->name('CourseWatche');
+Route::get('/CourseWatache/{id}', [App\Http\Controllers\Controller::class, 'CourseWatche'])->name('CourseWatche');
 
 
