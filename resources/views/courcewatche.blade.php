@@ -108,7 +108,9 @@
                 </div>
                 @else
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    <form id="logout-form"
+                    class=" w-full"
+                    action="{{ route('logout') }}" method="POST" class="d-none">
                         <div class="btn-container flex items-center gap-2">
                             @csrf
                             <p
@@ -118,7 +120,7 @@
                                 >{{ auth()->user()->name }}</span> في أكاديمية المهندس
                             </p>
                             <button type="submit"
-                                class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
+                                class="  border-[1.4px] border-red-500 text-white   md:px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
                                 تسجيل الخروج
                             </button>
                         </div>
@@ -152,12 +154,7 @@
                   التدريب المتوفر :
                 <div class="flex mr-2 justify-center items-center gap-2 ">
                     <span
-                    class=" border-[1.4px] border-white    px-4 py-1 rounded-full   transition-colors duration-300 ease-out"
-                    >
-                    قاعة تدريبية
-                    </span>
-                    <span
-                    class=" border-[1.4px] border-white    px-4 py-1 rounded-full   transition-colors duration-300 ease-out"
+                    class=" border-[1.4px] border-white  px-1 md:px-4 py-1 rounded-full   transition-colors duration-300 ease-out"
                     >
                     تدريب اونلاين
                     </span>
@@ -188,9 +185,9 @@
             </section>
         </main>
         <section
-        class="w-full bg-white py-2   z-10 flex flex-col justify-center items-start md:items-start gap-5  rtl px-5"
+        class="w-full bg-white py-2 md:flex-row flex-col   z-10 flex  justify-center items-start md:items-start gap-5  rtl px-5"
         >
-        <div class="w-[70%] mt-3 flex flex-col gap-4 justify-start items-start  ">
+        <div class=" w-full md:w-[70%] mt-3 flex flex-col gap-4 justify-start items-start  ">
         <h1
         class="text-2xl text-slate-800 font-semibold"
         >
@@ -209,36 +206,8 @@
         <section 
         class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  rtl px-5"
         >
-        <div class=" mt-3 flex  gap-4 justify-start items-start  ">
-            <div class="group flex flex-col gap-2 justify-start items-start  ">
-                <p
-                class="text-emerald-500 text-xl font-semibold"
-                >
-                مخرجات الدورة :
-                </p>
-                <ul
-                class=" list-decimal list-inside text-slate-500"
-                >
-                    <li>
-                    فهم وتنفيذ أساسيات البرمجة باستخدام بايثون.
-                    </li>
-                    <li>
-                    إنشاء قواعد البيانات والتعامل معها باستخدام .SQL
-                    </li>
-                    <li>
-                    فهم وإعداد البيانات.
-                    </li> 
-                    <li>
-                    تحليل البيانات باستخدام بايثون.
-                    </li>
-                    <li>
-                    تصور البيانات باستخدام مكتبات البيانات البصرية.
-                    </li>
-                    <li>
-                    تطبيق خوارزميات التعلم الآلي الأكثر شيوعًا مثل التصنيف والتجميع والتعلم العميق.
-                    </li>
-                </ul>
-            </div>
+        <div class=" mt-3 flex flex-col  gap-4 md:justify-start md:flex-col md:items-start  ">
+
             <div class="group flex md:mr-20 flex-col gap-2 ">
                 <div
                 class="flex flex-col gap-2 w-48 justify-start items-start  "
@@ -293,7 +262,7 @@ const animation = lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '{{ asset('animation_lneu00o5.json') }}'
+    path: '{{ asset('animation_lneujon2.json') }}'
 });
       let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');
