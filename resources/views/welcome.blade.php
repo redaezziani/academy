@@ -66,30 +66,15 @@
                     دورات مباشرة
                     </button>
                     </a>
-                    <a >
-                    <button onclick="hidelive()" id="recordbutton"
-                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
-                    >
-                    دورات مسجلة
-                    </button>
-                    </a>
-
                 </div>
 
                 <div id="divlive"  class="links overflow-auto flex w-full  flex-col justify-center items-center">
                     @foreach ($livecourses as $course)
-                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
+                        <a href="/LiveCourses/Course/{{$course->id}}"
+                        class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
                         {{ $course->name }}
                         </a>
                     @endforeach
-                </div>
-
-                <div id="divrecord" style="display: none" class="links overflow-auto flex w-full  flex-col justify-center items-center">
-                @foreach ($recordcourses as $course)
-                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        {{ $course->name }}
-                        </a>
-                @endforeach
                 </div>
             </div>
             <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex md:justify-between justify-start gap-4  items-start md:items-center md:flex-row flex-col  px-4 py-7">
@@ -103,6 +88,8 @@
                     </i>
                     المواضيع
                 </div>
+                @if (!auth()->check())
+
                 <div class="btn-container flex items-center gap-2">
                     <button
                     class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
@@ -117,18 +104,23 @@
                         مستخدم جديد
                     </a>
                     </button>
-                    {{-- <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                </div>@else
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        <div class="btn-container flex items-center gap-2">
                             @csrf
-                        </form>
-                    </div> --}}
+                            <p
+                                class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
+                                {{Auth::user()->name}}
+                        </p>
+                            <button type="submit"
+                                class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
+                                تسجيل الخروج
+                            </button>
+                        </div>
+                    </form>
                 </div>
+                @endif
             </div>
             <section
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"

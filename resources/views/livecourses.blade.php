@@ -73,31 +73,18 @@
                     دورات مباشرة
                     </button>
                     </a>
-                    <a >
-                    <button onclick="hidelive()" id="recordbutton"
-                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
-                    >
-                    دورات مسجلة
-                    </button>
-                    </a>
-
                 </div>
 
                 <div id="divlive"  class="links overflow-auto flex w-full  flex-col justify-center items-center">
                     @foreach ($livecourses as $course)
-                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
+                        <a href="/LiveCourses/Course/{{$course->id}}"
+                        class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
                         {{ $course->name }}
                         </a>
                     @endforeach
                 </div>
 
-                <div id="divrecord" style="display: none" class="links overflow-auto flex w-full  flex-col justify-center items-center">
-                @foreach ($recordcourses as $course)
-                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        {{ $course->name }}
-                        </a>
-                @endforeach
-                </div>
+
             </div>
             <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex md:justify-between justify-start gap-4  items-start md:items-center md:flex-row flex-col  px-4 py-7">
                 <div
@@ -178,9 +165,9 @@
         <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3
         ">
         @foreach ($allrecord as $items)
-        <div class="card flex py-3  w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
+        <div class="card flex py-3 mt-5 w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
             <img
-            class="w-1/2  h-30 rounded-md max-h-30 object-cover"
+            class="w-1/2 rounded-md max-h-30 object-cover" style="height:40%; backround-size:cover"
             src="{{asset('./images/'.$items->image)}}"
             alt="" srcset="">
             <div class="text-content flex justify-center items-center gap-2 flex-col ">

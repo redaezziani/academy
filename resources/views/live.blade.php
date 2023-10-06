@@ -66,31 +66,19 @@
                     دورات مباشرة
                     </button>
                     </a>
-                    <a >
-                    <button onclick="hidelive()" id="recordbutton"
-                    class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
-                    >
-                    دورات مسجلة
-                    </button>
-                    </a>
 
                 </div>
 
                 <div id="divlive"  class="links overflow-auto flex w-full  flex-col justify-center items-center">
                     @foreach ($livecourses as $course)
-                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
+                        <a href="/LiveCourses/Course/{{$course->id}}"
+                        class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
                         {{ $course->name }}
                         </a>
                     @endforeach
                 </div>
 
-                <div id="divrecord" style="display: none" class="links overflow-auto flex w-full  flex-col justify-center items-center">
-                @foreach ($recordcourses as $course)
-                        <a href="" class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        {{ $course->name }}
-                        </a>
-                @endforeach
-                </div>
+
             </div>
             <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex md:justify-between justify-start gap-4  items-start md:items-center md:flex-row flex-col  px-4 py-7">
                 <div
@@ -303,7 +291,7 @@
                 @foreach ($livecourses as $course)
                 <a href="/LiveCourses/Course/{{$course->id}}">
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">
-                    <img src="{{ asset('./images/' . $course->image) }}" alt="logo" srcset="" class="w-16">
+                    <img src="{{ asset('./images/' . $course->image) }}" alt="logo" srcset="" class="w-16" >
                     <p
                     class="text-slate-600 text-xl font-semibold"
                     >
