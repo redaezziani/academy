@@ -14,6 +14,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
 
         <!-- Styles -->
         @vite('resources/css/app.css')
@@ -206,7 +211,7 @@
         <section 
         class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  rtl px-5"
         >
-        <div class=" mt-3 flex flex-col  gap-4 md:justify-start md:flex-col md:items-start  ">
+        <div class=" mt-3 flex flex-col w-full  gap-4 md:justify-start items-center md:flex-col justify-center md:items-center  ">
 
             <div class="group flex md:mr-20 flex-col gap-2 ">
                 <div
@@ -222,6 +227,8 @@
             </div>
             
         </div>
+        </section>
+    
     <footer
     class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
     >
@@ -256,7 +263,9 @@
         </div>
     </div>
     </footer>
+
 <script>
+
 const animation = lottie.loadAnimation({
     container: document.getElementById('lottie'),
     renderer: 'svg',
@@ -264,7 +273,8 @@ const animation = lottie.loadAnimation({
     autoplay: true,
     path: '{{ asset('animation_lneujon2.json') }}'
 });
-      let menu=document.getElementById('menu');
+
+let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');
 let sidebar=document.querySelector('.sidebar');
 
