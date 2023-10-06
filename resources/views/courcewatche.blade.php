@@ -283,7 +283,7 @@
             </div>
 
             <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
-            <img class="w-14" src="{{asset('./images/mastercard.svg')}}" alt="" srcset="">
+            <img class="w-14" src="{{asset('./images/mastercard-2.svg')}}" alt="" srcset="">
             </div>
 
             <div class="item w-14 p-2 flex bg-white rounded-md justify-center items-center" >
