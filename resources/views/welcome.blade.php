@@ -111,11 +111,11 @@
                         <div class="btn-container flex items-center gap-2">
                             @csrf
                             <p
-                                class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
-                                {{Auth::user()->name}}
+                                class=" rtl  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
+                                مرحبا بك {{ auth()->user()->name }}
                         </p>
                             <button type="submit"
-                                class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out">
+                                class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
                                 تسجيل الخروج
                             </button>
                         </div>
@@ -193,16 +193,16 @@
         </div>
         </section>
     <main
-        class=" w-full flex-wrap  rtl border-t-2 border-emerald-500  flex bg-white  justify-start items-center"
+        class=" w-full flex-wrap  rtl border-t-2 border-emerald-500  flex bg-white z-10 py-3  justify-center items-center"
         >
-        <div class=" w-full md:w-1/2 relative h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
-            <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full  h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
+        <div class="  w-3/4 relative  h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
+            <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full rounded-md overflow-hidden  h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
             <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
                 <h2
                 class="md:text-4xl text-2xl  font-semibold text-white"
                 >نظام التعلم عن بعد</h2>
                 <p
-                class="md:text-xl text-sm text-blue-700/80"
+                class="md:text-xl text-sm text-emerald-500/80"
                 >بخاصية البث المباشر</p>
                 <p
                 class='md:text-xl text-sm text-center text-white/80'
@@ -211,7 +211,7 @@
                 </p>
                 <a href="/LiveCourses">
                     <button
-                    class=" bg-blue-400 text-white  px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300 ease-out"
+                    class=" bg-emerald-400 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
                     اعرف المزيد
                     </button>
@@ -228,12 +228,13 @@
         >العملاء</span>
         </h1>
         <div class="grid grid-cols-1 px-6 mt-3 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
+            <div class="card rtl  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
                 <p
                 class="text-slate-400"
                 >
-                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
+                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها  .
                 </p>
+                <div class="content-text flex flex-col justify-start items-start rtl">
                 <p
                 class="text-slate-700"
                 >
@@ -244,40 +245,46 @@
                 >
                 مدير دائرة الامداد
                 </p>
+                </div>
             </div>
-            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
+            <div class="card rtl  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
                 <p
                 class="text-slate-400"
                 >
-                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
+                لا يسعنا إلا أن نشكر لكم جهودكم المتميزة والحثيثة وتعاونكم معنا في تدريب موظفي مكتبنا من أجل رفع كفاءة ومهنية الموظفين. آملين أن نستمر معكم في دورات أخرى قادمة, متمنيين لكم دوام الموفقية والنجاح.
                 </p>
+                <div class="content-text flex flex-col justify-start items-start rtl">
+
                 <p
                 class="text-slate-700"
                 >
-                محمد الشعلان
+                هشام عبدالله
                 </p>
                 <p
                 class=" text-pink-600"
                 >
-                مدير دائرة الامداد
+                مدير مكتب الشركة العامة للمعارض  
                 </p>
+                </div>
             </div>
-            <div class="card rtl  bg-white p-5 maxw-[70%] flex flex-col gap-2 justify-start items-start w-full col-span-1">
+            <div class="card rtl  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
                 <p
                 class="text-slate-400"
                 >
-                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها, وهو ما انعكس إيجابا على أداء الموظفين بشكل خاص وعلى الشركة بشكل عام. يشرفنا استمرار التعاون فيما بيننا في المستقبل من خلال البرامج التدريبية التي تساهم في تلبية الاحتياجات العملية لمختلف دوائر الشركة.
+                يسر إدارة شركة جازان للاستشارات التسويقية أن تتقدم إلى إدارة أكاديمية الرواد للتدريب والاستشارات بجزيل الشكر والثناء على المجهود المميز والأداء الراقي المحترف والذي تبذله الأكاديمية في مجال التدريب وخصوصاً دورات اللغة الانجليزية في جميع مستوياتها وهذا يدل على الكفاءة العالية والخبرة المميزة لديكم. اننا نتمنى لكم المزيد من التقدم والنجاح.
                 </p>
+                <div class="content-text flex flex-col justify-start items-start rtl">
                 <p
                 class="text-slate-700"
                 >
-                محمد الشعلان
+                محمد الحربي
                 </p>
                 <p
                 class=" text-pink-600"
                 >
-                مدير دائرة الامداد
+                مدير عام شركة جازان للاستشارات التسويقية
                 </p>
+                </div>
             </div>
         </div>
     </div>
