@@ -6,8 +6,8 @@ https://www.codingnepalweb.com/draggable-image-slider-html-css-javascript/
 
 
 
-// @vite('resources/css/app.css') 
+// @vite('resources/css/app.css')
 
 
-<link rel="stylesheet" href="{{asset('build/assets/app-259270ff.css')}}">        
-<link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">  
+<link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">
+<link rel="stylesheet" href="{{asset('build/assets/app-0c389839.css')}}">

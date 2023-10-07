@@ -1,18 +1,19 @@
 {
   "resources/js/app.css": {
-    "file": "assets/app-40e921f0.css",
+    "file": "assets/app-0c389839.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "assets": [
       "assets/pexels-vlada-karpovich-4050320-5125d8a2.jpg",
       "assets/987256-cfa4bad3.png",
-      "assets/pexels-fox-1595385-b96b877a.jpg"
+      "assets/pexels-fox-1595385-b96b877a.jpg",
+      "assets/pexels-karolina-grabowska-5632402-c56320b5.jpg"
     ],
     "css": [
-      "assets/app-40e921f0.css"
+      "assets/app-0c389839.css"
     ],
-    "file": "assets/app-06e4cb5c.js",
+    "file": "assets/app-8c58b86f.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -28,6 +29,10 @@
   "resources/views/images/pexels-fox-1595385.jpg": {
     "file": "assets/pexels-fox-1595385-b96b877a.jpg",
     "src": "resources/views/images/pexels-fox-1595385.jpg"
+  },
+  "resources/views/images/pexels-karolina-grabowska-5632402.jpg": {
+    "file": "assets/pexels-karolina-grabowska-5632402-c56320b5.jpg",
+    "src": "resources/views/images/pexels-karolina-grabowska-5632402.jpg"
   },
   "resources/views/images/pexels-vlada-karpovich-4050320.jpg": {
     "file": "assets/pexels-vlada-karpovich-4050320-5125d8a2.jpg",
