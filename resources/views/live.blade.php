@@ -15,9 +15,7 @@
         />
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">
-        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}">
-        <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>
+        @vite('resources/css/app.css')
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 

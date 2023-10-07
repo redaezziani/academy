@@ -7,7 +7,8 @@
         <title>
             اكادمية المبتكر
         </title>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
         <!--fontawesome cdn link-->
         <link
         rel="stylesheet"
@@ -16,9 +17,19 @@
         @vite('resources/css/app.css')
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
-
+        <!-- Show Done Alert -->
+        @if (session()->has('message'))
+            <script>
+                        Swal.fire(
+                            'تم اضافة الدورة الى السلة بنجاح',
+                            '! يمكنك اضافة المزيد . تابع التصفح ',
+                            'success'
+                        )
+            </script>
+        @endif
+        <!-- Get nav From navbar.blade.php -->
         @include('navbar')
-
+        <!-- Side Bar Main -->
         <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">

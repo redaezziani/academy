@@ -6,9 +6,9 @@
                 href="/"
                 >
                 <img
-                src="{{asset('./images/19d7f5fbae4ea.jpg')}}"
+                src="{{asset('./images/logo.png')}}"
                 alt="logo"
-                class="w-14"
+                style="width: 25%"
                 >
                 </a>
             </div>
@@ -21,7 +21,7 @@
                     <span
                     class="absolute -top-2  -right-2 bg-emerald-400 text-slate-950 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out px-1 text-xs"
                     >
-                        2
+                        {{$count}}
                     </span>
                 </div>
             </div>

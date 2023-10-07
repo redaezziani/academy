@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\recordcourses;
 use App\Models\Livecourses;
 use Illuminate\Http\Request;
+use App\Models\Addtocart;
 
 class HomeController extends Controller
 {
@@ -25,9 +26,19 @@ class HomeController extends Controller
      */
     public function index()
     {
+         // get number of course in cart
+         if(auth()->check())
+         {
+             $count = Addtocart::where('userid', auth()->user()->id)->count();
+         }
+         else
+         {
+             $count = 0;
+         }
+         //
+             $recordcourses = recordcourses::all();
+             $livecourses = Livecourses::all();
+             return view('welcome')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('count',$count);
 
-        $recordcourses = recordcourses::all();
-        $livecourses = Livecourses::all();
-        return view('welcome')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
     }
 }
