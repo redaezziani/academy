@@ -159,23 +159,27 @@
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
             >
             <h1
-            class="text-4xl text-emerald-500 font-semibold"
+            class="text-4xl text-center md:text-start  text-emerald-500 font-semibold"
             >
             قم بحجز دورة تدريبية
                
             </h1>
             <p
-            class="text-xl text-white/80"
+            class="text-xl text-center md:text-start text-white/80"
             >
             قم بشراء الدورة التدريبية التي تريدها من خلال الضغط على زر الشراء
             </p>
             </section>
         </main>
-        
-
-
+        <div class="w-full z-10 bg-white rtl flex justify-start items-start gap-4 flex-col px-2 py-5">
+            <p
+            class="text-2xl text-slate-500 font-semibold"
+            >
+             الدورات التي تم حجزها
+            </p>
+        </div>
     <footer
-    class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
+    class="w-full z-10 flex px-3 md:px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
     >
     <div class="w-full rtl flex border-b py-2 border-slate-400 justify-between items-center ">
         <img src="{{asset('./images/19d7f5fbae4ea.jpg')}}" alt="logo" class="w-14" srcset="">
