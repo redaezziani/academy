@@ -27,7 +27,7 @@
         >
             <div class="logo">
                 <img
-                src="{{asset('./images/pifoneerstec.png')}}"
+                src="{{asset('./images/19d7f5fbae4ea.jpg')}}"
                 alt="logo"
                 class="w-10"
                 >
