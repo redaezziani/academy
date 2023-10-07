@@ -18,6 +18,7 @@
         <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
+
         <nav
         class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center px-10 py-4"
         >
