@@ -48,6 +48,14 @@ body {
   min-height: 78vh;
 }
 
+.hero-5{
+  background-image: url('../views/images/pexels-karolina-grabowska-5632402.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 78vh;
+}
+
 @keyframes slideIn {
   to {
     right: 0;
@@ -91,14 +99,7 @@ img {
 lest add a base input style
 */
 
-@layer base {
-  .form-input {
-    @apply block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent;
-  }
-  .navbar{
-    @apply w-full bg-white shadow-lg shadow-md lg:shadow-none;
-  }
-}
+
 
 
 
