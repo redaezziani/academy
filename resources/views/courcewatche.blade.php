@@ -7,6 +7,8 @@
         <title>
             اكادمية المبتكر
         </title>
+        <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
+
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
         <link
@@ -160,44 +162,23 @@
 
             <div class="grid w-full  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->
+                @foreach ($randomColumns as $item)
 
-        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
-            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
-            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
-                <p>دورة تدريبية</p>
-                <p>دورة تدريبية</p>
-            </div>
-            <a class="w-full" href="">
-                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
-            </a>
-        </div>
+                <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
+                    <img src="{{asset('./images/'.$item->image)}}" class="w-full h-40 md:h-28 rounded-md" alt="">
+                    <div class="text-content flex flex-col w-full justify-start items-start gap-2">
+                        <h1 class="text-slate-800 font-semibold">{{$item->name}}</h1>
+                        <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">دولار</span></p>
+                        <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">ساعة</span> </p>
+                    </div>
+                    <a class="w-full" href="/CourseWatache/{{$item->id}}">
+                        <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">شاهد التفاصيل</button>
+                    </a>
+                </div>
 
-        <!-- Card max-w-[90%] 2 -->
-        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
-            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
-            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
-                <p>دورة تدريبية</p>
-                <p>دورة تدريبية</p>
-            </div>
-            <a class="w-full" href="">
-                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
-            </a>
-        </div>
+                @endforeach
 
-        <!-- Card max-w-[90%] 3 -->
-        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
-            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
-            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
-                <p>دورة تدريبية</p>
-                <p>دورة تدريبية</p>
-            </div>
-            <a class="w-full" href="">
-                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
-            </a>
-        </div>
+
     </div>
     </section>
         <section

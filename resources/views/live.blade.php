@@ -7,6 +7,7 @@
         <title>
             اكادمية المبتكر
         </title>
+        <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
         <!--fontawesome cdn link-->
         <link

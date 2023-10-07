@@ -7,6 +7,7 @@
         <title>
             اكادمية المبتكر
         </title>
+        <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
         <!--fontawesome cdn link-->
         <link
@@ -17,7 +18,7 @@
 
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
-        
+
         @include('navbar')
 
         <main class="rtl hero-2   relative w-full flex flex-col justify-start items-center gap-3">

@@ -6,7 +6,7 @@
                 href="/"
                 >
                 <img
-                src="{{asset('./images/logo.png')}}"
+                src="{{asset('./images/19d7f5fbae4ea.jpg')}}"
                 alt="logo"
                 style="width: 25%"
                 >

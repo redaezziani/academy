@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Controller extends BaseController
 {
@@ -94,10 +95,11 @@ class Controller extends BaseController
               $count = 0;
           }
           //
+        $randomColumns = DB::table('allrecords')->inRandomOrder()->take(3)->get();
         $recordcourses = recordcourses::all();
         $livecourses = Livecourses::all();
         $allrecord = Allrecord::where('id', $id)->get();
-        return view('courcewatche')->with('count',$count)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord);
+        return view('courcewatche')->with('count',$count)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord)->with('randomColumns',$randomColumns);
 
     }
     public function Cart()
