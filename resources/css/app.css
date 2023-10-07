@@ -85,3 +85,21 @@ img {
   min-height: 200px;
   text-align: center;
 }
+
+
+/*
+lest add a base input style
+*/
+
+@layer base {
+  .form-input {
+    @apply block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent;
+  }
+  .navbar{
+    @apply w-full bg-white shadow-lg shadow-md lg:shadow-none;
+  }
+}
+
+
+
+
