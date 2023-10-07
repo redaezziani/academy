@@ -3,7 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+a,a:hover,a:focus,a:active{
+  text-decoration: none;
+  outline: none;
+}
 
 body {
   font-family: 'Cairo', sans-serif;
