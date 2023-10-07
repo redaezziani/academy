@@ -149,7 +149,7 @@
         </div>
         </main>
     <footer
-    class="w-full z-10 flex px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
+    class="w-full z-10 flex md:px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
     >
     <div class="w-full rtl flex border-b py-2 border-slate-400 justify-between items-center ">
         <img src="{{asset('./images/pifoneerstec.png')}}" alt="logo" class="w-10" srcset="">
