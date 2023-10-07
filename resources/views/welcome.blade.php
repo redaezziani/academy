@@ -13,9 +13,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-        <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}"> 
-        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}">        
-        <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>  
+        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}">
+        <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
@@ -81,7 +80,7 @@
                     @endforeach
                 </div>
             </div>
-            
+
             <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200  flex justify-between  gap-4 items-center flex-row   px-4 py-4">
                 <div
                 onClick="add()"
@@ -125,8 +124,8 @@
                             class="items hidden top-14 left-28 md:left-0  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
                             <p
                                 class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
-                                مرحباً 
-                                  {{ auth()->user()->name }} 
+                                مرحباً
+                                  {{ auth()->user()->name }}
                             </p>
                             <hr
                             class="w-full"
@@ -262,7 +261,7 @@
                 >
                 مدير دائرة الامداد
                 </p>
-               
+
                 </div>
             </div>
             <div class="card h-[17rem] rtl  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">

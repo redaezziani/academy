@@ -15,9 +15,8 @@
         />
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}"> 
-        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}">        
-        <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>  
+        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}"> 
+        <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
@@ -125,8 +124,8 @@
                             class="items hidden top-14 left-28 md:left-0  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
                             <p
                                 class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
-                                مرحباً 
-                                  {{ auth()->user()->name }} 
+                                مرحباً
+                                  {{ auth()->user()->name }}
                             </p>
                             <hr
                             class="w-full"
