@@ -17,30 +17,9 @@
 
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
-        <nav
-        class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center px-10 py-4"
-        >
-            <div class="logo">
-                <img
-                src="{{asset('./images/19d7f5fbae4ea.jpg')}}"
-                alt="logo"
-                class="w-10"
-                >
-            </div>
-            <div class="cart cursor-pointer flex justify-center items-center relative">
-                <i
-                class="fas fa-shopping-cart text-xl text-slate-400"
-                >
-                </i>
-                <div class="products-count">
-                    <span
-                    class="absolute -top-2  -right-2 bg-emerald-400 text-slate-950 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out px-1 text-xs"
-                    >
-                        2
-                    </span>
-                </div>
-            </div>
-        </nav>
+
+        @include('navbar')
+
         <main class="rtl hero-2   relative w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
 
