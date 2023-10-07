@@ -17,7 +17,8 @@
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
-        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}"> 
+        <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">
+        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}">
         <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>
     </head>
     <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
@@ -312,8 +313,7 @@
             <p
             class="text-white/80 text-sm"
             >
-            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المبتكر
-             مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
+            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المبتكر مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
             </p>
         </div>
     </div>
