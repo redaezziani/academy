@@ -80,10 +80,9 @@
 
 
             </div>
-            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex md:justify-between justify-start gap-4  items-start md:items-center md:flex-row flex-col  px-4 py-7">
+            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200  flex justify-between  gap-4 items-center flex-row   px-4 py-4">
                 <div
                 onClick="add()"
-
                 class="menu hover:text-emerald-400  ease-in-out duration-300 transition-all  text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
                     <i
                     class="fas fa-bars  "
@@ -91,8 +90,9 @@
                     </i>
                     المواضيع
                 </div>
+
                 @if (!auth()->check())
-                <div class="btn-container flex items-center gap-2">
+                <div class="btn-container  flex items-center gap-2">
                     <button
                     class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
                     >
@@ -108,35 +108,46 @@
                     </button>
                 </div>
                 @else
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        <div class="btn-container flex items-center gap-2">
+                        <div class=" relative w-80   justify-center flex items-center gap-2">
                             @csrf
+                            <div
+                            id="menu-avatar"
+                            class="menu w-10 cursor-pointer justify-center  items-center flex overflow-hidden h-10 rounded-full bg-slate-300">
+                                <img
+                                src="{{asset('./images/photo-1534528741775-53994a69daeb.jpg')}}"
+                                alt="" srcset="">
+                            </div>
+                            <div
+                            id="menu"
+                            class="items hidden top-14 left-28 md:left-0  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
                             <p
-                                class=" rtl   text-white  px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
-                                مرحبا بك <span
-                                class="text-emerald-500"
-                                >{{ auth()->user()->name }}</span> في أكاديمية المهندس
+                                class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
+                                مرحباً 
+                                  {{ auth()->user()->name }} 
                             </p>
+                            <hr
+                            class="w-full"
+                            >
                             <button type="submit"
-                                class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
+                                class="  text-red-500 mt-3   px-4 py-2 rounded-md hover:text-red-700 transition-colors duration-300 ease-out">
                                 تسجيل الخروج
                             </button>
+                            </div>
                         </div>
                     </form>
-                </div>
                 @endif
             </div>
             <section
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
             >
             <h1
-            class="text-5xl text-white font-semibold"
+            class=" text-3xl md:text-5xl text-white font-semibold"
             > طور مهاراتك
 
             </h1>
             <p
-            class="text-6xl text-white/80"
+            class=" text-3xl md:text-5xl flex justify-center items-centerx text-white/80"
             >
             وأنت
             <span
@@ -146,7 +157,7 @@
             </span>
             </p>
             <p
-            class="text-xl text-white"
+            class="  md:text-xl text-white"
             >
             تعلم عن بعد... وتميز بشهادات
                 <b
@@ -156,7 +167,7 @@
                 </b>
             </p>
             <p
-            class='text-xl text-white'
+            class=' md:text-xl text-white'
             >
             أكثر من
             <span
@@ -176,7 +187,7 @@
         </main>
 
         <section
-        class="   w-full  rtl z-10 place-items-center justify-center items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-4 bg-emerald-500 text-white min-h-[6rem] px-5 ">
+        class="   w-full  rtl z-10 place-items-center justify-center items-center  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-4 bg-emerald-500 text-white min-h-[6rem] px-5 ">
         <div class="groupe lg:mr-72  px-4 col-span-1 w-full flex items-center justify-start gap-1">
             <img
             class="w-10"
@@ -340,13 +351,23 @@
             <p
             class="text-white/80 text-sm"
             >
-            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المهندس مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
+            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المبتكر
+             مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
             </p>
         </div>
     </div>
     </footer>
-        <script>
-            let menu=document.getElementById('menu');
+<script>
+
+let  menuAvatar=document.getElementById('menu-avatar');
+let menuDrop=document.getElementById('menu');
+
+
+menuAvatar.addEventListener('click',()=>{
+    menuDrop.classList.toggle('hidden');
+})
+
+let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');
 let sidebar=document.querySelector('.sidebar');
 

@@ -17,8 +17,7 @@
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
-        <!-- Styles -->
-        @vite('resources/css/app.css')
+        @vite('resources/css/app.css') 
     </head>
     <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
@@ -80,10 +79,9 @@
                     @endforeach
                 </div>
             </div>
-            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200 flex md:justify-between justify-start gap-4  items-start md:items-center md:flex-row flex-col  px-4 py-7">
+            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200  flex justify-between  gap-4 items-center flex-row   px-4 py-4">
                 <div
                 onClick="add()"
-
                 class="menu hover:text-emerald-400  ease-in-out duration-300 transition-all  text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
                     <i
                     class="fas fa-bars  "
@@ -91,8 +89,9 @@
                     </i>
                     المواضيع
                 </div>
+
                 @if (!auth()->check())
-                <div class="btn-container flex items-center gap-2">
+                <div class="btn-container  flex items-center gap-2">
                     <button
                     class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
                     >
@@ -108,23 +107,34 @@
                     </button>
                 </div>
                 @else
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        <div class="btn-container flex items-center gap-2">
+                        <div class=" relative w-80   justify-center flex items-center gap-2">
                             @csrf
+                            <div
+                            id="menu-avatar"
+                            class="menu w-10 cursor-pointer justify-center  items-center flex overflow-hidden h-10 rounded-full bg-slate-300">
+                                <img
+                                src="{{asset('./images/photo-1534528741775-53994a69daeb.jpg')}}"
+                                alt="" srcset="">
+                            </div>
+                            <div
+                            id="menu"
+                            class="items hidden top-14 left-28 md:left-0  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
                             <p
-                                class=" rtl   text-white  px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
-                                مرحبا بك <span
-                                class="text-emerald-500"
-                                >{{ auth()->user()->name }}</span> في أكاديمية المهندس
+                                class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
+                                مرحباً 
+                                  {{ auth()->user()->name }} 
                             </p>
+                            <hr
+                            class="w-full"
+                            >
                             <button type="submit"
-                                class="  border-[1.4px] border-red-500 text-white  px-4 py-2 rounded-md hover:bg-red-500 transition-colors duration-300 ease-out">
+                                class="  text-red-500 mt-3   px-4 py-2 rounded-md hover:text-red-700 transition-colors duration-300 ease-out">
                                 تسجيل الخروج
                             </button>
+                            </div>
                         </div>
                     </form>
-                </div>
                 @endif
             </div>
             @foreach ($allrecord as $items)
@@ -301,7 +311,8 @@
             <p
             class="text-white/80 text-sm"
             >
-            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المهندس مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
+            مهما كانت الدورة التدريبية التي تبحث عنها! تقدم أكاديمية المبتكر
+             مجموعة واسعة من الدورات التدريبية والدبلومات في مجالات مختلفة، مثل الإدارة, المحاسبة, التسويق, التصميم الجرافيكي, الهندسة, البرمجة, الشبكات, واللغات. قم بتنزيل كتيبات الدورات الآن!
             </p>
         </div>
     </div>
@@ -309,7 +320,13 @@
 <!-- Add the Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
+let  menuAvatar=document.getElementById('menu-avatar');
+let menuDrop=document.getElementById('menu');
 
+
+menuAvatar.addEventListener('click',()=>{
+    menuDrop.classList.toggle('hidden');
+})
 const animation = lottie.loadAnimation({
     container: document.getElementById('lottie'),
     renderer: 'svg',
