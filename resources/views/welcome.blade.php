@@ -13,9 +13,7 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-        <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}"> 
-        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}">        
-        <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>  
+        @vite('resources/css/app.css')  
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <nav
@@ -82,7 +80,7 @@
                 </div>
             </div>
             
-            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200  flex justify-between  gap-4 items-center flex-row   px-4 py-4">
+            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200  flex justify-between  gap-4 items-center    px-4 py-4">
                 <div
                 onClick="add()"
                 class="menu hover:text-emerald-400  ease-in-out duration-300 transition-all  text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
@@ -94,21 +92,38 @@
                 </div>
 
                 @if (!auth()->check())
-                <div class="btn-container  flex items-center gap-2">
-                    <button
-                    class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
+                <div class=" absolute left-3 w-80   justify-center flex items-center gap-2">
+                            @csrf
+                            <div
+                            id="menu-avatar"
+                            class="menu w-10 cursor-pointer justify-center  items-center flex overflow-hidden h-10 rounded-full bg-slate-300">
+                                <img
+                                src="{{asset('./images/Unknown_person.jpg')}}"
+                                alt="" srcset="">
+                            </div>
+                            <div
+                            id="menu"
+                            class="items hidden top-14 left-28 md:left-0  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
+                            <button
+                    class="    text-slate-200  px-4 py-2 rounded-md hover:text-slate-300 transition-colors duration-300 ease-out"
                     >
-                    <a href="/login">   تسجيل الدخول
+                    <a
+                    class="text-slate-200 "
+                    href="/login">   تسجيل الدخول
                     </a>
                     </button>
-                    <button
-                    class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out"
+                            <hr
+                            class="w-full"
+                            >
+                            <button
+                    class="  text-emerald-500   px-4 py-2 rounded-md text:bg-emerald-500 transition-colors duration-300 ease-out"
                     >
                     <a href="/register">
                         مستخدم جديد
                     </a>
                     </button>
-                </div>
+                            </div>
+                    </div>
                 @else
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         <div class=" relative w-80   justify-center flex items-center gap-2">
@@ -340,7 +355,6 @@
         </div>
     </div>
     </footer>
-    <script src="{{asset('./build/assets/app.js')}}"></script>
 <script>
 
 let  menuAvatar=document.getElementById('menu-avatar');
