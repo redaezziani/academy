@@ -13,7 +13,7 @@
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
-        @vite('resources/css/app.css') 
+        @vite('resources/css/app.css')
 
     </head>
     <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
@@ -87,52 +87,7 @@
                     المواضيع
                 </div>
 
-                @if (!auth()->check())
-                <div class="btn-container  flex items-center gap-2">
-                    <button
-                    class="  border-[1.4px]  border-slate-100 text-white  px-4 py-2 rounded-md hover:bg-white/25 transition-colors duration-300 ease-out"
-                    >
-                    <a href="/login">   تسجيل الدخول
-                    </a>
-                    </button>
-                    <button
-                    class="  border-[1.4px] border-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-500 transition-colors duration-300 ease-out"
-                    >
-                    <a href="/register">
-                        مستخدم جديد
-                    </a>
-                    </button>
-                </div>
-                @else
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        <div class=" relative w-80   justify-center flex items-center gap-2">
-                            @csrf
-                            <div
-                            id="menu-avatar"
-                            class="menu w-10 cursor-pointer justify-center  items-center flex overflow-hidden h-10 rounded-full bg-slate-300">
-                                <img
-                                src="{{asset('./images/photo-1534528741775-53994a69daeb.jpg')}}"
-                                alt="" srcset="">
-                            </div>
-                            <div
-                            id="menu"
-                            class="items hidden top-14 left-28 md:left-0  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
-                            <p
-                                class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
-                                مرحباً
-                                  {{ auth()->user()->name }}
-                            </p>
-                            <hr
-                            class="w-full"
-                            >
-                            <button type="submit"
-                                class="  text-red-500 mt-3   px-4 py-2 rounded-md hover:text-red-700 transition-colors duration-300 ease-out">
-                                تسجيل الخروج
-                            </button>
-                            </div>
-                        </div>
-                    </form>
-                @endif
+                @include('login')
             </div>
             @foreach ($allrecord as $items)
             <section
@@ -266,11 +221,11 @@
                 id='lottie'
                 >
                 </div>
-                <button
+                <a href="/Cart"
             class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
             >
             احجز الدورة
-            </button>
+            </a>
             </div>
             <div class="grid w-1/2   bg-white z-10 h-28 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
