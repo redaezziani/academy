@@ -1,6 +1,6 @@
 {
   "resources/js/app.css": {
-    "file": "assets/app-0c389839.css",
+    "file": "assets/app-61802598.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -11,9 +11,9 @@
       "assets/pexels-karolina-grabowska-5632402-c56320b5.jpg"
     ],
     "css": [
-      "assets/app-0c389839.css"
+      "assets/app-61802598.css"
     ],
-    "file": "assets/app-8c58b86f.js",
+    "file": "assets/app-1d891ca3.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
