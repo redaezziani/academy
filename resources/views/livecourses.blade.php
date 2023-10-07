@@ -75,12 +75,12 @@
             class="w-full  z-10 flex flex-col justify-center items-center  gap-5 mt-20 rtl px-5"
             >
             <h1
-            class="text-5xl text-white font-semibold"
+            class=" text-2xl text-center md:text-start md:text-5xl text-white font-semibold"
             >
             {{$namecourses}}
             </h1>
             <p
-            class=" text-emerald-500 text-5xl"
+            class=" text-2xl text-center md:text-start  text-emerald-500 md:text-5xl"
             >
             تدريب مباشر
             </p>
