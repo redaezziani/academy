@@ -17,7 +17,7 @@ class Controller extends BaseController
             $recordcourses = recordcourses::all();
             $livecourses = Livecourses::all();
             return view('welcome')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
-           
+
         }
     public function RecordCourses()
     {
@@ -52,6 +52,14 @@ class Controller extends BaseController
         $livecourses = Livecourses::all();
         $allrecord = Allrecord::where('id', $id)->get();
         return view('courcewatche')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord);
+
+    }
+    public function Cart()
+    {
+
+        $recordcourses = recordcourses::all();
+        $livecourses = Livecourses::all();
+        return view('cart')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
 
     }
 

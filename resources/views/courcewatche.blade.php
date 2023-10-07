@@ -221,11 +221,11 @@
                 id='lottie'
                 >
                 </div>
-                <button
+                <a href="/Cart"
             class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
             >
             احجز الدورة
-            </button>
+            </a>
             </div>
             <div class="grid w-1/2   bg-white z-10 h-28 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
