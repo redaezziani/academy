@@ -11,3 +11,6 @@ https://www.codingnepalweb.com/draggable-image-slider-html-css-javascript/
 
 <link rel="stylesheet" href="{{asset('build/assets/app-259270ff.css')}}">        
 <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">  
+        <script type="module"
+        scr="{{asset('build/assets/app-fabb6531.js')}}"
+        ></script>
