@@ -7,6 +7,7 @@
         <title>
             اكادمية المبتكر
         </title>
+        <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
         <!--fontawesome cdn link-->
         <link
@@ -15,9 +16,7 @@
         />
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">
-        <link rel="stylesheet" href="{{asset('build/assets/app-40e921f0.css')}}">
-        <script src="{{asset('build/assets/app-06e4cb5c.js')}}"></script>
+        @vite('resources/css/app.css')
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 
@@ -115,7 +114,7 @@
             دورة في مختلف التخصصات الأكثر طلباً
             </p>
             <p
-            class="text-xl text-white"
+            class="text-xl text-white mb-5"
             >
             محلياً وعالمياً!
             </p>

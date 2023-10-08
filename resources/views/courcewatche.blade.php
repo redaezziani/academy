@@ -7,6 +7,10 @@
         <title>
             اكادمية المبتكر
         </title>
+        <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,6 +23,17 @@
 
     </head>
     <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
+
+         <!-- Show Done Alert -->
+         @if (session()->has('message'))
+         <script>
+                     Swal.fire(
+                         'تم اضافة الدورة الى السلة بنجاح',
+                         '! يمكنك اضافة المزيد . تابع التصفح ',
+                         'success'
+                     )
+         </script>
+     @endif
 
         @include('navbar')
 
@@ -136,7 +151,7 @@
         >
         <div class=" w-full z-10  text-slate-600  mt-3 flex flex-col gap-4 justify-start items-start  ">
         <h1
-        class="text-2xl text-slate-800 font-semibold"
+        class="text-2xl  text-emerald-500 font-semibold"
         >
         {{$items->name}}
 
@@ -232,54 +247,28 @@
 
         </div>
         </section>
+        <input type="hidden" {{$idget=$items->id}} name="">
         @endforeach
-    <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
-        <div class="w-full">
-        <h1
-        class=' text-xl font-semibold mt-2 text-slate-700 justify-start'
-        >
-            اليك بعض الدورات المشابهة :
-        </h1>
-        </div>
+        <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
     <div class="grid w-full  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->
-        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
-            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
-            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
-                <p>دورة تدريبية</p>
-                <p>دورة تدريبية</p>
-            </div>
-            <a class="w-full" href="">
-                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
-            </a>
-        </div>
+                @foreach ($randomColumns as $item)
 
-        <!-- Card max-w-[90%] 2 -->
-        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
-            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
-            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
-                <p>دورة تدريبية</p>
-                <p>دورة تدريبية</p>
-            </div>
-            <a class="w-full" href="">
-                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
-            </a>
-        </div>
+                <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
+                    <img src="{{asset('./images/'.$item->image)}}" class="w-full h-40 md:h-28 rounded-md" alt="">
+                    <div class="text-content flex flex-col w-full justify-start items-start gap-2">
+                        <h1 class="text-slate-800 font-semibold">{{$item->name}}</h1>
+                        <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">دولار</span></p>
+                        <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">ساعة</span> </p>
+                    </div>
+                    <a class="w-full" href="/CourseWatache/{{$item->id}}">
+                        <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">شاهد التفاصيل</button>
+                    </a>
+                </div>
 
-        <!-- Card max-w-[90%] 3 -->
-        <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
-            <img src="{{ asset('./images/exel.jpeg') }}" class="w-full h-40 md:h-28 rounded-md" alt="">
-            <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                <h1 class="text-xl text-slate-800 font-semibold">دورة تدريبية</h1>
-                <p>دورة تدريبية</p>
-                <p>دورة تدريبية</p>
-            </div>
-            <a class="w-full" href="">
-                <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">احجز الدورة</button>
-            </a>
-        </div>
+                @endforeach
+
+
     </div>
     </section>
         <section
@@ -287,25 +276,26 @@
         >
 
         <div class=" mt-3 flex flex-col w-full  gap-4 md:justify-start items-center md:flex-col justify-center md:items-center  ">
+            <form action="/AddToCart/{{$idget}}" method="POST">
+                @csrf
             <div class="group flex md:mr-20 flex-col gap-2 ">
                 <div
                 class="flex flex-col gap-2 w-72 justify-start items-start  "
                 id='lottie'
                 >
                 </div>
-                <a href="/Cart"
+                <button type="submit"
             class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
             >
-            احجز الدورة
-            </a>
+            أضف الدورة الى السلة
+                </button>
             </div>
             <div class="grid w-1/2   bg-white z-10 h-28 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
            </div>
+        </form>
         </div>
-
         </section>
-
 
         @include('footer')
 

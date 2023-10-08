@@ -38,4 +38,6 @@ Route::get('/CourseWatache/{id}', [App\Http\Controllers\Controller::class, 'Cour
 
 Route::get('/Cart', [App\Http\Controllers\Controller::class, 'Cart'])->name('Cart');
 
+Route::post('/AddToCart/{id}', [App\Http\Controllers\Controller::class, 'AddToCart'])->name('AddToCart');
+
 

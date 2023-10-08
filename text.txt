@@ -6,11 +6,9 @@ https://www.codingnepalweb.com/draggable-image-slider-html-css-javascript/
 
 
 
-// @vite('resources/css/app.css') 
+// @vite('resources/css/app.css')
 
+// Fix vite in Host
 
-<link rel="stylesheet" href="{{asset('build/assets/app-259270ff.css')}}">        
-<link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">  
-        <script type="module"
-        scr="{{asset('build/assets/app-fabb6531.js')}}"
-    ></script>
+<link rel="stylesheet" href="{{asset('build/assets/app-61802598.css')}}">
+<script type="module" scr="{{asset('build/assets/app-1d891ca3.js')}}"></script>

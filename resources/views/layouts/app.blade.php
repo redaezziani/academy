@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Academy</title>
+    <title>   اكادمية المبتكر</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -15,7 +16,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    @vite('resources/css/app.css') 
+    @vite('resources/css/app.css')
 </head>
 <body lang="ar"
 class='bg-white '
@@ -24,12 +25,12 @@ class='bg-white '
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                        <img 
+                        <img
                         class="w-14 object-cover"
                         src="{{asset('./images/19d7f5fbae4ea.jpg')}}"
                         >
                 </a>
-                
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
 
@@ -37,9 +38,9 @@ class='bg-white '
 
                     <ul class="navbar-nav ms-auto">
                         @guest
-                            
 
-                            
+
+
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
