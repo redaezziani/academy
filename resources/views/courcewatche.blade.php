@@ -165,9 +165,12 @@
             {{$items->desc1}}
         </p>
         </div>
+        <input type="hidden" {{$idget=$items->id}} name="">
+        @endforeach
+
         </section>
         <section
-        class="w-full flex rtl sm:flex-row flex-col  bg-white px-5  z-10  text-slate-600   items-center gap-2 justify-between  "
+        class="w-full py-5 flex rtl sm:flex-row flex-col  bg-white px-5  z-10  text-slate-600   items-start gap-14 justify-between  "
         >
         <div class="group-1 w-full  sm:w-1/2 mt-2  flex flex-col gap-2 ">
             <h1
@@ -175,9 +178,9 @@
             >
             مخرجات الدورة
             </h1>
-
+            @foreach ($desc1 as $item)
             <div
-            class=' flex  justify-start gap-2 items-center '
+            class=' flex  justify-start gap-2 items-start '
             >
             <i
             class="fas text-sm fa-check-circle text-slate-300"
@@ -185,11 +188,12 @@
 
             </i>
                 <p
-                class=' font-cairo text-slate-600'
+                class=' font-cairo text-sm text-slate-600'
                 >
-                فهم وتنفيذ أساسيات البرمجة باستخدام بايثون. 
+                {{$item->desc1}}
                 </p>
             </div>
+            @endforeach
         </div>
 
 
@@ -199,24 +203,24 @@
             >
             المحاور
             </h1>
-
+            @foreach ($desc2 as $items)
             <div
-            class=' max-w-[20rem] flex justify-between gap-2 items-center '
+            class=' max-w-[20rem] flex justify-between gap-2 items-start'
             >
-            
+
                 <p
-                class=' font-cairo text-slate-600'
+                class=' font-cairo text-sm text-slate-600'
                 >
-                Introduction
+                {{$items->desc2}}
                 </p>
                 <i
                 class="fas fa-bookmark text-sm text-slate-300" >
                 </i>
             </div>
+            @endforeach
         </div>
         </section>
-        <input type="hidden" {{$idget=$items->id}} name="">
-        @endforeach
+
         <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
         <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->

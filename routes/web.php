@@ -40,4 +40,6 @@ Route::get('/Cart', [App\Http\Controllers\Controller::class, 'Cart'])->name('Car
 
 Route::post('/AddToCart/{id}', [App\Http\Controllers\Controller::class, 'AddToCart'])->name('AddToCart');
 
+Route::get('/RemoveFromCart/{id}', [App\Http\Controllers\Controller::class, 'RemoveFromCart'])->name('RemoveFromCart');
+
 

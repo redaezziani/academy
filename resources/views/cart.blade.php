@@ -7,7 +7,6 @@
         <title>
             اكادمية المبتكر
         </title>
-
         <!--fontawesome cdn link-->
         <link
         rel="stylesheet"
@@ -135,7 +134,7 @@
             <h1
             class="text-4xl text-center md:text-start text-white font-semibold"
             >
-            سلة المشتريات 
+            سلة المشتريات
             </h1>
             <div
             class=' flex min-w-[10rem] justify-start items-center gap-2'
@@ -147,9 +146,9 @@
 
                     </i>
                 </div>
-                <div class="content ">  
+                <div class="content ">
                 <h1>
-                    محتويات السلة <span class=' text-yellow-400'> 1</span>
+                    محتويات السلة <span class='text-emerald-400'>  {{$count}} </span>
                 </h1>
                 </div>
             </div>
@@ -166,49 +165,50 @@
 
                 </i>
                 </div>
-                <div class="content text-white/80">  
+                <div class="content text-white/80">
                 <h1>
-                    يتوجب عليك <a href="" class=' text-white'>تسجيل الدخول </a> لتتمكن من  اتمام عملية الشراء
+                    يتوجب عليك <a class='text-emerald-400 '>تسجيل الدخول </a> لتتمكن من  اتمام عملية الشراء
                 </h1>
                 </div>
             </div>
             </section>
         </main>
-       
         <div class=" w-full text-center bg-white z-20 rtl px-4 py-4 flex flex-col gap-7 justify-center items-center  ">
             <h1
             class=' sm:text-xl text-slate-800'
             >
             محتويات  السلة :
             </h1>
+            @foreach ($items as $item)
             <div class="item bg-slate-100 p-3 sm:px-7 rounded-md mt-2 sm:min-w-[40rem] sm:justify-between    flex justify-start  items-center gap-2 text-slate-500">
                 <div class="img-container">
                     <img
-                    src="{{asset('./images/How-to-Learn-Spoken-English_.png')}}"
+                    src="{{asset('./images/'.$item->image)}}"
                     alt=""
                     srcset=""
                     class='w-10 h-10 sm:w-24 sm:h-24 rounded-sm'
                     >
                 </div>
                 <div class="content flex justify-start items-start gap-2 flex-col ">
-                  <p>
-                  علم البيانات باستخدام بايثون     
-                  </p>
-                <p
-                class=' text-slate-400 text-sm'
-                >
-                    450 دولار
-                </p>
-                </div>
-                <button class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
-                    <i
-                    class="fas fa-trash-alt"
+                    <p>
+                        {{$item->name}}
+                    </p>
+                    <p
+                    class=' text-slate-400 text-sm'
                     >
-                    </i>
-                </button>
+                    {{$item->price}} <span class="text-emerald-400">دولار</span>
+                </p>
             </div>
+            <form action="/RemoveFromCart/{{$item->id}}" method="GET">
+                    <button type="submit" class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
+                        <iv class="fas fa-trash-alt">
+                        </iv>
+                    </button>
+            </form>
+            </div>
+        @endforeach
 
-            
+
             <!-- end items  -->
             <hr
             class='w-72 mt-2'
@@ -216,7 +216,7 @@
             <p
             class=' mt-2 text-slate-700'
             >
-              المجموع الكلي لمشترياتك هو 30 دولار  
+              المجموع الكلي لمشترياتك هو<span class="text-emerald-400"> {{$some}} </span>  دولار
             </p>
             <button
             class=' mt-3 text-white min-w-[20rem] bg-emerald-500 rounded-md px-3 py-2'

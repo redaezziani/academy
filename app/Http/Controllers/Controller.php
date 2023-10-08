@@ -5,6 +5,7 @@ use App\Models\Addtocart;
 use App\Models\recordcourses;
 use App\Models\Livecourses;
 use App\Models\Allrecord;
+use App\Models\desccourse;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -95,11 +96,13 @@ class Controller extends BaseController
               $count = 0;
           }
           //
+        $desc1 = desccourse::where('idrecord',$id)->where('desc1', '<>', '')->get();
+        $desc2 = desccourse::where('idrecord',$id)->where('desc2', '<>', '')->get();
         $randomColumns = DB::table('allrecords')->inRandomOrder()->take(3)->get();
         $recordcourses = recordcourses::all();
         $livecourses = Livecourses::all();
         $allrecord = Allrecord::where('id', $id)->get();
-        return view('courcewatche')->with('count',$count)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord)->with('randomColumns',$randomColumns);
+        return view('courcewatche')->with('desc1',$desc1)->with('desc2',$desc2)->with('count',$count)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('allrecord',$allrecord)->with('randomColumns',$randomColumns);
 
     }
     public function Cart()
@@ -108,15 +111,19 @@ class Controller extends BaseController
           if(auth()->check())
           {
               $count = Addtocart::where('userid', auth()->user()->id)->count();
+              $items=Addtocart::where('userid',auth()->user()->id)->get();
+              $some=Addtocart::where('userid',auth()->user()->id)->sum('price');
           }
           else
-          {
-              $count = 0;
+          {     $items= [];
+                $count = 0;
+                $some=0;
           }
-          //
+
+
         $recordcourses = recordcourses::all();
         $livecourses = Livecourses::all();
-        return view('cart')->with('count',$count)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
+        return view('cart')->with('some',$some)->with('count',$count)->with('items',$items)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
 
     }
     public function AddToCart(Request $request,$id)
@@ -153,5 +160,10 @@ class Controller extends BaseController
         }
     }
 
+    public function RemoveFromCart($id){
+        $item= Addtocart::find($id);
+        $item->delete();
+        return redirect()->back();
+    }
 
 }
