@@ -114,7 +114,7 @@
             دورة في مختلف التخصصات الأكثر طلباً
             </p>
             <p
-            class="text-xl text-white"
+            class="text-xl text-white mb-5"
             >
             محلياً وعالمياً!
             </p>
