@@ -176,81 +176,49 @@
             مخرجات الدورة
             </h1>
 
-            <span
-            class=' flex justify-start items-center '
+            <div
+            class=' flex  justify-start gap-2 items-center '
             >
-                <i
-                class=' text-slate-400 '
-                >
-
-                </i>
-                <p
-                class=' text-slate-600'
-                >
-                     
-                </p>
-            </span>
-
-            <span
-            class=' flex justify-start items-center '
+            <i
+            class="fas text-sm fa-check-circle text-slate-300"
             >
-                <i
-                class=' text-slate-400 '
-                >
 
-                </i>
+            </i>
                 <p
-                class=' text-slate-600'
+                class=' font-cairo text-slate-600'
                 >
-                     
+                فهم وتنفيذ أساسيات البرمجة باستخدام بايثون. 
                 </p>
-            </span>
-
+            </div>
         </div>
 
-        <div class="group-2 w-full  sm:w-1/2 mt-2  flex flex-col gap-2 ">
+
+        <div class="group-2  w-full justify-center  sm:w-1/2 mt-2  flex flex-col gap-2 ">
             <h1
-            class='text-xl text-teal-500  '
+            class='text-xl text-teal-400 '
             >
-            مخرجات الدورة
+            المحاور
             </h1>
 
-            <span
-            class=' flex justify-start items-center '
+            <div
+            class=' max-w-[20rem] flex justify-between gap-2 items-center '
             >
-                <i
-                class=' bx bxs-pencel text-slate-400 '
-                >
-
-                </i>
+            
                 <p
-                class='  text-slate-600'
+                class=' font-cairo text-slate-600'
                 >
-
+                Introduction
                 </p>
-            </span>
-
-            <span
-            class=' flex justify-start items-center '
-            >
                 <i
-                class=' text-slate-400 '
-                >
-
+                class="fas fa-bookmark text-sm text-slate-300" >
                 </i>
-                <p
-                class=' text-slate-600'
-                >
-                     
-                </p>
-            </span>
-
+            </div>
         </div>
         </section>
         <input type="hidden" {{$idget=$items->id}} name="">
         @endforeach
         <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
-    <div class="grid w-full  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
+        <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->
                 @foreach ($randomColumns as $item)
 

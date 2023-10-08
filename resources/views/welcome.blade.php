@@ -143,7 +143,7 @@
     <main
         class=" w-full flex-wrap  rtl border-t-2 border-emerald-500  flex bg-white z-10 lg:py-3  justify-center items-center"
         >
-        <div class=" w-full  sm:w-3/4 relative  h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
+        <div class=" w-full   sm:w-3/4 max-w-[50rem] relative  h-fit flex justify-center min-h-[30rem] md:max-h-0  items-center">
             <img src="{{asset('./images/pexels-vlada-karpovich-4050415.jpg')}}" class="w-full lg:rounded-md overflow-hidden  h-full absolute top-0 inset-0 z-0 left-0" alt="" srcset="">
             <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
                 <h2

@@ -19,7 +19,7 @@
 
         @include('navbar')
 
-        <main class="rtl hero-5  w-full flex flex-col justify-start items-center gap-3">
+        <main class="rtl hero-5   w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/60"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -160,9 +160,11 @@
                 <div
                 class=' h-8 w-8 p-1  text-yellow-400'
                 >
-                    <i>
+                <i
+                class="fas fa-exclamation-triangle"
+                >
 
-                    </i>
+                </i>
                 </div>
                 <div class="content text-white/80">  
                 <h1>
@@ -172,27 +174,22 @@
             </div>
             </section>
         </main>
-        <div class="w-full px-4 z-10 bg-white rtl flex justify-start items-start gap-4 flex-col py-5">
-            <p
-            class=" text-slate-500"
-            >
-               السعر الاجمالي هو : <span class=' text-emerald-500 '>40</span>دولار  
-            </p>
-        </div>
-        <div class="w-full bg-white z-10 rtl px-4 py-4 flex-col gap-7 justify-start items-start  ">
+       
+        <div class=" w-full text-center bg-white z-20 rtl px-4 py-4 flex flex-col gap-7 justify-center items-center  ">
             <h1
-            class=' text-slate-800'
+            class=' sm:text-xl text-slate-800'
             >
             محتويات  السلة :
             </h1>
-            <div class="item  flex justify-start w-full items-center gap-2 text-slate-500">
-                <button class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
-                    <i
-                    class='fa'
+            <div class="item bg-slate-100 p-2 rounded-md mt-2 sm:min-w-[40rem] sm:justify-between sm:items-start   flex justify-start  items-center gap-2 text-slate-500">
+                <div class="img-container">
+                    <img
+                    src="{{asset('./images/How-to-Learn-Spoken-English_.png')}}"
+                    alt=""
+                    srcset=""
+                    class='w-10 h-10 sm:w-24 sm:h-24 rounded-sm'
                     >
-
-                    </i>
-                </button>
+                </div>
                 <div class="content flex justify-start items-start gap-2 flex-col ">
                   <p>
                   علم البيانات باستخدام بايثون     
@@ -203,50 +200,15 @@
                     450 دولار
                 </p>
                 </div>
-                
-            </div>
-
-            <div class="item  flex justify-start w-full items-center gap-2 text-slate-500">
                 <button class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
                     <i
-                    class='fa'
+                    class="fas fa-trash-alt"
                     >
                     </i>
                 </button>
-                <div class="content flex justify-start items-start gap-2 flex-col ">
-                  <p>
-                  تطوير تطبيقات الهاتف باستخدام برنامج Flutter     
-                  </p>
-                <p
-                class=' text-slate-400 text-sm'
-                >
-                    57 دولار
-                </p>
-                </div>
-                
             </div>
 
-            <div class="item  flex justify-start w-full items-center gap-2 text-slate-500">
-                <button class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
-                    <i
-                    class='fa'
-                    >
-
-                    </i>
-                </button>
-                <div class="content flex justify-start items-start gap-2 flex-col ">
-                  <p>
-                    المحادثة باللغة الإنجليزية      
-                  </p>
-                <p
-                class=' text-slate-400 text-sm'
-                >
-                    120 دولار
-                </p>
-                </div>
-                
-            </div>
-
+            
             <!-- end items  -->
             <hr
             class='w-72 mt-2'
@@ -257,7 +219,7 @@
               المجموع الكلي لمشترياتك هو 30 دولار  
             </p>
             <button
-            class=' mt-3 text-white bg-emerald-500 rounded-md px-3 py-2'
+            class=' mt-3 text-white min-w-[20rem] bg-emerald-500 rounded-md px-3 py-2'
             >
             الدفع الان
             </button>
