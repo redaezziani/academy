@@ -11,6 +11,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
         @vite('resources/css/app.css')
@@ -132,14 +134,16 @@
         <section
         class="w-full bg-white py-2 md:flex-row flex-col   z-10 flex  justify-center items-start md:items-start gap-5  rtl px-5"
         >
-        <div class=" w-full z-10  text-slate-600 md:w-[70%] mt-3 flex flex-col gap-4 justify-start items-start  ">
+        <div class=" w-full z-10  text-slate-600  mt-3 flex flex-col gap-4 justify-start items-start  ">
         <h1
         class="text-2xl text-slate-800 font-semibold"
         >
         {{$items->name}}
 
         </h1>
-        <p>
+        <p
+        class=' text-emerald-400'
+        >
         دورة تدريبية
         </p>
         <p>
@@ -147,8 +151,96 @@
         </p>
         </div>
         </section>
+        <section
+        class="w-full flex rtl sm:flex-row flex-col  bg-white px-5  z-10  text-slate-600   items-center gap-2 justify-between  "
+        >
+        <div class="group-1 w-full  sm:w-1/2 mt-2  flex flex-col gap-2 ">
+            <h1
+            class='text-xl text-teal-400 '
+            >
+            مخرجات الدورة
+            </h1>
+
+            <span
+            class=' flex justify-start items-center '
+            >
+                <i
+                class=' text-slate-400 '
+                >
+
+                </i>
+                <p
+                class=' text-slate-600'
+                >
+                     
+                </p>
+            </span>
+
+            <span
+            class=' flex justify-start items-center '
+            >
+                <i
+                class=' text-slate-400 '
+                >
+
+                </i>
+                <p
+                class=' text-slate-600'
+                >
+                     
+                </p>
+            </span>
+
+        </div>
+
+        <div class="group-2 w-full  sm:w-1/2 mt-2  flex flex-col gap-2 ">
+            <h1
+            class='text-xl text-teal-500  '
+            >
+            مخرجات الدورة
+            </h1>
+
+            <span
+            class=' flex justify-start items-center '
+            >
+                <i
+                class=' bx bxs-pencel text-slate-400 '
+                >
+
+                </i>
+                <p
+                class='  text-slate-600'
+                >
+
+                </p>
+            </span>
+
+            <span
+            class=' flex justify-start items-center '
+            >
+                <i
+                class=' text-slate-400 '
+                >
+
+                </i>
+                <p
+                class=' text-slate-600'
+                >
+                     
+                </p>
+            </span>
+
+        </div>
+        </section>
         @endforeach
-        <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
+    <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
+        <div class="w-full">
+        <h1
+        class=' text-xl font-semibold mt-2 text-slate-700 justify-start'
+        >
+            اليك بعض الدورات المشابهة :
+        </h1>
+        </div>
     <div class="grid w-full  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->
         <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">

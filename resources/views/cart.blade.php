@@ -46,7 +46,7 @@
             </div>
         </nav>
         <main class="rtl hero-5  w-full flex flex-col justify-start items-center gap-3">
-            <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
+            <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/60"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
                     <h3
@@ -106,7 +106,7 @@
                             id="menu"
                             class="items hidden top-14 left-7  w-[10rem] text-center  gap-2  absolute p-2 rounded-md min-h-[5rem] bg-white flex-col justify-center items-center text-slate-400 ">
                             <button
-                    class="    text-slate-200  px-4 py-2 rounded-md hover:text-slate-300 transition-colors duration-300 ease-out"
+                    class="    text-slate-400  px-4 py-2 rounded-md hover:text-slate-300 transition-colors duration-300 ease-out"
                     >
                     <a
                     class="text-slate-600 "
@@ -159,26 +159,135 @@
             class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
             >
             <h1
-            class="text-4xl text-center md:text-start  text-emerald-500 font-semibold"
+            class="text-4xl text-center md:text-start text-white font-semibold"
             >
-            قم بحجز دورة تدريبية
-
+            سلة المشتريات 
             </h1>
-            <p
-            class="text-xl text-center md:text-start text-white/80"
+            <div
+            class=' flex min-w-[10rem] justify-start items-center gap-2'
             >
-            قم بشراء الدورة التدريبية التي تريدها من خلال الضغط على زر الشراء
-            </p>
+                <div
+                class=' h-8 w-8 p-1 border-r-2 border-yellow-400'
+                >
+                    <i>
+
+                    </i>
+                </div>
+                <div class="content ">  
+                <h1>
+                    محتويات السلة <span class=' text-yellow-400'> 1</span>
+                </h1>
+                </div>
+            </div>
+
+            <div
+            class=' flex max-w-[14.5rem] text-sm justify-start items-center gap-2'
+            >
+                <div
+                class=' h-8 w-8 p-1  text-yellow-400'
+                >
+                    <i>
+
+                    </i>
+                </div>
+                <div class="content text-white/80">  
+                <h1>
+                    يتوجب عليك <a href="" class=' text-white'>تسجيل الدخول </a> لتتمكن من  اتمام عملية الشراء
+                </h1>
+                </div>
+            </div>
             </section>
         </main>
-        <div class="w-full z-10 bg-white rtl flex justify-start items-start gap-4 flex-col px-2 py-5">
+        <div class="w-full px-4 z-10 bg-white rtl flex justify-start items-start gap-4 flex-col py-5">
             <p
-            class="text-2xl text-slate-500 font-semibold"
+            class=" text-slate-500"
             >
-             الدورات التي تم حجزها
+               السعر الاجمالي هو : <span class=' text-emerald-500 '>40</span>دولار  
             </p>
         </div>
+        <div class="w-full bg-white z-10 rtl px-4 py-4 flex-col gap-7 justify-start items-start  ">
+            <h1
+            class=' text-slate-800'
+            >
+            محتويات  السلة :
+            </h1>
+            <div class="item  flex justify-start w-full items-center gap-2 text-slate-500">
+                <button class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
+                    <i
+                    class='fa'
+                    >
 
+                    </i>
+                </button>
+                <div class="content flex justify-start items-start gap-2 flex-col ">
+                  <p>
+                  علم البيانات باستخدام بايثون     
+                  </p>
+                <p
+                class=' text-slate-400 text-sm'
+                >
+                    450 دولار
+                </p>
+                </div>
+                
+            </div>
+
+            <div class="item  flex justify-start w-full items-center gap-2 text-slate-500">
+                <button class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
+                    <i
+                    class='fa'
+                    >
+                    </i>
+                </button>
+                <div class="content flex justify-start items-start gap-2 flex-col ">
+                  <p>
+                  تطوير تطبيقات الهاتف باستخدام برنامج Flutter     
+                  </p>
+                <p
+                class=' text-slate-400 text-sm'
+                >
+                    57 دولار
+                </p>
+                </div>
+                
+            </div>
+
+            <div class="item  flex justify-start w-full items-center gap-2 text-slate-500">
+                <button class="icon w-8 h-8 rounded-md bg-red-600 text-cyan-50">
+                    <i
+                    class='fa'
+                    >
+
+                    </i>
+                </button>
+                <div class="content flex justify-start items-start gap-2 flex-col ">
+                  <p>
+                    المحادثة باللغة الإنجليزية      
+                  </p>
+                <p
+                class=' text-slate-400 text-sm'
+                >
+                    120 دولار
+                </p>
+                </div>
+                
+            </div>
+
+            <!-- end items  -->
+            <hr
+            class='w-72 mt-2'
+            >
+            <p
+            class=' mt-2 text-slate-700'
+            >
+              المجموع الكلي لمشترياتك هو 30 دولار  
+            </p>
+            <button
+            class=' mt-3 text-white bg-emerald-500 rounded-md px-3 py-2'
+            >
+            الدفع الان
+            </button>
+        </div>
         @include('footer')
 
 
