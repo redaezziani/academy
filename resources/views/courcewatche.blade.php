@@ -10,7 +10,7 @@
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -22,6 +22,16 @@
     </head>
     <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 
+         <!-- Show Done Alert -->
+         @if (session()->has('message'))
+         <script>
+                     Swal.fire(
+                         'تم اضافة الدورة الى السلة بنجاح',
+                         '! يمكنك اضافة المزيد . تابع التصفح ',
+                         'success'
+                     )
+         </script>
+     @endif
 
         @include('navbar')
 

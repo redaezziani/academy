@@ -142,7 +142,7 @@ class Controller extends BaseController
             $cart->save();
             $recordcourses = recordcourses::all();
             $livecourses = Livecourses::all();
-            return redirect()->route('HomePage')->with('count',$count)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('message','azerty');
+            return redirect()->back()->with('count',$count)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('message','azerty');
 
         }
         else

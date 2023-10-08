@@ -19,16 +19,6 @@
         @vite('resources/css/app.css')
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
-        <!-- Show Done Alert -->
-        @if (session()->has('message'))
-            <script>
-                        Swal.fire(
-                            'تم اضافة الدورة الى السلة بنجاح',
-                            '! يمكنك اضافة المزيد . تابع التصفح ',
-                            'success'
-                        )
-            </script>
-        @endif
         <!-- Get nav From navbar.blade.php -->
         @include('navbar')
         <!-- Side Bar Main -->
