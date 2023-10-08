@@ -181,7 +181,7 @@
             >
             محتويات  السلة :
             </h1>
-            <div class="item bg-slate-100 p-2 rounded-md mt-2 sm:min-w-[40rem] sm:justify-between sm:items-start   flex justify-start  items-center gap-2 text-slate-500">
+            <div class="item bg-slate-100 p-3 sm:px-7 rounded-md mt-2 sm:min-w-[40rem] sm:justify-between    flex justify-start  items-center gap-2 text-slate-500">
                 <div class="img-container">
                     <img
                     src="{{asset('./images/How-to-Learn-Spoken-English_.png')}}"
