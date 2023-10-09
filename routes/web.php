@@ -12,10 +12,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Auth::routes(['verify' => true]);
 
 Route::get('/', function () {
     return redirect('/HomePage');
 });
+Route::get('/verify', function () {
+    return redirect('/HomePage');
+})->middleware(['auth','verified']);
 
 Route::get('/HomePage', [App\Http\Controllers\Controller::class, 'welcome'])->name('HomePage');
 

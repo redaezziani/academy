@@ -32,6 +32,9 @@
             </div>
     </div>
 @else
+    @if (auth()->user()->email_verified_at == NULL)
+    <script>window.location = "{{ url('/verify') }}";</script>
+    @endif
     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
         <div class=" relative    justify-center flex items-center gap-2">
             @csrf

@@ -161,7 +161,7 @@
         >
         دورة تدريبية
         </p>
-        <p>
+        <p class="text-2xl">
             {{$items->desc1}}
         </p>
         </div>
@@ -189,7 +189,7 @@
 
             </i>
                 <p
-                class=' font-cairo text-sm text-slate-600'
+                class='text-2xl font-cairo text-slate-600'
                 >
                 {{$item->desc1}}
                 </p>
@@ -210,7 +210,7 @@
             >
 
                 <p
-                class=' font-cairo text-sm text-slate-600'
+                class=' font-cairo text-2xl text-slate-600'
                 >
                 {{$items->desc2}}
                 </p>
@@ -224,7 +224,7 @@
 
 
         <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
-            <h1 style="color:green;" class="text-4xl mt-2 text-center">دورات أخرى يمكنك مشاهدتها </h1>
+            <h1 style="color:green;" class="text-xl mt-2 text-center">دورات أخرى يمكنك مشاهدتها </h1>
             <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->
                 @foreach ($randomColumns as $item)

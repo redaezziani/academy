@@ -8,6 +8,8 @@
             اكاديمية المبتكر
         </title>
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 
         <!--fontawesome cdn link-->
         <link
@@ -21,6 +23,17 @@
 
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
+
+         <!-- Show Done Alert -->
+         @if (session()->has('message'))
+         <script>
+                     Swal.fire(
+                         'تم اضافة الدورة الى السلة بنجاح',
+                         '! يمكنك اضافة المزيد . تابع التصفح ',
+                         'success'
+                     )
+         </script>
+        @endif
 
         @include('navbar')
 
@@ -136,17 +149,32 @@
                 {{$items->name}}
                 </p>
                 <p
-                class="text-xl text-slate-400 font-medium "
+                class="text-xl font-medium text-slate-500"
                 >
-                {{$items->time}} ساعة
+                 <span class="text-emerald-500">{{$items->time}}  </span>ساعة
                 </p>
-                <a href="/CourseWatache/{{$items->id}}">
-                <button
-                class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                <p
+                class="text-xl font-medium text-slate-500"
                 >
-                    تفاصيل الدورة
-                </button>
-                </a>
+                 <span class="text-emerald-500">{{$items->price}}  </span>دولار
+                </p>
+                <div class="mt-2 flex gap-3">
+                    <a href="/CourseWatache/{{$items->id}}">
+                        <button
+                        class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                        >
+                        التفاصيل
+                        </button>
+                    </a>
+                    <form method="POST" action="/AddToCart/{{$items->id}}">
+                        @csrf
+                        <button type="submit"
+                        class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                        >
+                        اضافة الى السلة
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
         @endforeach

@@ -38,7 +38,7 @@ class HomeController extends Controller
          //
              $recordcourses = recordcourses::all();
              $livecourses = Livecourses::all();
-             return view('welcome')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('count',$count);
+             return Redirect('/verify')->with('recordcourses',$recordcourses)->with('livecourses',$livecourses)->with('count',$count);
 
     }
 }

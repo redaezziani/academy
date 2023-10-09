@@ -38,6 +38,19 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('رقم الهاتف :') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="number" class="py-2 px-4 rounded-md border-slate-400 focus:border-emerald-500 border-[1.4px] focus:outline-none @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required >
+
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __(' كلمة المرور :') }}</label>
