@@ -5,14 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
         <title>
-            اكادمية المبتكر
+            اكاديمية المبتكر
         </title>
         <!--fontawesome cdn link-->
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
+
         @vite('resources/css/app.css')
+
+
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 

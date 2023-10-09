@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            اكادمية المبتكر
+            اكاديمية المبتكر
         </title>
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
@@ -17,6 +17,7 @@
 
         <!-- Styles -->
         @vite('resources/css/app.css')
+
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 
@@ -117,7 +118,7 @@
             class="text-xl text-white mb-5"
             >
             محلياً وعالمياً!
-            
+
             </p>
             </section>
 

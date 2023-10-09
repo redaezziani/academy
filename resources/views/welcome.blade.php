@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            اكادمية المبتكر
+            اكاديمية المبتكر
         </title>
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
@@ -16,7 +16,10 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
+
+
         @vite('resources/css/app.css')
+
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <!-- Get nav From navbar.blade.php -->

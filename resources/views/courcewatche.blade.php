@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            اكادمية المبتكر
+            اكاديمية المبتكر
         </title>
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
@@ -147,7 +147,7 @@
             </section>
         </main>
         <section
-        class="w-full bg-white py-2 md:flex-row flex-col   z-10 flex  justify-center items-start md:items-start gap-5  rtl px-5"
+        class="w-full bg-white py-2 md:flex-row flex-col z-10 flex  justify-center items-start md:items-start gap-5  rtl px-5"
         >
         <div class=" w-full z-10  text-slate-600  mt-3 flex flex-col gap-4 justify-start items-start  ">
         <h1
@@ -169,6 +169,7 @@
         @endforeach
 
         </section>
+        <hr>
         <section
         class="w-full py-5 flex rtl sm:flex-row flex-col  bg-white px-5  z-10  text-slate-600   items-start gap-14 justify-between  "
         >
@@ -221,8 +222,10 @@
         </div>
         </section>
 
+
         <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
-        <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
+            <h1 style="color:green;" class="text-4xl mt-2 text-center">دورات أخرى يمكنك مشاهدتها </h1>
+            <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->
                 @foreach ($randomColumns as $item)
 
