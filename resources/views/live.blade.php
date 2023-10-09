@@ -15,8 +15,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
 
-        <!-- Styles -->
-        @vite('resources/css/app.css')
+        <link rel="stylesheet" href="{{asset('build/assets/app-d592f2ce.css')}}">
+        <script type="module" scr="{{asset('build/assets/app-fcbdc510.js')}}"></script>
 
     </head>
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
