@@ -210,9 +210,6 @@
             </form>
             </div>
         @endforeach
-
-
-            <!-- end items  -->
             <hr
             class='w-72 mt-2'
             >
@@ -228,13 +225,10 @@
             </button>
         </div>
         @include('footer')
-
-
 <script>
 
 let  menuAvatar=document.getElementById('menu-avatar');
 let menuDrop=document.getElementById('menu');
-
 
 menuAvatar.addEventListener('click',()=>{
     menuDrop.classList.toggle('hidden');
@@ -242,7 +236,6 @@ menuAvatar.addEventListener('click',()=>{
 let menu=document.getElementById('menu');
 let cancel=document.getElementById('cancel');
 let sidebar=document.querySelector('.sidebar');
-
 
 function add(){
     sidebar.classList.toggle('active');
