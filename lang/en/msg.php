@@ -1,6 +1,7 @@
 <?php
 
     return [
+        'projettitel'=>'Innovator Academy',
         'hi'=>'Hi',
         'login'=>'Login',
         'register'=>'Register',

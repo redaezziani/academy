@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            اكاديمية المبتكر
+            {{ __('msg.projettitel') }}
         </title>
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
