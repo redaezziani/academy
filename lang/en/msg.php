@@ -80,6 +80,10 @@
         'ct6'=>'You must',
         'ct7'=>'log in',
         'ct8'=>'to complete the purchase process',
+        'ct9'=>'Cart Contents:',
+        'ct10'=>'Your total purchase amount is',
+        'ct11'=>'Pay Now',
+
 
 
 

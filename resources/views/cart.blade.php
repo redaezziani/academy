@@ -112,7 +112,7 @@
                 </div>
                 <div class="content text-white/80">
                 <h1>
-                    يتوجب عليك <a class='text-emerald-400 '>تسجيل الدخول </a> لتتمكن من  اتمام عملية الشراء
+                    {{ __('msg.ct6') }}<a class='text-emerald-400 '>{{ __('msg.ct7') }}</a> {{ __('msg.ct8') }}
                 </h1>
                 </div>
             </div>
@@ -146,7 +146,7 @@
             <h1
             class=' sm:text-xl text-slate-800'
             >
-            محتويات  السلة :
+            {{ __('msg.ct9') }}
             </h1>
             @foreach ($items as $item)
             <div class="item bg-slate-100 p-3 sm:px-7 rounded-md mt-2 sm:min-w-[40rem] sm:justify-between    flex justify-start  items-center gap-2 text-slate-500">
@@ -165,7 +165,7 @@
                     <p
                     class=' text-slate-400 text-sm'
                     >
-                    {{$item->price}} <span class="text-emerald-400">دولار</span>
+                    {{$item->price}} <span class="text-emerald-400">{{ __('msg.in2') }}</span>
                 </p>
             </div>
             <form action="/RemoveFromCart/{{$item->id}}" method="GET">
@@ -182,12 +182,12 @@
             <p
             class=' mt-2 text-slate-700'
             >
-              المجموع الكلي لمشترياتك هو<span class="text-emerald-400"> {{$some}} </span>  دولار
+            {{ __('msg.ct10') }}<span class="text-emerald-400"> {{$some}} </span>  {{ __('msg.in2') }}
             </p>
             <button
             class=' mt-3 text-white min-w-[20rem] bg-emerald-500 rounded-md px-3 py-2'
             >
-            الدفع الان
+            {{ __('msg.ct11') }}
             </button>
         </div>
         @include('footer')
