@@ -71,6 +71,15 @@
         'subt3'=>'Topics',
         'subt4'=>'Add Course to Cart',
         'subt5'=>'Other Courses You Can Watch',
+        // cart page
+        'ct1'=>'Shopping Cart',
+        'ct2'=>'Cart Contents',
+        'ct3'=>'You can now proceed with the purchase',
+        'ct4'=>'Welcome,',
+        'ct5'=>'to our website',
+        'ct6'=>'You must',
+        'ct7'=>'log in',
+        'ct8'=>'to complete the purchase process',
 
 
 

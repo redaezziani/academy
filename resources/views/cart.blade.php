@@ -76,7 +76,7 @@
             <h1
             class="text-4xl text-center md:text-start text-white font-semibold"
             >
-            سلة المشتريات
+                {{ __('msg.ct1') }}
             </h1>
             <div
             class=' flex min-w-[10rem] justify-start items-center gap-2'
@@ -90,7 +90,8 @@
                 </div>
                 <div class="content ">
                 <h1>
-                    محتويات السلة <span class='text-emerald-400'>  {{$count}} </span>
+                    {{ __('msg.ct2') }}
+                    <span class='text-emerald-400'>  {{$count}} </span>
                 </h1>
                 </div>
             </div>
@@ -130,9 +131,9 @@
                 </div>
                 <div class="content text-white/80">
                 <h1>
-                 يمكنك الان اتمام عملية الشراء
+                    {{ __('msg.ct3') }}
                   <p class="mt-1">
-                      مرحبا بك يا <span class='text-emerald-400 '>  {{ auth()->user()->name }} </span>في موقعنا
+                    {{__('msg.ct4') }}<span class='text-emerald-400 '>  {{ auth()->user()->name }} </span>{{__('msg.ct5') }}
                   </p>
                 </h1>
                 </div>
