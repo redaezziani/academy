@@ -41,7 +41,7 @@
                         </div>
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class=" justify-center items-center text-white rounded-md bg-emerald-500 hover:bg-emerald-600 px-3 py-2">
+                                <button style="background-color: green" type="submit" class=" justify-center items-center text-white rounded-md px-3 py-2">
                                     {{ __('الدخول') }}
                                 </button>
 

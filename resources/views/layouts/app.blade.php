@@ -27,7 +27,8 @@ class='bg-white '
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                         <img
-                        class="w-14 object-cover"
+                        style="width: 150px"
+                        class=" object-cover"
                         src="{{asset('./images/19d7f5fbae4ea.jpg')}}"
                         >
                 </a>
@@ -49,13 +50,13 @@ class='bg-white '
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a  class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
                                         @csrf
                                     </form>
                                 </div>

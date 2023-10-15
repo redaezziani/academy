@@ -1,6 +1,12 @@
 <?php
 
     return [
+        'login'=>'Login:',
+        'register'=>'Register:',
+        'email'=>'Email:',
+        'password'=>'Password:',
+        'btn1'=>'Login',
+        'res'=>'Create an account?',
         'navtitle' => 'Start Learning',
         'courslive' => 'Live Courses',
         'buttonnav' => 'Topics',
