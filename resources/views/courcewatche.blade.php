@@ -262,7 +262,7 @@
                         <h1 class="text-slate-800 font-semibold">{{$item->name}}</h1>
                         <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">{{ __('msg.in2') }}</span></p>
                         <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">{{ __('msg.in1') }}</span> </p>
-                    </div>Ihr Name
+                    </div>
                     <div class="mt-2 flex gap-2">
                         <a href="/CourseWatache/{{$item->id}}" class="">
                             <button

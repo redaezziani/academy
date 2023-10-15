@@ -1,8 +1,10 @@
 <?php
 
     return [
+        'hi'=>'Hi',
         'login'=>'Login:',
         'register'=>'Register:',
+        'logout'=>'Log out',
         'email'=>'Email:',
         'password'=>'Password:',
         'btnlog'=>'Login',

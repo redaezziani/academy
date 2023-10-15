@@ -26,7 +26,7 @@
     class="  text-emerald-500  py-2 rounded-md text:bg-emerald-500 transition-colors duration-300 ease-out"
     >
     <a href="/register">
-        مستخدم جديد
+        {{ __('msg.register') }}
     </a>
     </button>
             </div>
@@ -50,14 +50,14 @@
             class="items hidden top-14 left-7  w-[10rem] text-center  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
             <p
                 class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
-                مرحباً
+                {{ __('msg.hi') }}
                   {{ auth()->user()->name }}
             </p>
             <hr
             class="w-full"
             >
             <button  class="  text-red-500 mt-3 py-2 rounded-md hover:text-red-700 transition-colors duration-300 ease-out">
-                تسجيل الخروج
+                {{ __('msg.logout') }}
             </button>
             </div>
         </div>
