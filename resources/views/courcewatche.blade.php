@@ -45,7 +45,7 @@
                     <h3
                     class="text-slate-500 text-xl font-semibold"
                     >
-                    إبدأ رحلة التعلم
+                    {{ __('msg.navtitle') }}
                     </h3>
                     <i
                     onclick="remove()"
@@ -59,7 +59,7 @@
                     <button onclick="hiderecord()" id="livebutton"
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out btn-active"
                     >
-                    دورات مباشرة
+                    {{ __('msg.courslive') }}
                     </button>
                     </a>
                 </div>
@@ -81,7 +81,7 @@
                     class="fas fa-bars  "
                     >
                     </i>
-                    المواضيع
+                    {{ __('msg.buttonnav') }}
                 </div>
 
                 @include('login')
@@ -97,25 +97,25 @@
             </h1>
             <div class="informations rtl flex-col flex justify-start items-start gap-4 text-white/90">
                 <p>
-                مدة الدورة :
+                    {{ __('msg.tt1') }}
                 <span
                 class="text-emerald-500 mr-8"
                 >
                    {{$items->time}}
                 </span>
-                الساعة
+                {{ __('msg.in1') }}
                 </p>
                 <div
                 class="flex justify-center items-center gap-2 "
                 >
 
                 <p >
-                  التدريب المتوفر :
+                    {{ __('msg.tt2') }}
                 <div class="flex mr-2 justify-center items-center gap-2 ">
                     <span
                     class=" border-[1.4px] border-white  px-1 md:px-4 py-1 rounded-full   transition-colors duration-300 ease-out"
                     >
-                    تدريب اونلاين
+                    {{ __('msg.tt3') }}
                     </span>
                 </div>
 
@@ -125,7 +125,7 @@
                     <p
                     class=""
                     >
-                        السعر الكلي :
+                    {{ __('msg.tt4') }}
                     </p>
                     <div class="flex mr-4 justify-start items-center gap-2 ">
                         <span
@@ -138,7 +138,7 @@
                         class=" text-white"
                         >
 
-                        دولار
+                        {{ __('msg.in2') }}
 
                         </span>
                     </div>
@@ -159,7 +159,7 @@
         <p
         class=' text-emerald-400'
         >
-        دورة تدريبية
+        {{ __('msg.subt1') }}
         </p>
         <p class="text-2xl">
             {{$items->desc1}}
@@ -177,7 +177,7 @@
             <h1
             class='text-xl text-teal-400 '
             >
-            مخرجات الدورة
+            {{ __('msg.subt2') }}
             </h1>
             @foreach ($desc1 as $item)
             <div
@@ -202,7 +202,7 @@
             <h1
             class='text-xl text-teal-400 '
             >
-            المحاور
+            {{ __('msg.subt3') }}
             </h1>
             @foreach ($desc2 as $items)
             <div
@@ -238,7 +238,7 @@
                 <button type="submit"
             class="bg-emerald-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
             >
-            أضف الدورة الى السلة
+            {{ __('msg.subt4') }}
                 </button>
             </div>
             <div class="grid w-1/2   bg-white z-10 h-28 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -249,7 +249,9 @@
         </section>
 
         <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
-            <h1 style="color:green;" class="text-xl mt-2 text-center">دورات أخرى يمكنك مشاهدتها </h1>
+            <h1 style="color:green;" class="text-xl mt-2 text-center">
+                {{ __('msg.subt5') }}
+            </h1>
             <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
         <!-- Card max-w-[90%] 1 -->
                 @foreach ($randomColumns as $item)
@@ -258,23 +260,23 @@
                     <img src="{{asset('./images/'.$item->image)}}" class="w-full h-40 md:h-28 rounded-md" alt="">
                     <div class="text-content flex flex-col w-full justify-start items-start gap-2">
                         <h1 class="text-slate-800 font-semibold">{{$item->name}}</h1>
-                        <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">دولار</span></p>
-                        <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">ساعة</span> </p>
+                        <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">{{ __('msg.in2') }}</span></p>
+                        <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">{{ __('msg.in1') }}</span> </p>
                     </div>
                     <div class="mt-2 flex gap-2">
                         <a href="/CourseWatache/{{$item->id}}" class="">
                             <button
                             class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                             >
-                            التفاصيل
+                            {{ __('msg.btn1') }}
                             </button>
                         </a>
                         <form method="POST" action="/AddToCart/{{$item->id}}">
                             @csrf
                             <button type="submit"
-                            class="bg-emerald-500 text-white px- py-2  mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                            class="bg-emerald-500 text-white px-2 py-2  mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                             >
-                            اضافة الى السلة
+                            {{ __('msg.btn2') }}
                             </button>
                         </form>
                     </div>

@@ -30,7 +30,7 @@
                     <h3
                     class="text-slate-500 text-xl font-semibold"
                     >
-                    إبدأ رحلة التعلم
+                    {{ __('msg.navtitle') }}
                     </h3>
                     <i
                     onclick="remove()"
@@ -44,7 +44,7 @@
                     <button onclick="hiderecord()" id="livebutton"
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out btn-active"
                     >
-                    دورات مباشرة
+                    {{ __('msg.courslive') }}
                     </button>
                     </a>
 
@@ -69,7 +69,7 @@
                     class="fas fa-bars  "
                     >
                     </i>
-                    المواضيع
+                    {{ __('msg.buttonnav') }}
                 </div>
 
                 @include('login')
@@ -79,44 +79,45 @@
             >
             <h1
             class=" text-3xl md:text-5xl text-white font-semibold"
-            > طور مهاراتك
-
+            >
+            {{ __('msg.lt1') }}
             </h1>
             <p
             class=" text-3xl md:text-5xl flex justify-center items-centerx text-white/80"
             >
-            وأنت
+            {{ __('msg.lt2') }}
             <span
             class='text-emerald-500 '
             >
-            في مكانك!
+            {{ __('msg.lt2.1') }}
             </span>
             </p>
             <p
             class="  md:text-xl text-white"
             >
-            تعلم عن بعد... وتميز بشهادات
+            {{ __('msg.lt3') }}
                 <b
                 class=""
                 >
-                معتمدة دولية
+                {{ __('msg.lt4') }}
                 </b>
             </p>
             <p
             class=' md:text-xl text-white'
             >
-            أكثر من
+            {{ __('msg.lt5') }}
             <span
             class='text-emerald-500'
             >
             50
             </span>
-            دورة في مختلف التخصصات الأكثر طلباً
+            {{ __('msg.lt6') }}
             </p>
             <p
             class="text-xl text-white mb-5"
             >
-            محلياً وعالمياً!
+            {{ __('msg.lt7') }}
+
 
             </p>
             </section>
@@ -133,12 +134,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                معتمدون دولياً
+                {{ __('msg.card1') }}
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                مركز تدريب واختبار معتمد
+                {{ __('msg.card1.1') }}
                 </p>
             </div>
         </div>
@@ -150,12 +151,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                مدربون محترفون
+                {{ __('msg.card2') }}
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                ذوي كفاءة عالية ومعتمدون دوليأ
+                {{ __('msg.card2.1') }}
                 </p>
             </div>
         </div>
@@ -167,12 +168,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                تنوع في التدريب
+                {{ __('msg.card3') }}
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                عن بعد (مباشر) – قاعة دراسية
+                {{ __('msg.card3.2') }}
                 </p>
             </div>
         </div>
@@ -189,7 +190,7 @@
             <h2
             class="text-xl text-white font-semibold mt-2"
             >
-            مكان  لإدارة جميع أمورك الأكاديمية والمالية
+            {{ __('msg.sub1') }}
             </h2>
         </div>
         <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
@@ -201,8 +202,8 @@
             <h2
             class="text-xl text-white font-semibold mt-2"
             >
-             خيارات متعددة للدفع
-             تدعم الدفع الإلكتروني
+            {{ __('msg.sub2') }}
+
             </h2>
         </div>
         <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
@@ -214,7 +215,7 @@
             <h2
             class="text-xl text-white font-semibold mt-2"
             >
-            سلسلة من الدروس المسجلة التي تم طرحها خلال الدورة
+            {{ __('msg.sub3') }}
             </h2>
         </div>
         <div class="card rounded-md flex justify-center items-center flex-col gap-2 text-center  mt-2 w-full min-w-[15rem]  col-span-1 max-h-52 ">
@@ -226,8 +227,7 @@
             <h2
             class="text-xl text-white font-semibold mt-2"
             >
-            فريق عمل متخصص بتقديم المساعدة
-            (الدعم الفني)
+            {{ __('msg.sub4') }}
             </h2>
         </div>
         </main>
@@ -236,12 +236,12 @@
                 <h1
                 class="text-4xl text-emerald-500 font-semibold"
                 >
-                تصفح الدورات التدريبية
+                {{ __('msg.bg1') }}
                 </h1>
                 <h2
                 class="text-xl mt-3 text-slate-600 font-semibold"
                 >
-                اختر الدورة التدريبية التي ترغب في الالتحاق بها
+                {{ __('msg.bg2') }}
                 </h2>
             </div>
             <div class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">

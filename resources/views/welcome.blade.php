@@ -20,7 +20,7 @@
         @vite('resources/css/app.css')
 
     </head>
-    <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
+    <body  class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
         <!-- Get nav From navbar.blade.php -->
         @include('navbar')
         <!-- Side Bar Main -->
@@ -84,7 +84,7 @@
             <p
             class="text-xl text-white/80"
             >
-             تعلم.. طور.. وحقق نجاحك مع أكاديمية  المبتكر
+            {{ __('msg.subtitel') }}
             </p>
             </section>
         </main>
@@ -98,12 +98,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                معتمدون دولياً
+                {{ __('msg.card1') }}
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                مركز تدريب واختبار معتمد
+                {{ __('msg.card1.1') }}
                 </p>
             </div>
         </div>
@@ -115,12 +115,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                مدربون محترفون
+                {{ __('msg.card2') }}
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                ذوي كفاءة عالية ومعتمدون دوليأ
+                {{ __('msg.card2.1') }}
                 </p>
             </div>
         </div>
@@ -132,12 +132,12 @@
                 <h2
                 class="text-xl font-semibold"
                 >
-                تنوع في التدريب
+                {{ __('msg.card3') }}
                 </h2>
                 <p
                 class=" text-white/80"
                 >
-                عن بعد (مباشر) – قاعة دراسية
+                {{ __('msg.card3.1') }}
                 </p>
             </div>
         </div>
@@ -150,20 +150,24 @@
             <div class="text-content px-8 flex justify-center items-center gap-4 flex-col z-10">
                 <h2
                 class="md:text-4xl text-2xl  font-semibold text-white"
-                >نظام التعلم عن بعد</h2>
+                >
+                {{ __('msg.livtitel') }}
+            </h2>
                 <p
                 class="md:text-xl text-sm text-emerald-500/80"
-                >بخاصية البث المباشر</p>
+                >
+                {{ __('msg.livtitel1') }}
+                </p>
                 <p
                 class='md:text-xl text-sm text-center text-white/80'
                 >
-                يمكنك الإلتحاق بالدورات التي تعقد في الأكاديمية دون الحاجة للتواجد داخل القاعة التدريبية
+                {{ __('msg.livtitel2') }}
                 </p>
                 <a href="/LiveCourses">
                     <button
                     class=" bg-emerald-400 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                     >
-                    اعرف المزيد
+                    {{ __('msg.livbtn') }}
                     </button>
                 </a>
             </div>
@@ -173,27 +177,30 @@
         <h1
         class="text-4xl text-center text-slate-800 font-semibold"
         >
-        آراء <span
+        {{ __('msg.cmt1') }}
+        <span
         class="text-emerald-500"
-        >العملاء</span>
+        >
+        {{ __('msg.cmt2') }}
+    </span>
         </h1>
         <div class="grid grid-cols-1 place-items-center w-full  px-6 mt-3 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
             <div class="card h-[17rem] rtl line-clamp-4  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
                 <p
                 class="text-slate-400 line-clamp-6 "
                 >
-                نتقدم بخالص الشكر ووافر التقدير على ما تبذلونه من جهود مثمرة ومتواصلة فيما يتعلق بالدورات التدريبية التي قدمت لموظفي شركة كراون الشرق الأوسط لصناعة العبوات لافتين النظر الى اسلوبكم البسيط والعملي في ايصال المعلومة وحرصكم على بلوغ الاستفادة القصوى منها  .
+                {{ __('msg.cnt1.1') }}
                 </p>
                 <div class="content-text flex flex-col justify-start items-start rtl">
                 <p
                 class="text-slate-700"
                 >
-                محمد الشعلان
+                {{ __('msg.cnt1.2') }}
                 </p>
                 <p
                 class=" text-pink-600"
                 >
-                مدير دائرة الامداد
+                {{ __('msg.cnt1.3') }}
                 </p>
 
                 </div>
@@ -202,19 +209,19 @@
                 <p
                 class="text-slate-400 line-clamp-4"
                 >
-                لا يسعنا إلا أن نشكر لكم جهودكم المتميزة والحثيثة وتعاونكم معنا في تدريب موظفي مكتبنا من أجل رفع كفاءة ومهنية الموظفين. آملين أن نستمر معكم في دورات أخرى قادمة, متمنيين لكم دوام الموفقية والنجاح.
+                {{ __('msg.cnt2.1') }}
                 </p>
                 <div class="content-text flex flex-col justify-start items-start rtl">
 
                 <p
                 class="text-slate-700"
                 >
-                هشام عبدالله
+                {{ __('msg.cnt2.2') }}
                 </p>
                 <p
-                class=" text-pink-600"
+                class="text-pink-600"
                 >
-                مدير مكتب الشركة العامة للمعارض
+                {{ __('msg.cnt2.3') }}
                 </p>
                 </div>
             </div>
@@ -222,18 +229,18 @@
                 <p
                 class="text-slate-400 line-clamp-4"
                 >
-                يسر إدارة شركة جازان للاستشارات التسويقية أن تتقدم إلى إدارة أكاديمية الرواد للتدريب والاستشارات بجزيل الشكر والثناء على المجهود المميز والأداء الراقي المحترف والذي تبذله الأكاديمية في مجال التدريب وخصوصاً دورات اللغة الانجليزية في جميع مستوياتها وهذا يدل على الكفاءة العالية والخبرة المميزة لديكم. اننا نتمنى لكم المزيد من التقدم والنجاح.
+                {{ __('msg.cnt3.1') }}
                 </p>
                 <div class="content-text flex flex-col justify-start items-start rtl">
                 <p
                 class="text-slate-700"
                 >
-                محمد الحربي
+                {{ __('msg.cnt3.2') }}
                 </p>
                 <p
                 class=" text-pink-600"
                 >
-                مدير عام شركة جازان للاستشارات التسويقية
+                {{ __('msg.cnt3.3') }}
                 </p>
                 </div>
             </div>

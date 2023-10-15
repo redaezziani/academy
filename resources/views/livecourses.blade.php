@@ -45,7 +45,7 @@
                     <h3
                     class="text-slate-500 text-xl font-semibold"
                     >
-                    إبدأ رحلة التعلم
+                    {{ __('msg.navtitle') }}
                     </h3>
                     <i
                     onclick="remove()"
@@ -59,7 +59,7 @@
                     <button onclick="hiderecord()" id="livebutton"
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out btn-active"
                     >
-                    دورات مباشرة
+                    {{ __('msg.courslive') }}
                     </button>
                     </a>
                 </div>
@@ -83,7 +83,7 @@
                     class="fas fa-bars  "
                     >
                     </i>
-                    المواضيع
+                    {{ __('msg.buttonnav') }}
                 </div>
 
                 @include('login')
@@ -99,7 +99,7 @@
             <p
             class=" text-2xl text-center md:text-start  text-emerald-500 md:text-5xl"
             >
-            تدريب مباشر
+            {{ __('msg.1t') }}
             </p>
             </section>
 
@@ -109,12 +109,12 @@
                 <h2
                 class="text-3xl text-slate-400 font-semibold"
                 >
-                دورات
+                {{ __('msg.2t') }}
                 </h2>
                 <p
                 class="text-xl text-emerald-500/80 font-semibold"
                 >
-                مباشرة
+                {{ __('msg.3t') }}
                 </p>
             </div>
         </div>
@@ -124,7 +124,7 @@
         <h1
         class="text-5xl mt-16 text-slate-400 font-semibold"
         >
-        دورات مباشرة
+        {{ __('msg.4t') }}
         </h1>
         <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3
         ">
@@ -151,19 +151,19 @@
                 <p
                 class="text-xl font-medium text-slate-500"
                 >
-                 <span class="text-emerald-500">{{$items->time}}  </span>ساعة
+                 <span class="text-emerald-500">{{$items->time}}  </span> {{ __('msg.in1') }}
                 </p>
                 <p
                 class="text-xl font-medium text-slate-500"
                 >
-                 <span class="text-emerald-500">{{$items->price}}  </span>دولار
+                 <span class="text-emerald-500">{{$items->price}}  </span>{{ __('msg.in2') }}
                 </p>
                 <div class="mt-2 flex gap-3">
                     <a href="/CourseWatache/{{$items->id}}">
                         <button
                         class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                         >
-                        التفاصيل
+                        {{ __('msg.btn1') }}
                         </button>
                     </a>
                     <form method="POST" action="/AddToCart/{{$items->id}}">
@@ -171,7 +171,7 @@
                         <button type="submit"
                         class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
                         >
-                        اضافة الى السلة
+                        {{ __('msg.btn2') }}
                         </button>
                     </form>
                 </div>
