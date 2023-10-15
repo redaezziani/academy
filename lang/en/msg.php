@@ -5,7 +5,7 @@
         'register'=>'Register:',
         'email'=>'Email:',
         'password'=>'Password:',
-        'btn1'=>'Login',
+        'btnlog'=>'Login',
         'res'=>'Create an account?',
         'navtitle' => 'Start Learning',
         'courslive' => 'Live Courses',
