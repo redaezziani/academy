@@ -19,8 +19,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
-        <link rel="stylesheet" href="{{asset('build/assets/app-d592f2ce.css')}}">
-        <script type="module" scr="{{asset('build/assets/app-fcbdc510.js')}}"></script>
+        @vite('resources/css/app.css')
 
     </head>
     <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
@@ -34,7 +33,7 @@
                          'success'
                      )
          </script>
-     @endif
+        @endif
 
         @include('navbar')
 
@@ -222,31 +221,7 @@
             @endforeach
         </div>
         </section>
-
-
-        <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
-            <h1 style="color:green;" class="text-xl mt-2 text-center">دورات أخرى يمكنك مشاهدتها </h1>
-            <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
-        <!-- Card max-w-[90%] 1 -->
-                @foreach ($randomColumns as $item)
-
-                <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
-                    <img src="{{asset('./images/'.$item->image)}}" class="w-full h-40 md:h-28 rounded-md" alt="">
-                    <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                        <h1 class="text-slate-800 font-semibold">{{$item->name}}</h1>
-                        <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">دولار</span></p>
-                        <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">ساعة</span> </p>
-                    </div>
-                    <a class="w-full" href="/CourseWatache/{{$item->id}}">
-                        <button class="bg-emerald-500 text-white w-full px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out">شاهد التفاصيل</button>
-                    </a>
-                </div>
-
-                @endforeach
-
-
-    </div>
-    </section>
+        <hr>
         <section
         class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  rtl px-5"
         >
@@ -273,6 +248,44 @@
         </div>
         </section>
 
+        <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
+            <h1 style="color:green;" class="text-xl mt-2 text-center">دورات أخرى يمكنك مشاهدتها </h1>
+            <div class="grid w-full place-items-center  md:w-2/3 grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ">
+        <!-- Card max-w-[90%] 1 -->
+                @foreach ($randomColumns as $item)
+
+                <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
+                    <img src="{{asset('./images/'.$item->image)}}" class="w-full h-40 md:h-28 rounded-md" alt="">
+                    <div class="text-content flex flex-col w-full justify-start items-start gap-2">
+                        <h1 class="text-slate-800 font-semibold">{{$item->name}}</h1>
+                        <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">دولار</span></p>
+                        <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">ساعة</span> </p>
+                    </div>
+                    <div class="mt-2 flex gap-2">
+                        <a href="/CourseWatache/{{$item->id}}" class="">
+                            <button
+                            class="bg-emerald-500 text-white  px-4 py-2 mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                            >
+                            التفاصيل
+                            </button>
+                        </a>
+                        <form method="POST" action="/AddToCart/{{$item->id}}">
+                            @csrf
+                            <button type="submit"
+                            class="bg-emerald-500 text-white px- py-2  mb-4 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out"
+                            >
+                            اضافة الى السلة
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                @endforeach
+
+
+    </div>
+    </section>
         @include('footer')
 
 

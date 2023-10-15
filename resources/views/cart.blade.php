@@ -12,8 +12,9 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-        <link rel="stylesheet" href="{{asset('build/assets/app-d592f2ce.css')}}">
-        <script type="module" scr="{{asset('build/assets/app-fcbdc510.js')}}"></script>
+
+        @vite('resources/css/app.css')
+
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 
@@ -154,6 +155,8 @@
                 </div>
             </div>
 
+            @if (!auth()->check())
+
             <div
             class=' flex max-w-[14.5rem] text-sm justify-start items-center gap-2'
             >
@@ -172,6 +175,30 @@
                 </h1>
                 </div>
             </div>
+            @else
+
+            <div
+            class=' flex max-w-[14.5rem] text-sm justify-start items-center gap-2'
+            >
+                <div
+                class=' h-8 w-8 p-1  text-green-400'
+                >
+
+                <i class="fas fa-check"></i>
+
+
+                </div>
+                <div class="content text-white/80">
+                <h1>
+                 يمكنك الان اتمام عملية الشراء
+                  <p class="mt-1">
+                      مرحبا بك يا <span class='text-emerald-400 '>  {{ auth()->user()->name }} </span>في موقعنا
+                  </p>
+                </h1>
+                </div>
+            </div>
+
+            @endif
             </section>
         </main>
         <div class=" w-full text-center bg-white z-20 rtl px-4 py-4 flex flex-col gap-7 justify-center items-center  ">

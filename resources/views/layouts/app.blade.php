@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>   اكادمية المبتكر</title>
+    <title>   اكاديمية المبتكر</title>
     <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
 
     <!-- Fonts -->

@@ -17,8 +17,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
 
-        <link rel="stylesheet" href="{{asset('build/assets/app-d592f2ce.css')}}">
-        <script type="module" scr="{{asset('build/assets/app-fcbdc510.js')}}"></script>
+        @vite('resources/css/app.css')
 
 
 

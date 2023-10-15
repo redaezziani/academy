@@ -11,5 +11,5 @@ https://www.codingnepalweb.com/draggable-image-slider-html-css-javascript/
 // Fix vite in Host
 
 <link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">
-<link rel="stylesheet" href="{{asset('build/assets/app-693aae50.css')}}">
-<script type="module" scr="{{asset('build/assets/app-a1443453.js')}}"></script>
+<link rel="stylesheet" href="{{asset('build/assets/app-685d6faa.css')}}">
+<script type="module" scr="{{asset('build/assets/app-424f7e86.js')}}"></script>

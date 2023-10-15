@@ -16,8 +16,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-        <link rel="stylesheet" href="{{asset('build/assets/app-d592f2ce.css')}}">
-        <script type="module" scr="{{asset('build/assets/app-fcbdc510.js')}}"></script>
+
+        @vite('resources/css/app.css')
 
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
@@ -31,7 +31,7 @@
                     <h3
                     class="text-slate-500 text-xl font-semibold"
                     >
-                    إبدأ رحلة التعلم
+                    {{ __('msg.navtitle') }}
                     </h3>
                     <i
                     onclick="remove()"
@@ -45,7 +45,7 @@
                     <button onclick="hiderecord()" id="livebutton"
                     class="bg-slate-500 text-white  px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out btn-active"
                     >
-                    دورات مباشرة
+                    {{ __('msg.courslive') }}
                     </button>
                     </a>
                 </div>
@@ -68,7 +68,7 @@
                     class="fas fa-bars  "
                     >
                     </i>
-                    المواضيع
+                    {{ __('msg.buttonnav') }}
                 </div>
                 @include('login')
 
@@ -79,7 +79,7 @@
             <h1
             class="text-4xl text-white font-semibold"
             >
-            تعلم اليوم، لتَقُد غداً
+            {{ __('msg.bigtitel') }}
             </h1>
             <p
             class="text-xl text-white/80"

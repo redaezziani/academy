@@ -18,11 +18,12 @@
                         </div>
                     @endif
 
-                    {{ __('مرحبا بك في موقعنا . يرجى الضغط على الرابط للتأكيد ,') }} <br><br>
+                    {{ __('مرحبا بك في موقعنا . يرجى الضغط على الرابط الذي وصلك عن طريق الايميل الذي قمت بتسجيله  ,') }} <br><br>
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('  اضغط هنا لارسال الرابط') }}</button>.
                     </form>
+                    
                 </div>
             </div>
         </div>
