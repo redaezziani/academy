@@ -13,7 +13,7 @@
                 </a>
                 @if(!auth()->check())
                 <a href="/login">
-                    <button class="bg-transparent hover:bg-green-500 text-green-500 font-semibold p-1 hover:text-white border border-green-500 hover:border-transparent rounded">تسجيل الدخول </button>
+                    <button class="bg-transparent hover:bg-green-500 text-green-500 font-semibold p-1 hover:text-white border border-green-500 hover:border-transparent rounded">{{ __('msg.login') }}</button>
                 </a>
                 @endif
             </div>

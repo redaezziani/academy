@@ -2,10 +2,10 @@
 
     return [
         'hi'=>'Hi',
-        'login'=>'Login:',
-        'register'=>'Register:',
+        'login'=>'Login',
+        'register'=>'Register',
         'logout'=>'Log out',
-        'email'=>'Email:',
+        'email'=>'Email',
         'password'=>'Password:',
         'btnlog'=>'Login',
         'res'=>'Create an account?',
@@ -80,7 +80,7 @@
         'ct6'=>'You must',
         'ct7'=>'log in',
         'ct8'=>'to complete the purchase process',
-        'ct9'=>'Cart Contents:',
+        'ct9'=>'Cart Contents',
         'ct10'=>'Your total purchase amount is',
         'ct11'=>'Pay Now',
 

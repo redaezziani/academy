@@ -16,7 +16,7 @@
     >
     <a
     class="text-slate-600 "
-    href="/login">   تسجيل الدخول
+    href="/login">   {{ __('msg.login') }}
     </a>
     </button>
             <hr
