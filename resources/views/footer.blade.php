@@ -1,7 +1,7 @@
 @if (session('local')=='en')
-{{$dirf='ltr'}}
+<input type="hidden" name="" {{$dirf='ltr'}}>
 @else
-{{$dirf='rtl'}}
+<input type="hidden" name="" {{$dirf='rtl'}}>
 @endif
 <footer
 class="w-full z-10 flex px-3 md:px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"

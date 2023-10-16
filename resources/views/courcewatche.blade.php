@@ -161,8 +161,8 @@
             </div>
             </section>
         </main>
-        <section
-        class="w-full bg-white py-2 md:flex-row flex-col z-10 flex  justify-center items-start md:items-start gap-5  rtl px-5"
+        <section dir="{{$dir}}"
+        class="w-full bg-white py-2 md:flex-row flex-col z-10 flex  justify-center items-start md:items-start gap-5 px-5"
         >
         <div class=" w-full z-10  text-slate-600  mt-3 flex flex-col gap-4 justify-start items-start  ">
         <h1
@@ -193,8 +193,8 @@
 
         </section>
         <hr>
-        <section
-        class="w-full py-5 flex rtl sm:flex-row flex-col  bg-white px-5  z-10  text-slate-600   items-start gap-14 justify-between  "
+        <section dir="{{$dir}}"
+        class="w-full py-5 flex  sm:flex-row flex-col  bg-white px-5  z-10  text-slate-600   items-start gap-14 justify-between  "
         >
         <div class="group-1 w-full  sm:w-1/2 mt-2  flex flex-col gap-2 ">
             <h1
@@ -254,7 +254,7 @@
         </section>
         <hr>
         <section
-        class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  rtl px-5"
+        class="w-full bg-white py-2   z-10 flex flex-col justify-center items-center md:items-start gap-5  px-5"
         >
 
         <div class=" mt-3 flex flex-col w-full  gap-4 md:justify-start items-center md:flex-col justify-center md:items-center  ">
@@ -279,7 +279,7 @@
         </div>
         </section>
 
-        <section class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5 rtl px-5">
+        <section dir="{{$dir}}"  class="w-full bg-slate-50 py-2 z-10 flex flex-col justify-center items-center gap-5  px-5">
             <h1 style="color:green;" class="text-xl mt-2 text-center">
                 {{ __('msg.subt5') }}
             </h1>

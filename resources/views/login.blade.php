@@ -1,4 +1,12 @@
+@if (session('local')=='en')
+    <input type="hidden" name="" {{$pos='right-7'}}>
+@else
+<input type="hidden" name="" {{$pos='left-7'}}>
+@endif
+
 @if (!auth()->check())
+// set direction of login nav
+//
 <div class=" relative  justify-center flex items-center gap-2">
             @csrf
             <div
@@ -47,7 +55,7 @@
             </div>
             <div
             id="menu"
-            class="items hidden top-14 left-7  w-[10rem] text-center  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
+            class="items hidden top-14 {{$pos}}  w-[10rem] text-center  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
             <p
                 class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
                 {{ __('msg.hi') }}
