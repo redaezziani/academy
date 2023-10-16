@@ -68,7 +68,11 @@
                     @foreach ($livecourses as $course)
                         <a href="/LiveCourses/Course/{{$course->id}}"
                         class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        {{ $course->name }}
+                        @if (session('local')=='en')
+                        {{$course->name_en}}
+                        @else
+                        {{$course->name}}
+                        @endif
                         </a>
                     @endforeach
                 </div>
@@ -94,7 +98,11 @@
             <h1
             class=" text-2xl text-center md:text-start md:text-5xl text-white font-semibold"
             >
-            {{$namecourses}}
+            @if (session('local')=='en')
+            {{$namecourses ->name_en}}
+            @else
+            {{$namecourses->name}}
+            @endif
             </h1>
             <p
             class=" text-2xl text-center md:text-start  text-emerald-500 md:text-5xl"
@@ -146,7 +154,11 @@
                 <p
                 class="text-xl text-slate-500 font-medium"
                 >
+                @if (session('local')=='en')
+                {{$items->name_en}}
+                @else
                 {{$items->name}}
+                @endif
                 </p>
                 <p
                 class="text-xl font-medium text-slate-500"

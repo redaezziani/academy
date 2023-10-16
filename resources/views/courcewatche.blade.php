@@ -68,7 +68,11 @@
                     @foreach ($livecourses as $course)
                         <a href="/LiveCourses/Course/{{$course->id}}"
                         class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        {{ $course->name }}
+                        @if (session('local')=='en')
+                        {{$course->name_en}}
+                        @else
+                        {{$course->name}}
+                        @endif
                         </a>
                     @endforeach
                 </div>
@@ -93,7 +97,11 @@
             <h1
             class="text-4xl text-white font-semibold"
             >
-           {{$items->name}}
+                @if (session('local')=='en')
+                {{$items->name_en}}
+                @else
+                {{$items->name}}
+                @endif
             </h1>
             <div class="informations rtl flex-col flex justify-start items-start gap-4 text-white/90">
                 <p>
@@ -153,7 +161,11 @@
         <h1
         class="text-2xl  text-emerald-500 font-semibold"
         >
+        @if (session('local')=='en')
+        {{$items->name_en}}
+        @else
         {{$items->name}}
+        @endif
 
         </h1>
         <p
@@ -162,7 +174,11 @@
         {{ __('msg.subt1') }}
         </p>
         <p class="text-2xl">
-            {{$items->desc1}}
+            @if (session('local')=='en')
+        {{$items->desc1_en}}
+        @else
+        {{$items->desc1}}
+        @endif
         </p>
         </div>
         <input type="hidden" {{$idget=$items->id}} name="">
@@ -191,7 +207,11 @@
                 <p
                 class='text-2xl font-cairo text-slate-600'
                 >
+                @if (session('local')=='en')
+                {{$item->desc1_en}}
+                @else
                 {{$item->desc1}}
+                @endif
                 </p>
             </div>
             @endforeach
@@ -212,7 +232,11 @@
                 <p
                 class=' font-cairo text-2xl text-slate-600'
                 >
+                @if (session('local')=='en')
+                {{$items->desc2_en}}
+                @else
                 {{$items->desc2}}
+                @endif
                 </p>
                 <i
                 class="fas fa-bookmark text-sm text-slate-300" >
@@ -259,7 +283,13 @@
                 <div class="card max-w-[90%] rounded-md bg-white flex-col justify-between items-center gap-2 flex shadow-md w-full col-span-1 p-4">
                     <img src="{{asset('./images/'.$item->image)}}" class="w-full h-40 md:h-28 rounded-md" alt="">
                     <div class="text-content flex flex-col w-full justify-start items-start gap-2">
-                        <h1 class="text-slate-800 font-semibold">{{$item->name}}</h1>
+                        <h1 class="text-slate-800 font-semibold">
+                            @if (session('local')=='en')
+                            {{$item->name_en}}
+                            @else
+                            {{$item->name}}
+                            @endif
+                        </h1>
                         <p class="text-emerald-500">{{$item->price}} <span class="text-slate-500">{{ __('msg.in2') }}</span></p>
                         <p class="text-emerald-500">{{$item->time}} <span class="text-slate-500">{{ __('msg.in1') }}</span> </p>
                     </div>

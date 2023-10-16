@@ -17,6 +17,8 @@
                 </a>
                 @endif
             </div>
+            <a href="/lang/ar">AR</a>
+            <a href="/lang/en">en</a>
             <div class="cart cursor-pointer flex justify-center items-center relative">
                 <a href="/Cart"
                 class="fas fa-shopping-cart text-xl text-slate-400"

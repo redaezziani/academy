@@ -47,3 +47,11 @@ Route::post('/AddToCart/{id}', [App\Http\Controllers\Controller::class, 'AddToCa
 Route::get('/RemoveFromCart/{id}', [App\Http\Controllers\Controller::class, 'RemoveFromCart'])->name('RemoveFromCart');
 
 
+Route::get('/lang/{local}', function($local){
+    if(in_array($local,['ar','en'])){
+        session()->put('local',$local);
+    }
+    return redirect()->back();
+})->name('lang');
+
+

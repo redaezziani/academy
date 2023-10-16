@@ -79,7 +79,7 @@ class Controller extends BaseController
           //
         $recordcourses = recordcourses::all();
         $livecourses = Livecourses::all();
-        $namecourses = Livecourses::where('id', $id)->value('name');
+        $namecourses  = Livecourses::where('id', $id)->select('name', 'name_en')->first();
         $allrecord = Allrecord::where('id-course', $id)->get();
             return view('livecourses')->with('recordcourses',$recordcourses)->with('count',$count)->with('livecourses',$livecourses)->with('allrecord',$allrecord)->with('namecourses',$namecourses);
 
@@ -96,7 +96,7 @@ class Controller extends BaseController
               $count = 0;
           }
           //
-        $desc1 = desccourse::where('idrecord',$id)->where('desc1', '<>', '')->get();
+        $desc1 = desccourse::where('idrecord', $id)->where(function($query) {$query->where('desc1', '<>', '')->orWhere('desc1_en', '<>', '');}) ->get();
         $desc2 = desccourse::where('idrecord',$id)->where('desc2', '<>', '')->get();
         $randomColumns = DB::table('allrecords')->inRandomOrder()->take(3)->get();
         $recordcourses = recordcourses::all();

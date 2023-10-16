@@ -54,7 +54,11 @@
                     @foreach ($livecourses as $course)
                         <a href="/LiveCourses/Course/{{$course->id}}"
                         class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        {{ $course->name }}
+                        @if (session('local')=='en')
+                        {{$course->name_en}}
+                        @else
+                        {{$course->name}}
+                        @endif
                         </a>
                     @endforeach
                 </div>
