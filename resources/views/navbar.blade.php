@@ -1,35 +1,42 @@
-<nav
-        class="w-full bg-white flex border-b-[1.4px] justify-between z-50 fixed top-0 items-center pr-8 pl-3 py-4"
-        >
-            <div class="logo flex">
-                <a
-                href="/"
-                >
-                <img
-                src="{{asset('./images/19d7f5fbae4ea.jpg')}}"
-                alt="logo"
-                style="height:50px; margin-right:20px"
-                >
-                </a>
-                @if(!auth()->check())
-                <a href="/login">
-                    <button class="bg-transparent hover:bg-green-500 text-green-500 font-semibold p-1 hover:text-white border border-green-500 hover:border-transparent rounded">{{ __('msg.login') }}</button>
-                </a>
-                @endif
-            </div>
-            <a href="/lang/ar">AR</a>
-            <a href="/lang/en">en</a>
-            <div class="cart cursor-pointer flex justify-center items-center relative">
-                <a href="/Cart"
-                class="fas fa-shopping-cart text-xl text-slate-400"
-                >
-                </a>
-                <div class="products-count">
-                    <span
-                    class="absolute -top-2  -right-2 bg-emerald-400 text-slate-950 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out px-1 text-xs"
-                    >
-                        {{$count}}
-                    </span>
-                </div>
-            </div>
-        </nav>
+<nav class="w-full bg-white flex border-b-[1.4px] z-50 fixed top-0 items-center pl-3 py-4">
+    <!-- Left Section (Logo) -->
+    <div class="logo flex items-center">
+        <a href="/">
+            <img src="{{ asset('./images/19d7f5fbae4ea.jpg') }}" alt="logo" style="height: 50px; margin-right: 20px;">
+        </a>
+
+        @if(!auth()->check())
+            <a href="/login">
+                <button class="bg-transparent hover:bg-green-500 text-green-500 font-semibold p-1 hover:text-white border border-green-500 hover:border-transparent rounded">
+                    {{ __('msg.loginnav') }}
+                </button>
+            </a>
+        @endif
+    </div>
+
+    <!-- Right Section (Language and Products) -->
+    <div class="cart mr-1 md:mr-5 cursor-pointer ml-auto flex items-center">
+
+         <!-- Shopping Cart Icon -->
+        <a href="/Cart" class="fas mr-2 fa-shopping-cart text-xl text-slate-400"></a>
+
+        <!-- Products Count Badge -->
+        <div class="products-count ml-2">
+            <span class="absolute top-3.5 right-10 md:right-14 bg-emerald-400 text-slate-950 rounded-md hover:bg-emerald-600 transition-colors duration-300 ease-out px-1 text-xs">
+                {{$count}}
+            </span>
+        </div>
+
+        <div class="bg-transparent hover:bg-green-500 text-green-500 font-semibold p-1 hover:text-white border border-green-500 hover:border-transparent rounded">
+            @if (session('local')=='en')
+                <a href="/lang/ar">AR</a>
+            @else
+                <a href="/lang/en">EN</a>
+            @endif
+        </div>
+
+
+
+
+    </div>
+</nav>

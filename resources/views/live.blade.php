@@ -21,9 +21,15 @@
     <body class=" w-full font-cairo  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 
         @include('navbar')
+        // set direction
+        @if (session('local')=='en')
+        {{$dir='ltr'}}
+        @else
+        {{$dir='rtl'}}
+        @endif
+        //
 
-
-        <main class="rtl hero-3  w-full flex flex-col justify-start items-center gap-3">
+        <main dir="{{$dir}}"  class=" hero-3  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -65,7 +71,7 @@
 
 
             </div>
-            <div class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200  flex justify-between  gap-4 items-center flex-row   px-4 py-4">
+            <div  class="menu-bar  z-10 w-full mt-20 border-b-[1.4px] border-slate-200  flex justify-between  gap-4 items-center flex-row   px-4 py-4">
                 <div
                 onClick="add()"
                 class="menu hover:text-emerald-400  ease-in-out duration-300 transition-all  text-2xl cursor-pointer text-white flex justify-center items-center gap-2">
@@ -78,8 +84,8 @@
 
                 @include('login')
             </div>
-            <section
-            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
+            <section dir="{{$dir}}"
+            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20  px-5"
             >
             <h1
             class=" text-3xl md:text-5xl text-white font-semibold"
@@ -248,7 +254,7 @@
                 {{ __('msg.bg2') }}
                 </h2>
             </div>
-            <div class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <div dir="{{$dir}}"  class="grid mt-8  gap-x-5 gap-y-4 w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                 @foreach ($livecourses as $course)
                 <a href="/LiveCourses/Course/{{$course->id}}">
                 <div class="card w-full bg-white shadow-sm rounded-sm min-h-[6rem] p-2 flex max-w-[24rem] justify-start items-center gap-2">

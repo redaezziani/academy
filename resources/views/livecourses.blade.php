@@ -37,7 +37,15 @@
 
         @include('navbar')
 
-        <main class="rtl hero-2   relative w-full flex flex-col justify-start items-center gap-3">
+        // set direction
+        @if (session('local')=='en')
+        {{$dir='ltr'}}
+        @else
+        {{$dir='rtl'}}
+        @endif
+        //
+
+        <main dir="{{$dir}}"  class=" hero-2   relative w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
 
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
@@ -137,7 +145,7 @@
         <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3
         ">
         @foreach ($allrecord as $items)
-        <div class="card flex py-3 mt-5 w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
+        <div dir="{{$dir}}"  class="card flex py-3 mt-5 w-full bg-slate-100 shadow-md rounded-md col-span-1 flex-col  justify-center items-center">
             <img
             class="w-1/2 rounded-md max-h-30 object-cover" style="height:40%; backround-size:cover"
             src="{{asset('./images/'.$items->image)}}"

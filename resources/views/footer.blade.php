@@ -1,3 +1,8 @@
+@if (session('local')=='en')
+{{$dirf='ltr'}}
+@else
+{{$dirf='rtl'}}
+@endif
 <footer
 class="w-full z-10 flex px-3 md:px-16 min-h-[20rem] border-t-2 border-emerald-400 items-center justify-start gap-5 flex-col bg-slate-800 text-white py-5"
 >
@@ -17,7 +22,7 @@ class="w-full z-10 flex px-3 md:px-16 min-h-[20rem] border-t-2 border-emerald-40
         </div>
     </div>
 </div>
-<div class="informations flex-wrap mt-2 rtl w-full  flex justify-start items-center ">
+<div dir="{{$dirf}}" class="informations flex-wrap mt-2  w-full  flex justify-start items-center ">
     <div class="group-1 w-full md:w-2/3 gap-2 flex flex-col justify-start items-start">
         <h2
         class="text-xl text-white font-semibold"

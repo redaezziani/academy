@@ -52,7 +52,7 @@
                                 @endif --}}
                             </div>
                             @if (Route::has('register'))
-                                <p class="nav-item text-emerald-400 mt-3 ">
+                                <p class="nav-item mt-3 " style="color: green">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('msg.res') }}</a>
                                 </p>
                             @endif

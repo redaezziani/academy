@@ -37,8 +37,15 @@
 
         @include('navbar')
 
+        // set direction
+        @if (session('local')=='en')
+        {{$dir='ltr'}}
+        @else
+        {{$dir='rtl'}}
+        @endif
+        //
 
-        <main class="rtl hero-2  w-full flex flex-col justify-start items-center gap-3">
+        <main dir="{{$dir}}"  class=" hero-2  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -91,8 +98,8 @@
                 @include('login')
             </div>
             @foreach ($allrecord as $items)
-            <section
-            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
+            <section dir="{{$dir}}"
+            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20  px-5"
             >
             <h1
             class="text-4xl text-white font-semibold"
@@ -103,11 +110,11 @@
                 {{$items->name}}
                 @endif
             </h1>
-            <div class="informations rtl flex-col flex justify-start items-start gap-4 text-white/90">
+            <div class="informations  flex-col flex justify-start items-start gap-4 text-white/90">
                 <p>
                     {{ __('msg.tt1') }}
                 <span
-                class="text-emerald-500 mr-8"
+                class="text-emerald-500"
                 >
                    {{$items->time}}
                 </span>

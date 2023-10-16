@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="{{asset('./images/x.jpg')}}">
         <title>
-            {{ __('msg.projettitel') }}
+             {{ __('msg.projettitel') }}
         </title>
         <!--fontawesome cdn link-->
         <link
@@ -20,7 +20,15 @@
 
         @include('navbar')
 
-        <main class="rtl hero-5   w-full flex flex-col justify-start items-center gap-3">
+        // set direction
+        @if (session('local')=='en')
+        {{$dir='ltr'}}
+        @else
+        {{$dir='rtl'}}
+        @endif
+        //
+        //
+        <main dir="{{$dir}}" class=" hero-5   w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/60"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -46,16 +54,16 @@
                     </a>
                 </div>
 
-                <div id="divlive"  class="links overflow-auto flex w-full  flex-col justify-center items-center">
+                <div id="divlive" dir='{{$dir}}' class="links overflow-auto flex w-full  flex-col justify-center items-center">
                     @foreach ($livecourses as $course)
-                        <a href="/LiveCourses/Course/{{$course->id}}"
-                        class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
-                        @if (session('local')=='en')
-                        {{$course->name_en}}
-                        @else
-                        {{$course->name}}
-                        @endif
-                        </a>
+                    <a href="/LiveCourses/Course/{{$course->id}}"
+                    class="w-full hover:bg-slate-400/40 transition-colors ease-out duration-500 hover:border-l-2 hover:border-emerald-500   flex items-center justify-start  px-4 py-2 text-slate-600">
+                    @if (session('local')=='en')
+                    {{$course->name_en}}
+                    @else
+                    {{$course->name}}
+                    @endif
+                    </a>
                     @endforeach
                 </div>
             </div>
@@ -75,7 +83,7 @@
 
             </div>
             <section
-            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
+            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 px-5"
             >
             <h1
             class="text-4xl text-center md:text-start text-white font-semibold"
@@ -164,7 +172,11 @@
                 </div>
                 <div class="content flex justify-start items-start gap-2 flex-col ">
                     <p>
+                        @if (session('local')=='en')
+                        {{$item->name_en}}
+                        @else
                         {{$item->name}}
+                        @endif
                     </p>
                     <p
                     class=' text-slate-400 text-sm'

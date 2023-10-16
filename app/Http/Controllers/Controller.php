@@ -143,6 +143,7 @@ class Controller extends BaseController
             $id_user=auth()->user()->id;
             $cart=new Addtocart;
             $cart->name=$couseselect->name;
+            $cart->name_en=$couseselect->name_en;
             $cart->userid=$id_user;
             $cart->price=$couseselect->price;
             $cart->image=$couseselect->image;

@@ -24,7 +24,14 @@
         <!-- Get nav From navbar.blade.php -->
         @include('navbar')
         <!-- Side Bar Main -->
-        <main class="rtl hero  w-full flex flex-col justify-start items-center gap-3">
+        // set direction
+        @if (session('local')=='en')
+        {{$dir='ltr'}}
+        @else
+        {{$dir='rtl'}}
+        @endif
+
+        <main dir="{{$dir}}" class="hero  w-full flex flex-col justify-start items-center gap-3">
             <div class="bg-color z-0 absolute left-0 top-0 w-full h-full bg-slate-500/40"></div>
             <div class=" sidebar fixed shadow-md gap-5  z-50 top-0 -right-[100vw] h-screen flex flex-col min-w-[300px] p-3 justify-start items-center bg-white ">
                 <div class="cancel flex w-full justify-between  items-center ">
@@ -78,7 +85,7 @@
 
             </div>
             <section
-            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20 rtl px-5"
+            class="w-full  z-10 flex flex-col justify-center items-center md:items-start gap-5 mt-20  px-5"
             >
             <h1
             class="text-4xl text-white font-semibold"
@@ -188,14 +195,14 @@
         {{ __('msg.cmt2') }}
     </span>
         </h1>
-        <div class="grid grid-cols-1 place-items-center w-full  px-6 mt-3 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-            <div class="card h-[17rem] rtl line-clamp-4  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
+        <div dir="{{$dir}}"  class="grid grid-cols-1 place-items-center w-full  px-6 mt-3 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+            <div class="card h-[17rem]  line-clamp-4  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
                 <p
                 class="text-slate-400 line-clamp-6 "
                 >
                 {{ __('msg.cnt1.1') }}
                 </p>
-                <div class="content-text flex flex-col justify-start items-start rtl">
+                <div class="content-text flex flex-col justify-start items-start ">
                 <p
                 class="text-slate-700"
                 >
@@ -209,13 +216,13 @@
 
                 </div>
             </div>
-            <div class="card h-[17rem] rtl  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
+            <div class="card h-[17rem]   bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
                 <p
                 class="text-slate-400 line-clamp-4"
                 >
                 {{ __('msg.cnt2.1') }}
                 </p>
-                <div class="content-text flex flex-col justify-start items-start rtl">
+                <div class="content-text flex flex-col justify-start items-start ">
 
                 <p
                 class="text-slate-700"
@@ -229,13 +236,13 @@
                 </p>
                 </div>
             </div>
-            <div class="card h-[17rem] rtl  bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
+            <div class="card h-[17rem]   bg-white p-5 max-w-[90%] flex flex-col gap-2 justify-between items-start w-full col-span-1">
                 <p
                 class="text-slate-400 line-clamp-4"
                 >
                 {{ __('msg.cnt3.1') }}
                 </p>
-                <div class="content-text flex flex-col justify-start items-start rtl">
+                <div class="content-text flex flex-col justify-start items-start ">
                 <p
                 class="text-slate-700"
                 >
