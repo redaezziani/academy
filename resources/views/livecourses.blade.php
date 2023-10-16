@@ -28,8 +28,8 @@
          @if (session()->has('message'))
          <script>
                      Swal.fire(
-                         'تم اضافة الدورة الى السلة بنجاح',
-                         '! يمكنك اضافة المزيد . تابع التصفح ',
+                         '{{ __('msg.alert1') }}',
+                         '{{ __('msg.alert2') }}',
                          'success'
                      )
          </script>

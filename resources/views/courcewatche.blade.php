@@ -27,12 +27,12 @@
          <!-- Show Done Alert -->
          @if (session()->has('message'))
          <script>
-                     Swal.fire(
-                         'تم اضافة الدورة الى السلة بنجاح',
-                         '! يمكنك اضافة المزيد . تابع التصفح ',
-                         'success'
-                     )
-         </script>
+            Swal.fire(
+                '{{ __('msg.alert1') }}',
+                '{{ __('msg.alert2') }}',
+                'success'
+                      )
+        </script>
         @endif
 
         @include('navbar')
