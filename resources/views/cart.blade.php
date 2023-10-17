@@ -200,11 +200,11 @@
             >
             {{ __('msg.ct10') }}<span class="text-emerald-400"> {{$some}} </span>  {{ __('msg.in2') }}
             </p>
-            <button
+            <a href="https://poynt.godaddy.com/checkout/78d0e35b-1eb1-4e1b-8389-aa9f2c238df0/mubtaker"
             class=' mt-3 text-white min-w-[20rem] bg-emerald-500 rounded-md px-3 py-2'
             >
             {{ __('msg.ct11') }}
-            </button>
+            </a>
         </div>
         @include('footer')
 <script>

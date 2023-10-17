@@ -51,7 +51,7 @@
                                     {{ __('msg.btnlog') }}
                                 </button>
 
-                                {{-- @if (Route::has('password.request'))
+                                {{-- @if (Route::has('passwordrequest'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('نسيت كلمة المرور') }}
                                     </a>

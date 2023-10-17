@@ -19,7 +19,9 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
-        @vite('resources/css/app.css')
+        <link rel="stylesheet" href="{{asset('build/assets/app-2d5e804d.css')}}">
+        <script type="module" scr="{{asset('build/assets/app-8580e13e.js')}}"></script>
+
 
     </head>
     <body class=" font-cairo w-full  overflow-x-hidden flex-col relative bg-white flex justify-start items-center">

@@ -19,6 +19,8 @@
         'alert2'=>'You can add more. Continue browsing !',
         'password1'=>'Confirm Password',
         'btnlog'=>'Login',
+        'erremail'=>'The email has already been taken.',
+        'errpass'=>'The password field confirmation does not match Or The password not at 6 characters.',
         'res'=>'Create an account',
         'navtitle' => 'Start Learning',
         'courslive' => 'Live Courses',
