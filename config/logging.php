@@ -81,7 +81,11 @@ return [
             'level' => env('LOG_LEVEL', 'critical'),
             'replace_placeholders' => true,
         ],
-
+        'PayTabs' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/paytabs.log'),
+            'level' => 'info',
+            ],
         'papertrail' => [
             'driver' => 'monolog',
             'level' => env('LOG_LEVEL', 'debug'),
