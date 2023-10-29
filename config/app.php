@@ -168,7 +168,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Paytabscom\Laravel_paytabs\PaypageServiceProvider::class, 
+        Paytabscom\Laravel_paytabs\PaypageServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -185,5 +185,11 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+
+
+    'mpgs_payment_url' => env('MPGS_PAYMENT_URL', 'https://test-network.mtf.gateway.mastercard.com/api/'),
+    'mpgs_api_username' => env('MPGS_API_USERNAME', 'merchant.TESTNITEST2'),
+    'mpgs_api_password' => env('MPGS_API_PASSWORD', '050ccb036307426a6a4ace4a57a70ad2'),
+    'mpgs_merchant_id' => env('MPGS_MERCHANT_ID', 'TESTNITEST2'),
 
 ];
