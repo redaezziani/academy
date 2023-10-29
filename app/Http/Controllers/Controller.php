@@ -13,8 +13,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PayTabs\PayTabs;
-
-
+use Paytabscom\Laravel_paytabs\PaytabsApi;
 
 class Controller extends BaseController
 {
@@ -170,45 +169,23 @@ class Controller extends BaseController
         $item->delete();
         return redirect()->back();
     }
-    public function process()
+    public function createPayment(Request $request)
     {
-        $profileId = config('paytabs.PAYTABS_PROFILE_ID');
-        $serverKey = config('paytabs.PAYTABS_SERVER_KEY');
-        $clientKey = config('paytabs.PAYTABS_CLIENT_KEY');
-
-        $paytabs = new PayTabs($profileId, $serverKey, $clientKey);
-
-        $payment = $paytabs->createPayPage(array(
-            'merchant_email' => 'your@email.com',
-            'secret_key' => 'your_secret_key',
-            'currency' => 'USD',
-            'amount' => 100.00,
-            'title' => 'Product Name',
-            'order_id' => '12345',
+        $response = PayTabs::create_pay_page(array(
+            "merchant_email" => "merchant@example.com",
+            "secret_key" => "your_secret_key",
+            "currency" => "USD",
+            "amount" => 100,
+            "title" => "Test Payment",
+            "order_id" => "12345",
+            "customer_details" => array(
+                "name" => "John Doe",
+                "email" => "john@example.com",
+                "phone_number" => "+1234567890",
+            ),
         ));
 
-        // Redirect to the payment page
-        return redirect($payment->payment_url);
+        return view('payment.create', compact('response'));
     }
-    public function callback(Request $request)
-{
-    $profileId = config('paytabs.PAYTABS_PROFILE_ID');
-    $serverKey = config('paytabs.PAYTABS_SERVER_KEY');
-    $clientKey = config('paytabs.PAYTABS_CLIENT_KEY');
-
-    $paytabs = new PayTabs($profileId, $serverKey, $clientKey);
-
-    $response = $paytabs->verifyPayment(array(
-        'payment_reference' => $request->payment_reference,
-    ));
-
-    if ($response->response_code == '100') {
-        // Payment successful, update your database or trigger other actions
-        return view('payment.success'); // Create this view
-    } else {
-        // Payment failed, handle accordingly
-        return view('payment.failure'); // Create this view
-    }
-}
 
 }
