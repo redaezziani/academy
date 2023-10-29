@@ -50,16 +50,13 @@
                                 <button style="background-color: green;    border: 2px solid green; border-radius: 10px;" type="submit" class=" justify-center items-center text-white rounded-md px-3 py-2">
                                     {{ __('msg.btnlog') }}
                                 </button>
-
-                                @if (Route::has('passwordrequest'))
-                                <p class="nav-item mt-3 " style="color: green">
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('نسيت كلمة المرور') }}
-                                    </a>
-                                </p>
-                                @endif
-
                             </div>
+                            <p class="nav-item mt-2 " style="color: green">
+
+                                <a class="nav-link" href="{{ route('password.request') }}">
+                                    {{ __('msg.forgot') }}
+                                </a>
+                            </p>
                             @if (Route::has('register'))
                                 <p class="nav-item mt-3 " style="color: green">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('msg.res') }}</a>
