@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "652729823eb81f5d3894f5a5a6841861",
+    "content-hash": "60d7f1d32ed790a27b89edcc945b0c86",
     "packages": [
         {
             "name": "brick/math",
@@ -60,6 +60,68 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "devinweb/laravel-paytabs",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devinweb/laravel-paytabs.git",
+                "reference": "00c116b9b2aa39f151638129219bc19137992e92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devinweb/laravel-paytabs/zipball/00c116b9b2aa39f151638129219bc19137992e92",
+                "reference": "00c116b9b2aa39f151638129219bc19137992e92",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0",
+                "vimeo/psalm": "^4.27"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Devinweb\\LaravelPaytabs\\LaravelPaytabsServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelPaytabs": "Devinweb\\LaravelPaytabs\\LaravelPaytabsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Devinweb\\LaravelPaytabs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Imane Acherrat",
+                    "email": "imane@devinweb.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel package for Paytabs payment gateway",
+            "homepage": "https://github.com/devinweb/laravel-paytabs",
+            "keywords": [
+                "devinweb",
+                "laravel-paytabs"
+            ],
+            "support": {
+                "issues": "https://github.com/devinweb/laravel-paytabs/issues",
+                "source": "https://github.com/devinweb/laravel-paytabs/tree/v1.0.3"
+            },
+            "time": "2022-10-21T11:39:40+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
