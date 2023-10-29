@@ -6,6 +6,7 @@ use App\Models\recordcourses;
 use App\Models\Livecourses;
 use App\Models\Allrecord;
 use App\Models\desccourse;
+use GuzzleHttp\Client;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -166,5 +167,26 @@ class Controller extends BaseController
         $item->delete();
         return redirect()->back();
     }
+    public function processPayment(Request $request)
+    {
+        $amount = $request->input('amount');
 
+        $client = new Client();
+        $response = $client->request('POST', config('app.mpgs_payment_url'), [
+            'form_params' => [
+                'apiOperation' => 'PAY',
+                'apiUsername' => config('app.mpgs_api_username'),
+                'apiPassword' => config('app.mpgs_api_password'),
+                'merchant' => config('app.mpgs_merchant_id'),
+                'order.id' => uniqid(),
+                'order.amount' => $amount,
+                // Add any other required parameters
+            ]
+        ]);
+
+        $result = json_decode($response->getBody()->getContents(), true);
+
+        // Redirect to MPGS
+        return redirect($result['redirect']['url']);
+    }
 }
