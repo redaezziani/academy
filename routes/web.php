@@ -55,3 +55,4 @@ Route::get('/lang/{local}', function($local){
 })->name('lang');
 
 
+Route::post('/process-payment', [App\Http\Controllers\Controller::class, 'processPayment'])->name('process.payment');
