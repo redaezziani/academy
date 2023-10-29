@@ -163,9 +163,8 @@
         <p class=' mt-2 text-slate-700'>
             {{ __('msg.ct10') }}<span class="text-emerald-400"> {{ $some }} </span> {{ __('msg.in2') }}
         </p>
-        <form action="{{ route('process.payment') }}" method="POST">
+        <form action="{{ route('payment.process') }}" method="POST">
             @csrf
-            <input type="hidden" name="amount" value="100.00"> <!-- Replace with your actual amount -->
             <button type="submit"class=' mt-3 text-white min-w-[20rem] bg-emerald-500 rounded-md px-3 py-2'>
                 {{ __('msg.ct11') }}</button>
         </form>

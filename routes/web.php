@@ -55,4 +55,7 @@ Route::get('/lang/{local}', function($local){
 })->name('lang');
 
 
-Route::post('/process-payment', [App\Http\Controllers\Controller::class, 'processPayment'])->name('process.payment');
+Route::get('/payment',  [App\Http\Controllers\Controller::class, 'create'])->name('payment.create');
+Route::post('/payment/process',  [App\Http\Controllers\Controller::class, 'process'])->name('payment.process');
+Route::get('/payment/callback',  [App\Http\Controllers\Controller::class, 'callback'])->name('payment.callback');
+

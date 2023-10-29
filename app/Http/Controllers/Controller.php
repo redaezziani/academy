@@ -12,6 +12,9 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PayTabs\PayTabs;
+
+
 
 class Controller extends BaseController
 {
@@ -167,26 +170,45 @@ class Controller extends BaseController
         $item->delete();
         return redirect()->back();
     }
-    public function processPayment(Request $request)
+    public function process()
     {
-        $amount = $request->input('amount');
+        $profileId = config('paytabs.PAYTABS_PROFILE_ID');
+        $serverKey = config('paytabs.PAYTABS_SERVER_KEY');
+        $clientKey = config('paytabs.PAYTABS_CLIENT_KEY');
 
-        $client = new Client();
-        $response = $client->request('POST', config('app.mpgs_payment_url'), [
-            'form_params' => [
-                'apiOperation' => 'PAY',
-                'apiUsername' => config('app.mpgs_api_username'),
-                'apiPassword' => config('app.mpgs_api_password'),
-                'merchant' => config('app.mpgs_merchant_id'),
-                'order.id' => uniqid(),
-                'order.amount' => $amount,
-                // Add any other required parameters
-            ]
-        ]);
+        $paytabs = new PayTabs($profileId, $serverKey, $clientKey);
 
-        $result = json_decode($response->getBody()->getContents(), true);
+        $payment = $paytabs->createPayPage(array(
+            'merchant_email' => 'your@email.com',
+            'secret_key' => 'your_secret_key',
+            'currency' => 'USD',
+            'amount' => 100.00,
+            'title' => 'Product Name',
+            'order_id' => '12345',
+        ));
 
-        // Redirect to MPGS
-        return redirect($result['redirect']['url']);
+        // Redirect to the payment page
+        return redirect($payment->payment_url);
     }
+    public function callback(Request $request)
+{
+    $profileId = config('paytabs.PAYTABS_PROFILE_ID');
+    $serverKey = config('paytabs.PAYTABS_SERVER_KEY');
+    $clientKey = config('paytabs.PAYTABS_CLIENT_KEY');
+
+    $paytabs = new PayTabs($profileId, $serverKey, $clientKey);
+
+    $response = $paytabs->verifyPayment(array(
+        'payment_reference' => $request->payment_reference,
+    ));
+
+    if ($response->response_code == '100') {
+        // Payment successful, update your database or trigger other actions
+        return view('payment.success'); // Create this view
+    } else {
+        // Payment failed, handle accordingly
+        return view('payment.failure'); // Create this view
+    }
+}
+
 }
