@@ -51,11 +51,14 @@
                                     {{ __('msg.btnlog') }}
                                 </button>
 
-                                {{-- @if (Route::has('passwordrequest'))
+                                @if (Route::has('passwordrequest'))
+                                <p class="nav-item mt-3 " style="color: green">
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('نسيت كلمة المرور') }}
                                     </a>
-                                @endif --}}
+                                </p>
+                                @endif
+
                             </div>
                             @if (Route::has('register'))
                                 <p class="nav-item mt-3 " style="color: green">
