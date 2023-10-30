@@ -12,8 +12,6 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use PayTabs\PayTabs;
-use Paytabscom\Laravel_paytabs\PaytabsApi;
 
 class Controller extends BaseController
 {
@@ -169,23 +167,26 @@ class Controller extends BaseController
         $item->delete();
         return redirect()->back();
     }
-    public function createPayment(Request $request)
+    public function processPayment(Request $request)
     {
-        $response = PayTabs::create_pay_page(array(
-            "merchant_email" => "merchant@example.com",
-            "secret_key" => "your_secret_key",
-            "currency" => "USD",
-            "amount" => 100,
-            "title" => "Test Payment",
-            "order_id" => "12345",
-            "customer_details" => array(
-                "name" => "John Doe",
-                "email" => "john@example.com",
-                "phone_number" => "+1234567890",
-            ),
-        ));
+        $amount = $request->input('amount');
 
-        return view('payment.create', compact('response'));
+        $client = new Client();
+        $response = $client->request('POST', config('app.mpgs_payment_url'), [
+            'form_params' => [
+                'apiOperation' => 'PAY',
+                'apiUsername' => config('app.mpgs_api_username'),
+                'apiPassword' => config('app.mpgs_api_password'),
+                'merchant' => config('app.mpgs_merchant_id'),
+                'order.id' => uniqid(),
+                'order.amount' => $amount,
+                // Add any other required parameters
+            ]
+        ]);
+
+        $result = json_decode($response->getBody()->getContents(), true);
+
+        // Redirect to MPGS
+        return redirect($result['redirect']['url']);
     }
-
 }
